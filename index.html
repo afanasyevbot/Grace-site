@@ -1217,6 +1217,97 @@
 
   .rebuild .btn-primary:hover { background: transparent; color: var(--cream); }
 
+  /* ====== PRAYER REQUEST ====== */
+  .prayer-section {
+    padding: 90px 40px;
+    background: var(--ivory);
+    text-align: center;
+  }
+
+  .prayer-inner {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .prayer-section h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: var(--bark);
+    margin-bottom: 16px;
+  }
+
+  .prayer-section p.lead {
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+
+  .prayer-form {
+    text-align: left;
+  }
+
+  .prayer-form label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--forest);
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 20px;
+  }
+
+  .prayer-form label:first-of-type { margin-top: 0; }
+
+  .prayer-form input, .prayer-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(61, 47, 33, 0.15);
+    background: #faf3e3;
+    color: var(--ink);
+    font-family: inherit;
+    font-size: 15px;
+    border-radius: 2px;
+    transition: border-color 0.2s;
+  }
+
+  .prayer-form input::placeholder, .prayer-form textarea::placeholder {
+    color: var(--tan); font-style: italic;
+  }
+
+  .prayer-form input:focus, .prayer-form textarea:focus {
+    outline: none; border-color: var(--forest);
+  }
+
+  .prayer-form textarea { resize: vertical; min-height: 160px; }
+
+  .prayer-form button {
+    margin-top: 24px;
+    width: 100%;
+    background: var(--bark); color: var(--cream);
+    padding: 14px 28px; border: 1px solid var(--bark);
+    font-size: 14px; font-weight: 500;
+    cursor: pointer; font-family: inherit;
+    border-radius: 2px; transition: all 0.2s;
+    letter-spacing: 0.03em;
+  }
+
+  .prayer-form button:hover { background: var(--forest); border-color: var(--forest); }
+
+  .prayer-note {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  @media (max-width: 960px) {
+    .prayer-section { padding: 70px 24px; }
+  }
+
   /* ====== CONTACT ====== */
   .contact-section {
     max-width: none;
@@ -1764,6 +1855,24 @@
     <p data-en="In December 2025, a fire caused significant damage to our church building. We do not believe it was chance. Our God is sovereign over every circumstance, and what seems like loss in our eyes, He is working for our good and for the glory of His name." data-ru="В декабре 2025 года пожар нанёс значительный ущерб зданию нашей церкви. Мы не верим, что это произошло случайно. Наш Бог суверенен над каждым обстоятельством, и то, что кажется потерей в наших глазах, Он обращает нам во благо и во славу Своего имени.">In December 2025, a fire caused significant damage to our church building. We do not believe it was chance. Our God is sovereign over every circumstance, and what seems like loss in our eyes, He is working for our good and for the glory of His name.</p>
     <p data-en="By His grace no one was harmed. By His grace we have continued to gather every Sunday in the active wing while construction progresses on the other. And by His grace we will rebuild — not to return to what was, but to honor Him in what comes next." data-ru="По Его благодати никто не пострадал. По Его благодати мы продолжаем собираться каждое воскресенье в действующем крыле, пока ведётся восстановление другого. И по Его благодати мы восстановим — не чтобы вернуться к тому, что было, но чтобы прославить Его в том, что будет.">By His grace no one was harmed. By His grace we have continued to gather every Sunday in the active wing while construction progresses on the other. And by His grace we will rebuild — not to return to what was, but to honor Him in what comes next.</p>
     <p class="rebuild-signature" data-en="To God be the glory." data-ru="Слава Богу.">To God be the glory.</p>
+  </div>
+</section>
+
+<!-- ============ PRAYER REQUEST ============ -->
+<section class="prayer-section" id="prayer">
+  <div class="prayer-inner">
+    <div class="eyebrow centered" data-en="Prayer" data-ru="Молитва">Prayer</div>
+    <h2 data-en="Share a prayer request." data-ru="Поделитесь молитвенной нуждой.">Share a prayer request.</h2>
+    <p class="lead" data-en="Our pastors and elders pray over every request submitted here. You may share your name or remain anonymous." data-ru="Наши пасторы и пресвитеры молятся над каждой нуждой. Вы можете указать имя или остаться анонимным.">Our pastors and elders pray over every request submitted here. You may share your name or remain anonymous.</p>
+    <form class="prayer-form" action="https://formspree.io/f/PLACEHOLDER" method="POST">
+      <input type="hidden" name="_subject" value="Prayer Request — Grace Evangelical Church">
+      <label for="pr-name" data-en="Your name (optional)" data-ru="Ваше имя (необязательно)">Your name (optional)</label>
+      <input type="text" id="pr-name" name="name" placeholder="Leave blank to remain anonymous">
+      <label for="pr-request" data-en="Prayer request" data-ru="Молитвенная нужда">Prayer request</label>
+      <textarea id="pr-request" name="request" required placeholder="Share what's on your heart…"></textarea>
+      <button type="submit" data-en="Submit request" data-ru="Отправить">Submit request</button>
+    </form>
+    <p class="prayer-note" data-en="All requests are held in confidence." data-ru="Все нужды хранятся в тайне.">All requests are held in confidence.</p>
   </div>
 </section>
 
