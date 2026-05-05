@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 180" role="img" aria-label="Grace Evangelical Church logo">
+  <title>Grace Evangelical Church</title>
+  <desc>Grace wordmark in Fraunces italic, flanked by a gold heart on the left and a cross on the right, with Slavic Church Eagan MN subtext below.</desc>
+  <path d="M 90 120 C 90 120, 58 92, 58 66 C 58 52, 68 42, 82 42 C 90 42, 98 48, 102 54 C 106 48, 112 42, 120 42 C 134 42, 144 52, 144 66 C 144 92, 90 120, 90 120 Z" fill="#b89968"/>
+  <text x="250" y="130" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="106" font-weight="300" font-style="italic" fill="#3d2f21" letter-spacing="-0.01em">Grace</text>
+  <g transform="translate(366, 42)">
+    <rect x="26" y="0" width="12" height="96" fill="#3d2f21"/>
+    <rect x="6" y="32" width="52" height="12" fill="#3d2f21"/>
+    <rect x="28" y="2" width="8" height="92" fill="#b89968"/>
+    <rect x="8" y="34" width="48" height="8" fill="#b89968"/>
+  </g>
+  <line x1="90" y1="150" x2="420" y2="150" stroke="#b89968" stroke-width="0.5"/>
+  <text x="250" y="168" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="500" letter-spacing="0.4em" fill="#7a6b5a">EVANGELICAL CHURCH · EAGAN MN</text>
+</svg>

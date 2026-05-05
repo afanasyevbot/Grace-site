@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Grace Evangelical Church favicon">
+  <title>Grace Evangelical Church</title>
+  <desc>Favicon — heart and cross paired.</desc>
+  <path d="M 38 70 C 38 70, 12 50, 12 30 C 12 20, 20 14, 30 14 C 36 14, 42 18, 44 24 C 46 18, 52 14, 58 14 C 68 14, 76 20, 76 30 C 76 50, 38 70, 38 70 Z" fill="#b89968"/>
+  <g transform="translate(66, 30)">
+    <rect x="22" y="0" width="10" height="64" fill="#3d2f21"/>
+    <rect x="6" y="22" width="42" height="10" fill="#3d2f21"/>
+    <rect x="23.5" y="2" width="7" height="60" fill="#b89968"/>
+    <rect x="8" y="23.5" width="38" height="7" fill="#b89968"/>
+  </g>
+</svg>
