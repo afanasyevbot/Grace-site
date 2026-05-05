@@ -1214,7 +1214,7 @@
 
   /* ====== PRAYER REQUEST ====== */
   .prayer-section {
-    padding: 90px 40px;
+    padding: 60px 40px;
     background: #ece3cf;
     text-align: center;
   }
@@ -1425,48 +1425,49 @@
   /* ====== FOOTER ====== */
   footer {
     background: var(--bark); color: var(--cream);
-    padding: 48px 40px 24px;
+    padding: 32px 60px 20px;
   }
 
   .footer-inner {
-    max-width: 900px; margin: 0 auto;
-    display: flex; flex-direction: column;
-    align-items: center; text-align: center;
-    gap: 32px; margin-bottom: 36px;
+    max-width: 1200px; margin: 0 auto;
+    display: flex; flex-direction: row;
+    align-items: center; justify-content: space-between;
+    gap: 40px; margin-bottom: 24px; flex-wrap: wrap;
   }
 
-  .footer-brand { display: flex; flex-direction: column; align-items: center; }
+  .footer-brand { display: flex; flex-direction: row; align-items: center; gap: 20px; }
 
   .footer-brand p {
-    font-size: 13px; color: rgba(245, 241, 232, 0.6);
-    line-height: 1.6; max-width: 380px;
+    font-size: 12px; color: rgba(245, 241, 232, 0.55);
+    line-height: 1.6; max-width: 260px;
   }
 
   .footer-cols {
-    display: flex; gap: 60px; justify-content: center; flex-wrap: wrap;
+    display: flex; gap: 48px; flex-wrap: wrap;
   }
 
   .footer-col h4 {
-    font-size: 11px; letter-spacing: 0.2em;
+    font-size: 10px; letter-spacing: 0.2em;
     text-transform: uppercase; color: var(--gold);
-    margin-bottom: 12px; font-weight: 500;
+    margin-bottom: 10px; font-weight: 500;
   }
 
   .footer-col ul { list-style: none; }
-  .footer-col li { margin-bottom: 8px; }
+  .footer-col li { margin-bottom: 6px; }
 
   .footer-col a {
     color: var(--cream); text-decoration: none;
-    font-size: 13px; opacity: 0.75; transition: opacity 0.2s;
+    font-size: 12px; opacity: 0.7; transition: opacity 0.2s;
   }
 
   .footer-col a:hover { opacity: 1; color: var(--gold); }
 
   .footer-bottom {
-    border-top: 1px solid rgba(245, 241, 232, 0.12);
-    padding-top: 20px; display: flex;
-    justify-content: center; font-size: 11px;
-    color: rgba(245, 241, 232, 0.4); gap: 20px; flex-wrap: wrap;
+    border-top: 1px solid rgba(245, 241, 232, 0.1);
+    padding-top: 14px; display: flex;
+    justify-content: space-between; font-size: 11px;
+    color: rgba(245, 241, 232, 0.35); flex-wrap: wrap; gap: 10px;
+    max-width: 1200px; margin: 0 auto;
   }
 
   /* ====== MOBILE ====== */
@@ -1942,7 +1943,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="grace-church-logo.svg" alt="Grace Evangelical Church" style="height: 100px; width: auto; display: block; margin-bottom: 12px; filter: brightness(0) invert(1); opacity: 0.9;">
+      <img src="grace-church-logo.svg" alt="Grace Evangelical Church" style="height: 50px; width: auto; display: block; filter: brightness(0) invert(1); opacity: 0.9;">
       <p data-en="A Russian-speaking church family in Eagan, Minnesota — gathered to worship Christ, grow in His word, and serve our neighbors." data-ru="Русскоязычная церковная семья в Игане, Миннесота — собранная, чтобы поклоняться Христу, возрастать в Его Слове и служить ближним.">A Russian-speaking church family in Eagan, Minnesota — gathered to worship Christ, grow in His word, and serve our neighbors.</p>
     </div>
     <div class="footer-cols">
