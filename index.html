@@ -1030,7 +1030,7 @@
     .beliefs-dark { padding: 80px 20px; }
     .beliefs-dark .belief-item { padding: 24px 16px 0; }
     .hero { padding: 48px 20px 60px; }
-    .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    .footer-cols { flex-direction: column; gap: 24px; align-items: center; }
     .cta-row { flex-direction: column; }
     .cta-row a { text-align: center; justify-content: center; }
   }
@@ -1425,48 +1425,48 @@
   /* ====== FOOTER ====== */
   footer {
     background: var(--bark); color: var(--cream);
-    padding: 80px 40px 32px;
+    padding: 48px 40px 24px;
   }
 
   .footer-inner {
-    max-width: 1200px; margin: 0 auto;
-    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 60px; margin-bottom: 60px;
+    max-width: 900px; margin: 0 auto;
+    display: flex; flex-direction: column;
+    align-items: center; text-align: center;
+    gap: 32px; margin-bottom: 36px;
   }
 
-  .footer-brand h3 {
-    font-family: 'Fraunces', serif; font-size: 24px;
-    font-weight: 400; margin-bottom: 16px;
-    color: var(--cream);
-    font-style: italic;
-  }
+  .footer-brand { display: flex; flex-direction: column; align-items: center; }
 
   .footer-brand p {
-    font-size: 14px; color: rgba(245, 241, 232, 0.7);
-    line-height: 1.7; max-width: 320px;
+    font-size: 13px; color: rgba(245, 241, 232, 0.6);
+    line-height: 1.6; max-width: 380px;
+  }
+
+  .footer-cols {
+    display: flex; gap: 60px; justify-content: center; flex-wrap: wrap;
   }
 
   .footer-col h4 {
     font-size: 11px; letter-spacing: 0.2em;
     text-transform: uppercase; color: var(--gold);
-    margin-bottom: 20px; font-weight: 500;
+    margin-bottom: 12px; font-weight: 500;
   }
 
   .footer-col ul { list-style: none; }
-  .footer-col li { margin-bottom: 10px; }
+  .footer-col li { margin-bottom: 8px; }
 
   .footer-col a {
     color: var(--cream); text-decoration: none;
-    font-size: 14px; opacity: 0.85; transition: opacity 0.2s;
+    font-size: 13px; opacity: 0.75; transition: opacity 0.2s;
   }
 
   .footer-col a:hover { opacity: 1; color: var(--gold); }
 
   .footer-bottom {
     border-top: 1px solid rgba(245, 241, 232, 0.12);
-    padding-top: 32px; display: flex;
-    justify-content: space-between; font-size: 12px;
-    color: rgba(245, 241, 232, 0.5); flex-wrap: wrap; gap: 10px;
+    padding-top: 20px; display: flex;
+    justify-content: center; font-size: 11px;
+    color: rgba(245, 241, 232, 0.4); gap: 20px; flex-wrap: wrap;
   }
 
   /* ====== MOBILE ====== */
@@ -1485,7 +1485,7 @@
     .ministry-hero { padding: 36px 28px; margin: 40px 0 28px; }
     .ministry-hero h3 { font-size: 26px; }
     .contact { grid-template-columns: 1fr; gap: 50px; }
-    .footer-inner { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .footer-cols { gap: 32px; }
     .section { padding: 80px 24px; }
     .welcome, .rebuild { padding: 80px 24px; }
     .service-strip { padding: 40px 24px; }
@@ -1950,32 +1950,34 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="grace-church-logo.svg" alt="Grace Evangelical Church" style="height: 180px; width: auto; display: block; margin-bottom: 16px; filter: brightness(0) invert(1); opacity: 0.9;">
+      <img src="grace-church-logo.svg" alt="Grace Evangelical Church" style="height: 100px; width: auto; display: block; margin-bottom: 12px; filter: brightness(0) invert(1); opacity: 0.9;">
       <p data-en="A Russian-speaking church family in Eagan, Minnesota — gathered to worship Christ, grow in His word, and serve our neighbors." data-ru="Русскоязычная церковная семья в Игане, Миннесота — собранная, чтобы поклоняться Христу, возрастать в Его Слове и служить ближним.">A Russian-speaking church family in Eagan, Minnesota — gathered to worship Christ, grow in His word, and serve our neighbors.</p>
     </div>
-    <div class="footer-col">
-      <h4 data-en="Visit" data-ru="Посетить">Visit</h4>
-      <ul>
-        <li><a href="#home" data-en="Service times" data-ru="Время служений">Service times</a></li>
-        <li><a href="https://maps.google.com/?q=1985+Diffley+Rd+Eagan+MN+55122" target="_blank" rel="noopener" data-en="Directions" data-ru="Как добраться">Directions</a></li>
-        <li><a href="#about" data-en="What to expect" data-ru="Чего ожидать">What to expect</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4 data-en="Connect" data-ru="Общение">Connect</h4>
-      <ul>
-        <li><a href="#contact" data-en="Contact" data-ru="Контакты">Contact</a></li>
-        <li><a href="https://www.youtube.com/@gracechurch4000" target="_blank" rel="noopener">YouTube</a></li>
-        <li><a href="https://www.facebook.com/p/Grace-Slavic-Church-100064707848112/" target="_blank" rel="noopener">Facebook</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4 data-en="About" data-ru="О нас">About</h4>
-      <ul>
-        <li><a href="#beliefs" data-en="Our beliefs" data-ru="Вероучение">Our beliefs</a></li>
-        <li><a href="#leadership" data-en="Leadership" data-ru="Руководство">Leadership</a></li>
-        <li><a href="https://tithe.ly/give_new/www/#/tithely/give-one-time/PLACEHOLDER" target="_blank" rel="noopener" data-en="Give" data-ru="Пожертвовать">Give</a></li>
-      </ul>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4 data-en="Visit" data-ru="Посетить">Visit</h4>
+        <ul>
+          <li><a href="#home" data-en="Service times" data-ru="Время служений">Service times</a></li>
+          <li><a href="https://maps.google.com/?q=1985+Diffley+Rd+Eagan+MN+55122" target="_blank" rel="noopener" data-en="Directions" data-ru="Как добраться">Directions</a></li>
+          <li><a href="#about" data-en="What to expect" data-ru="Чего ожидать">What to expect</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Connect" data-ru="Общение">Connect</h4>
+        <ul>
+          <li><a href="#contact" data-en="Contact" data-ru="Контакты">Contact</a></li>
+          <li><a href="https://www.youtube.com/@gracechurch4000" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://www.facebook.com/p/Grace-Slavic-Church-100064707848112/" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="About" data-ru="О нас">About</h4>
+        <ul>
+          <li><a href="#beliefs" data-en="Our beliefs" data-ru="Вероучение">Our beliefs</a></li>
+          <li><a href="#leadership" data-en="Leadership" data-ru="Руководство">Leadership</a></li>
+          <li><a href="https://tithe.ly/give_new/www/#/tithely/give-one-time/PLACEHOLDER" target="_blank" rel="noopener" data-en="Give" data-ru="Пожертвовать">Give</a></li>
+        </ul>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
