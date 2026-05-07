@@ -258,7 +258,7 @@
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--forest);
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     opacity: 0;
     animation: fadeUp 0.8s 0.2s ease-out forwards;
   }
@@ -269,7 +269,7 @@
     line-height: 0.95;
     letter-spacing: -0.035em;
     color: var(--bark);
-    margin-bottom: 40px;
+    margin-bottom: 28px;
     text-align: center;
   }
 
@@ -301,9 +301,10 @@
 
   .hero-subtitle {
     font-size: clamp(15px, 1.3vw, 18px);
+    font-weight: 600;
     color: var(--bark-soft);
     max-width: 560px;
-    margin: 0 auto 48px;
+    margin: 0 auto 32px;
     line-height: 1.7;
     opacity: 0;
     animation: fadeUp 0.8s 1.2s ease-out forwards;
@@ -311,7 +312,7 @@
 
   .hero .cta-row {
     justify-content: center;
-    margin-bottom: 64px;
+    margin-bottom: 44px;
     opacity: 0;
     animation: fadeUp 0.8s 1.4s ease-out forwards;
   }
@@ -331,6 +332,7 @@
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--forest);
+    font-weight: 700;
     margin-bottom: 14px;
   }
 
@@ -340,7 +342,7 @@
     font-size: clamp(19px, 1.9vw, 24px);
     line-height: 1.5;
     color: var(--bark);
-    font-weight: 300;
+    font-weight: 600;
   }
 
   @keyframes fadeUp {
@@ -1040,10 +1042,11 @@
 
   @media (max-width: 500px) {
     .gallery-grid {
-      grid-template-columns: 1fr;
-      grid-auto-rows: 240px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 160px;
+      gap: 8px;
     }
-    .gallery-tile-hero { grid-column: span 1; grid-row: span 1; }
+    .gallery-tile-hero { grid-column: span 2; grid-row: span 1; }
     .beliefs-dark { padding: 80px 20px; }
     .beliefs-dark .belief-item { padding: 24px 16px 0; }
     .hero { padding: 48px 20px 60px; }
@@ -1493,10 +1496,10 @@
       min-height: auto;
       padding: 60px 24px 80px;
     }
-    .hero-eyebrow { margin-bottom: 32px; font-size: 11px; }
-    .hero-headline { margin-bottom: 28px; }
-    .hero .cta-row { margin-bottom: 48px; }
-    .hero-subtitle { margin-bottom: 36px; }
+    .hero-eyebrow { margin-bottom: 14px; font-size: 11px; }
+    .hero-headline { margin-bottom: 20px; }
+    .hero .cta-row { margin-bottom: 32px; }
+    .hero-subtitle { margin-bottom: 24px; }
     .strip-items { grid-template-columns: 1fr; gap: 30px; }
     .beliefs-grid, .leaders-grid { grid-template-columns: 1fr; gap: 40px; }
     .involved-grid { grid-template-columns: 1fr; }
@@ -1568,7 +1571,6 @@
           <button onclick="setLang('ru', this)" aria-label="Переключить на русский">РУ</button>
         </div>
       </li>
-      <li class="give-wrap"><a href="https://tithe.ly/give_new/www/#/tithely/give-one-time/PLACEHOLDER" target="_blank" rel="noopener" class="give-btn" data-en="Give" data-ru="Пожертвовать">Give</a></li>
     </ul>
   </nav>
   <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
@@ -1684,7 +1686,7 @@
   <div class="section-narrow" style="max-width: 1200px; margin: 0 auto;">
     <div class="eyebrow" data-en="Leadership" data-ru="Руководство">Leadership</div>
     <h2 data-en="Those who serve." data-ru="Руководство.">Those who serve.</h2>
-    <p class="lead" style="max-width: 680px;" data-en="Our pastors and elders are called to shepherd, teach, and serve the congregation. They're available to meet, pray with you, or answer questions about faith." data-ru="Наши пасторы и пресвитеры призваны пасти, учить и служить общине. Они готовы встретиться, помолиться с вами или ответить на вопросы о вере.">Our pastors and elders are called to shepherd, teach, and serve the congregation. They're available to meet, pray with you, or answer questions about faith.</p>
+    <p class="lead" style="max-width: 680px;" data-en="Our pastor and elders are called to shepherd, teach, and serve the congregation. They're available to meet, pray with you, or answer questions about faith." data-ru="Наш пастор и пресвитеры призваны пасти, учить и служить общине. Они готовы встретиться, помолиться с вами или ответить на вопросы о вере.">Our pastor and elders are called to shepherd, teach, and serve the congregation. They're available to meet, pray with you, or answer questions about faith.</p>
     <div class="leaders-grid">
       <div class="leader-card">
         <div class="leader-photo">PA</div>
@@ -1900,7 +1902,7 @@
     <img src="grace-church-logo.svg" alt="" aria-hidden="true" style="height: 60px; width: auto; margin: 0 auto 24px; display: block; opacity: 0.6;">
     <div class="eyebrow centered" data-en="Prayer" data-ru="Молитва">Prayer</div>
     <h2 data-en="Share a prayer request." data-ru="Поделитесь молитвенной нуждой.">Share a prayer request.</h2>
-    <p class="lead" data-en="Our pastors and elders pray over every request submitted here. You may share your name or remain anonymous." data-ru="Наши пасторы и пресвитеры молятся над каждой нуждой. Вы можете указать имя или остаться анонимным.">Our pastors and elders pray over every request submitted here. You may share your name or remain anonymous.</p>
+    <p class="lead" data-en="Our pastor and elders pray over every request submitted here. You may share your name or remain anonymous." data-ru="Наш пастор и пресвитеры молятся над каждой нуждой. Вы можете указать имя или остаться анонимным.">Our pastor and elders pray over every request submitted here. You may share your name or remain anonymous.</p>
     <form class="prayer-form" action="https://formspree.io/f/PLACEHOLDER" method="POST">
       <input type="hidden" name="_subject" value="Prayer Request — Grace Evangelical Church">
       <label for="pr-name" data-en="Your name (optional)" data-ru="Ваше имя (необязательно)">Your name (optional)</label>
@@ -1982,7 +1984,6 @@
         <ul>
           <li><a href="#beliefs" data-en="Our beliefs" data-ru="Вероучение">Our beliefs</a></li>
           <li><a href="#leadership" data-en="Leadership" data-ru="Руководство">Leadership</a></li>
-          <li><a href="https://tithe.ly/give_new/www/#/tithely/give-one-time/PLACEHOLDER" target="_blank" rel="noopener" data-en="Give" data-ru="Пожертвовать">Give</a></li>
         </ul>
       </div>
     </div>
