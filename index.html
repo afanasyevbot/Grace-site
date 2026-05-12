@@ -1343,6 +1343,7 @@
 
   /* ====== CONTACT ====== */
   .contact-section {
+    background: var(--bark);
     max-width: none;
     margin: 0;
     padding: 110px 40px;
@@ -1350,80 +1351,88 @@
 
   .contact-header {
     text-align: center;
-    max-width: 1200px;
-    margin: 0 auto 60px;
+    max-width: 900px;
+    margin: 0 auto 64px;
   }
 
   .contact-header .eyebrow {
     justify-content: center;
+    color: var(--gold-soft);
+  }
+
+  .contact-header .eyebrow::before,
+  .contact-header .eyebrow::after {
+    background: var(--gold-soft);
   }
 
   .contact-header h2 {
     font-family: 'Fraunces', serif;
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 300;
-    color: var(--bark);
+    color: var(--cream);
+    letter-spacing: -0.02em;
   }
 
-  .contact {
-    display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px;
-    align-items: start;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .contact-info-card {
-    background: var(--cream);
-    padding: 44px 40px;
-    border: 1px solid rgba(61, 47, 33, 0.2);
-    box-shadow: 5px 5px 0 rgba(61, 47, 33, 0.1);
+  .contact-info-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 860px;
+    margin: 0 auto 64px;
+    border: 1px solid rgba(245, 241, 232, 0.15);
+    padding: 40px 0;
     position: relative;
   }
 
-  .contact-info-card::after {
+  .contact-info-strip::after {
     content: '';
     position: absolute;
     inset: 8px;
-    border: 1px solid rgba(61, 47, 33, 0.08);
+    border: 1px solid rgba(245, 241, 232, 0.07);
     pointer-events: none;
   }
 
-  .contact-info-item {
-    margin-bottom: 32px;
-    padding-bottom: 32px;
-    border-bottom: 1px solid rgba(61, 47, 33, 0.08);
+  .contact-strip-item {
+    flex: 1;
+    text-align: center;
+    padding: 0 40px;
   }
 
-  .contact-info-item:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
+  .contact-strip-div {
+    width: 1px;
+    height: 64px;
+    background: rgba(245, 241, 232, 0.15);
+    flex-shrink: 0;
   }
 
-  .contact-info-item h3 {
+  .contact-strip-label {
     font-family: 'Inter', sans-serif;
     font-size: 10px;
-    font-weight: 600;
-    color: var(--forest);
-    letter-spacing: 0.15em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
+    color: var(--gold-soft);
+    font-weight: 600;
     margin-bottom: 10px;
   }
 
-  .contact-info-item p, .contact-info-item a {
-    font-size: 15px; color: var(--bark);
-    line-height: 1.75; text-decoration: none;
+  .contact-strip-value {
+    font-size: 15px;
+    color: rgba(245, 241, 232, 0.8);
+    line-height: 1.75;
+    margin: 0;
   }
 
-  .contact-info-item a:hover { color: var(--forest); }
+  .contact-strip-value a {
+    color: rgba(245, 241, 232, 0.8);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
 
-  .contact-form h3 {
-    font-family: 'Fraunces', serif;
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--bark);
-    margin-bottom: 28px;
-    letter-spacing: 0.01em;
+  .contact-strip-value a:hover { color: var(--gold-soft); }
+
+  .contact-form-wrap {
+    max-width: 580px;
+    margin: 0 auto;
   }
 
   .contact-form label {
@@ -1431,10 +1440,10 @@
     font-size: 11px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--forest);
+    color: var(--gold-soft);
     font-weight: 600;
     margin-bottom: 8px;
-    margin-top: 20px;
+    margin-top: 24px;
   }
 
   .contact-form label:first-of-type { margin-top: 0; }
@@ -1442,36 +1451,47 @@
   .contact-form input, .contact-form textarea {
     width: 100%;
     padding: 14px 16px;
-    border: 1px solid rgba(61, 47, 33, 0.15);
-    background: #faf3e3; color: var(--ink);
+    border: 1px solid rgba(245, 241, 232, 0.15);
+    background: rgba(245, 241, 232, 0.06);
+    color: var(--cream);
     font-family: inherit; font-size: 15px;
-    margin-bottom: 0; border-radius: 2px;
+    border-radius: 2px;
     transition: border-color 0.2s;
   }
 
   .contact-form input::placeholder, .contact-form textarea::placeholder {
-    color: var(--tan);
+    color: rgba(245, 241, 232, 0.3);
     font-style: italic;
   }
 
   .contact-form input:focus, .contact-form textarea:focus {
-    outline: none; border-color: var(--forest);
+    outline: none; border-color: var(--gold-soft);
   }
 
   .contact-form textarea { resize: vertical; min-height: 140px; }
 
   .contact-form button {
-    background: var(--bark); color: var(--cream);
-    padding: 14px 36px; border: 1px solid var(--bark);
-    font-size: 14px; font-weight: 500;
+    background: var(--cream); color: var(--bark);
+    border: 1px solid var(--cream);
+    padding: 16px 36px;
+    font-size: 14px; font-weight: 600;
     cursor: pointer; font-family: inherit;
-    margin-top: 28px;
+    margin-top: 28px; width: 100%;
     transition: all 0.15s;
     border-radius: 2px;
-    box-shadow: 4px 4px 0 rgba(61, 47, 33, 0.2);
+    letter-spacing: 0.04em;
+    box-shadow: 4px 4px 0 rgba(245, 241, 232, 0.15);
   }
 
-  .contact-form button:hover { background: var(--forest); border-color: var(--forest); transform: translate(2px, 2px); box-shadow: 2px 2px 0 rgba(61, 47, 33, 0.15); }
+  .contact-form button:hover {
+    background: var(--gold-soft); border-color: var(--gold-soft);
+    transform: translate(2px, 2px); box-shadow: 2px 2px 0 rgba(245, 241, 232, 0.1);
+  }
+
+  @media (max-width: 700px) {
+    .contact-info-strip { flex-direction: column; gap: 28px; padding: 32px 24px; }
+    .contact-strip-div { width: 60px; height: 1px; }
+  }
 
   /* ====== FOOTER ====== */
   footer {
@@ -1949,43 +1969,42 @@
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section class="section contact-section" id="contact">
+<section class="contact-section" id="contact">
   <div class="contact-header">
     <div class="eyebrow centered" data-en="Contact" data-ru="Контакты">Contact</div>
     <h2 data-en="We'd love to hear from you." data-ru="Будем рады услышать вас.">We'd love to hear from you.</h2>
   </div>
-  <div class="contact">
-    <div class="contact-info">
-      <div class="contact-info-card">
-        <div class="contact-info-item">
-          <h3 data-en="Visit" data-ru="Адрес">Visit</h3>
-          <p>1985 Diffley Rd<br>Eagan, MN 55122</p>
-        </div>
-        <div class="contact-info-item">
-          <h3 data-en="Email" data-ru="Эл. почта">Email</h3>
-          <p><a href="mailto:contact@eagangrace.com">contact@eagangrace.com</a></p>
-        </div>
-        <div class="contact-info-item">
-          <h3 data-en="Service times" data-ru="Время служений">Service times</h3>
-          <p data-en="Sunday · 10:30 AM — main service<br>Wednesday · 6:30 PM — prayer service<br>Weeknights — small groups in homes" data-ru="Воскресенье · 10:30 — основное служение<br>Среда · 18:30 — молитвенное служение<br>По будням — домашние группы">Sunday · 10:30 AM — main service<br>Wednesday · 6:30 PM — prayer service<br>Weeknights — small groups in homes</p>
-        </div>
-      </div>
+
+  <div class="contact-info-strip">
+    <div class="contact-strip-item">
+      <div class="contact-strip-label" data-en="Visit" data-ru="Адрес">Visit</div>
+      <p class="contact-strip-value">1985 Diffley Rd<br>Eagan, MN 55122</p>
     </div>
-    <div class="contact-form">
-      <h3 data-en="Send us a message" data-ru="Напишите нам">Send us a message</h3>
-      <div id="contact-success" style="display:none; font-family:'Fraunces',serif; font-style:italic; font-size:18px; color:var(--forest); padding:20px 0;">Thank you — we'll be in touch soon.</div>
-      <div id="contact-error" style="display:none; color:#c0392b; font-size:14px; margin-bottom:14px;"></div>
-      <form id="contact-form">
-        <input type="hidden" name="_subject" value="Contact — eagangrace.com">
-        <label for="cf-name" data-en="Name" data-ru="Имя">Name</label>
-        <input type="text" id="cf-name" name="name" placeholder="Your name" required>
-        <label for="cf-email" data-en="Email" data-ru="Эл. почта">Email</label>
-        <input type="email" id="cf-email" name="email" placeholder="Email address" required>
-        <label for="cf-message" data-en="Message" data-ru="Сообщение">Message</label>
-        <textarea id="cf-message" name="message" placeholder="How can we help?" required></textarea>
-        <button type="submit" id="contact-btn" data-en="Send message" data-ru="Отправить">Send message</button>
-      </form>
+    <div class="contact-strip-div"></div>
+    <div class="contact-strip-item">
+      <div class="contact-strip-label" data-en="Email" data-ru="Эл. почта">Email</div>
+      <p class="contact-strip-value"><a href="mailto:contact@eagangrace.com">contact@eagangrace.com</a></p>
     </div>
+    <div class="contact-strip-div"></div>
+    <div class="contact-strip-item">
+      <div class="contact-strip-label" data-en="Service times" data-ru="Время служений">Service times</div>
+      <p class="contact-strip-value" data-en="Sunday · 10:30 AM<br>Wednesday · 6:30 PM<br>Weeknights — small groups" data-ru="Воскресенье · 10:30<br>Среда · 18:30<br>По будням — домашние группы">Sunday · 10:30 AM<br>Wednesday · 6:30 PM<br>Weeknights — small groups</p>
+    </div>
+  </div>
+
+  <div class="contact-form contact-form-wrap">
+    <div id="contact-success" style="display:none; font-family:'Fraunces',serif; font-style:italic; font-size:20px; color:var(--gold-soft); padding:40px 0; text-align:center;">Thank you — we'll be in touch soon.</div>
+    <div id="contact-error" style="display:none; color:#e07070; font-size:14px; margin-bottom:14px;"></div>
+    <form id="contact-form">
+      <input type="hidden" name="_subject" value="Contact — eagangrace.com">
+      <label for="cf-name" data-en="Name" data-ru="Имя">Name</label>
+      <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+      <label for="cf-email" data-en="Email" data-ru="Эл. почта">Email</label>
+      <input type="email" id="cf-email" name="email" placeholder="Email address" required>
+      <label for="cf-message" data-en="Message" data-ru="Сообщение">Message</label>
+      <textarea id="cf-message" name="message" placeholder="How can we help?" required></textarea>
+      <button type="submit" id="contact-btn" data-en="Send message" data-ru="Отправить">Send message</button>
+    </form>
   </div>
 </section>
 </main>
