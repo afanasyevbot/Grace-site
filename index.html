@@ -1355,15 +1355,15 @@
   }
 
   .contact-info-card {
-    background: #f5ecd8;
-    padding: 40px 36px;
-    border: 1px solid rgba(61, 47, 33, 0.08);
-    border-left: 3px solid var(--forest);
+    background: var(--cream);
+    padding: 44px 40px;
+    border: 1px solid rgba(61, 47, 33, 0.1);
+    box-shadow: 0 4px 28px rgba(61, 47, 33, 0.07);
   }
 
   .contact-info-item {
-    margin-bottom: 28px;
-    padding-bottom: 28px;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
     border-bottom: 1px solid rgba(61, 47, 33, 0.08);
   }
 
@@ -1374,15 +1374,18 @@
   }
 
   .contact-info-item h3 {
-    font-family: 'Fraunces', serif; font-size: 16px;
-    font-weight: 500; color: var(--bark);
-    margin-bottom: 8px;
-    letter-spacing: 0.02em;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--forest);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
   }
 
   .contact-info-item p, .contact-info-item a {
-    font-size: 15px; color: var(--bark-soft);
-    line-height: 1.7; text-decoration: none;
+    font-size: 15px; color: var(--bark);
+    line-height: 1.75; text-decoration: none;
   }
 
   .contact-info-item a:hover { color: var(--forest); }
@@ -1903,13 +1906,17 @@
     <div class="eyebrow centered" data-en="Prayer" data-ru="Молитва">Prayer</div>
     <h2 data-en="Share a prayer request." data-ru="Поделитесь молитвенной нуждой.">Share a prayer request.</h2>
     <p class="lead" data-en="Our pastor and elders pray over every request submitted here. You may share your name or remain anonymous." data-ru="Наш пастор и пресвитеры молятся над каждой нуждой. Вы можете указать имя или остаться анонимным.">Our pastor and elders pray over every request submitted here. You may share your name or remain anonymous.</p>
-    <form class="prayer-form" action="https://formspree.io/f/PLACEHOLDER" method="POST">
+    <div data-fs-success style="color: var(--forest); margin-bottom: 16px; display: none;">Your request has been received — our pastor and elders will be praying.</div>
+    <div data-fs-error style="color: #c0392b; margin-bottom: 16px; display: none;"></div>
+    <form id="prayer-form" class="prayer-form">
       <input type="hidden" name="_subject" value="Prayer Request — Grace Evangelical Church">
       <label for="pr-name" data-en="Your name (optional)" data-ru="Ваше имя (необязательно)">Your name (optional)</label>
-      <input type="text" id="pr-name" name="name" placeholder="Leave blank to remain anonymous">
+      <input type="text" id="pr-name" name="name" placeholder="Leave blank to remain anonymous" data-fs-field>
+      <span data-fs-error="name"></span>
       <label for="pr-request" data-en="Prayer request" data-ru="Молитвенная нужда">Prayer request</label>
-      <textarea id="pr-request" name="request" required placeholder="Share what's on your heart…"></textarea>
-      <button type="submit" data-en="Submit request" data-ru="Отправить">Submit request</button>
+      <textarea id="pr-request" name="request" required placeholder="Share what's on your heart…" data-fs-field></textarea>
+      <span data-fs-error="request"></span>
+      <button type="submit" data-fs-submit-btn data-en="Submit request" data-ru="Отправить">Submit request</button>
     </form>
     <p class="prayer-note" data-en="All requests are held in confidence." data-ru="Все нужды хранятся в тайне.">All requests are held in confidence.</p>
   </div>
@@ -1930,7 +1937,7 @@
         </div>
         <div class="contact-info-item">
           <h3 data-en="Email" data-ru="Эл. почта">Email</h3>
-          <p><a href="mailto:grace.church.1999@gmail.com">grace.church.1999@gmail.com</a></p>
+          <p><a href="mailto:contact@eagangrace.com">contact@eagangrace.com</a></p>
         </div>
         <div class="contact-info-item">
           <h3 data-en="Service times" data-ru="Время служений">Service times</h3>
@@ -1940,16 +1947,21 @@
     </div>
     <div class="contact-form">
       <h3 data-en="Send us a message" data-ru="Напишите нам">Send us a message</h3>
-      <form onsubmit="return handleForm(event)">
+      <div data-fs-success style="font-size: 14px; color: var(--forest); margin-bottom: 14px; display: none;">Thank you — we'll be in touch soon.</div>
+      <div data-fs-error style="font-size: 14px; color: #c0392b; margin-bottom: 14px; display: none;"></div>
+      <form id="contact-form">
+        <input type="hidden" name="_subject" value="Contact — eagangrace.com">
         <label for="cf-name" data-en="Name" data-ru="Имя">Name</label>
-        <input type="text" id="cf-name" placeholder="Your name" required>
+        <input type="text" id="cf-name" name="name" placeholder="Your name" required data-fs-field>
+        <span data-fs-error="name"></span>
         <label for="cf-email" data-en="Email" data-ru="Эл. почта">Email</label>
-        <input type="email" id="cf-email" placeholder="Email address" required>
+        <input type="email" id="cf-email" name="email" placeholder="Email address" required data-fs-field>
+        <span data-fs-error="email"></span>
         <label for="cf-message" data-en="Message" data-ru="Сообщение">Message</label>
-        <textarea id="cf-message" placeholder="How can we help?" required></textarea>
-        <button type="submit" data-en="Send message" data-ru="Отправить">Send message</button>
+        <textarea id="cf-message" name="message" placeholder="How can we help?" required data-fs-field></textarea>
+        <span data-fs-error="message"></span>
+        <button type="submit" data-fs-submit-btn data-en="Send message" data-ru="Отправить">Send message</button>
       </form>
-      <p id="formResult" style="font-size: 14px; color: var(--forest); margin-top: 14px; display: none;"></p>
     </div>
   </div>
 </section>
@@ -2054,21 +2066,9 @@
     });
   });
 
-  function handleForm(e) {
-    e.preventDefault();
-    const name = document.getElementById('cf-name').value;
-    const email = document.getElementById('cf-email').value;
-    const message = document.getElementById('cf-message').value;
-    const body = encodeURIComponent(`From: ${name} (${email})\n\n${message}`);
-    const subject = encodeURIComponent('Message from eagangrace.com');
-    window.location.href = `mailto:grace.church.1999@gmail.com?subject=${subject}&body=${body}`;
-    const r = document.getElementById('formResult');
-    r.style.display = 'block';
-    r.textContent = document.documentElement.lang === 'ru'
-      ? 'Спасибо — откроется ваш почтовый клиент для отправки сообщения.'
-      : 'Thank you — your email client will open to send the message.';
-    return false;
-  }
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#prayer-form', formId: 'mpqbbqzq' });
+  formspree('initForm', { formElement: '#contact-form', formId: 'mpqbbqzq' });
 
   // ========== SERMON TABLE — pulls from YouTube RSS feed ==========
   const CHANNEL_ID = 'UCFSu5oA0geK04MTEhFo4g3g';
@@ -2171,6 +2171,8 @@
   loadSermons();
 
 </script>
+
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>
