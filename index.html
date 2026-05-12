@@ -2116,57 +2116,66 @@
   let cachedSermons = [];
 
   async function loadSermons() {
+    const showError = () => {
+      const tbody = document.getElementById('sermon-tbody');
+      const lang = document.documentElement.lang || 'en';
+      tbody.innerHTML = '<tr><td colspan="3" class="sermon-loading">' +
+        (lang === 'ru'
+          ? 'Не удалось загрузить проповеди. Посетите наш <a href="https://www.youtube.com/@gracechurch4000" target="_blank" rel="noopener">YouTube канал</a> напрямую.'
+          : 'Could not load sermons. Visit our <a href="https://www.youtube.com/@gracechurch4000" target="_blank" rel="noopener">YouTube channel</a> directly.') +
+        '</td></tr>';
+    };
+
+    // Strategy 1: rss2json (dedicated service, most reliable)
+    try {
+      const r2jUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(RSS_URL);
+      const res = await fetch(r2jUrl);
+      if (res.ok) {
+        const data = await res.json();
+        if (data.status === 'ok' && data.items?.length) {
+          cachedSermons = data.items.slice(0, MAX_SERMONS).map(item => ({
+            title: item.title || 'Untitled',
+            link: item.link || '#',
+            date: item.pubDate || new Date().toISOString()
+          }));
+          renderSermons(cachedSermons);
+          return;
+        }
+      }
+    } catch (err) {
+      console.warn('rss2json failed:', err.message);
+    }
+
+    // Strategy 2: CORS proxy fallbacks (raw XML)
     const proxies = [
       url => 'https://corsproxy.io/?' + encodeURIComponent(url),
       url => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),
       url => 'https://api.codetabs.com/v1/proxy/?quest=' + encodeURIComponent(url)
     ];
 
-    let xmlText = null;
-
     for (const buildUrl of proxies) {
       try {
         const response = await fetch(buildUrl(RSS_URL), { cache: 'no-cache' });
         if (!response.ok) throw new Error('HTTP ' + response.status);
-        xmlText = await response.text();
-        if (xmlText && xmlText.length > 100) break;
-        xmlText = null;
+        const xmlText = await response.text();
+        if (!xmlText || xmlText.length < 100) throw new Error('Empty response');
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(xmlText, 'text/xml');
+        const entries = xml.querySelectorAll('entry');
+        if (!entries.length) throw new Error('No entries');
+        cachedSermons = Array.from(entries).slice(0, MAX_SERMONS).map(entry => ({
+          title: entry.querySelector('title')?.textContent || 'Untitled',
+          link: entry.querySelector('link')?.getAttribute('href') || '#',
+          date: entry.querySelector('published')?.textContent || new Date().toISOString()
+        }));
+        renderSermons(cachedSermons);
+        return;
       } catch (err) {
         console.warn('Sermons proxy failed:', err.message);
       }
     }
 
-    if (!xmlText) {
-      const tbody = document.getElementById('sermon-tbody');
-      const lang = document.documentElement.lang || 'en';
-      tbody.innerHTML = '<tr><td colspan="3" class="sermon-loading">' +
-        (lang === 'ru'
-          ? 'Не удалось загрузить проповеди. Посетите наш YouTube канал напрямую.'
-          : 'Could not load sermons. Please visit our YouTube channel directly.') +
-        '</td></tr>';
-      return;
-    }
-
-    try {
-      const parser = new DOMParser();
-      const xml = parser.parseFromString(xmlText, 'text/xml');
-      const entries = xml.querySelectorAll('entry');
-      cachedSermons = Array.from(entries).slice(0, MAX_SERMONS).map(entry => ({
-        title: entry.querySelector('title')?.textContent || 'Untitled',
-        link: entry.querySelector('link')?.getAttribute('href') || '#',
-        date: entry.querySelector('published')?.textContent || new Date().toISOString()
-      }));
-      renderSermons(cachedSermons);
-    } catch (err) {
-      console.error('Sermons parsing failed:', err);
-      const tbody = document.getElementById('sermon-tbody');
-      const lang = document.documentElement.lang || 'en';
-      tbody.innerHTML = '<tr><td colspan="3" class="sermon-loading">' +
-        (lang === 'ru'
-          ? 'Не удалось загрузить проповеди. Посетите наш YouTube канал напрямую.'
-          : 'Could not load sermons. Please visit our YouTube channel directly.') +
-        '</td></tr>';
-    }
+    showError();
   }
 
   // Re-render sermons when language changes
