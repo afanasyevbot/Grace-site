@@ -1914,17 +1914,15 @@
     <div class="eyebrow centered" data-en="Prayer" data-ru="Молитва">Prayer</div>
     <h2 data-en="Share a prayer request." data-ru="Поделитесь молитвенной нуждой.">Share a prayer request.</h2>
     <p class="lead" data-en="Our pastor and elders pray over every request submitted here. You may share your name or remain anonymous." data-ru="Наш пастор и пресвитеры молятся над каждой нуждой. Вы можете указать имя или остаться анонимным.">Our pastor and elders pray over every request submitted here. You may share your name or remain anonymous.</p>
-    <div data-fs-success style="color: var(--forest); margin-bottom: 16px; display: none;">Your request has been received — our pastor and elders will be praying.</div>
-    <div data-fs-error style="color: #c0392b; margin-bottom: 16px; display: none;"></div>
+    <div id="prayer-success" style="display:none; font-family:'Fraunces',serif; font-style:italic; font-size:18px; color:var(--forest); margin-bottom:16px;">Your request has been received — our pastor and elders will be praying.</div>
+    <div id="prayer-error" style="display:none; color:#c0392b; font-size:14px; margin-bottom:16px;"></div>
     <form id="prayer-form" class="prayer-form">
       <input type="hidden" name="_subject" value="Prayer Request — Grace Evangelical Church">
       <label for="pr-name" data-en="Your name (optional)" data-ru="Ваше имя (необязательно)">Your name (optional)</label>
-      <input type="text" id="pr-name" name="name" placeholder="Leave blank to remain anonymous" data-fs-field>
-      <span data-fs-error="name"></span>
+      <input type="text" id="pr-name" name="name" placeholder="Leave blank to remain anonymous">
       <label for="pr-request" data-en="Prayer request" data-ru="Молитвенная нужда">Prayer request</label>
-      <textarea id="pr-request" name="request" required placeholder="Share what's on your heart…" data-fs-field></textarea>
-      <span data-fs-error="request"></span>
-      <button type="submit" data-fs-submit-btn data-en="Submit request" data-ru="Отправить">Submit request</button>
+      <textarea id="pr-request" name="request" required placeholder="Share what's on your heart…"></textarea>
+      <button type="submit" id="prayer-btn" data-en="Submit request" data-ru="Отправить">Submit request</button>
     </form>
     <p class="prayer-note" data-en="All requests are held in confidence." data-ru="Все нужды хранятся в тайне.">All requests are held in confidence.</p>
   </div>
@@ -1955,20 +1953,17 @@
     </div>
     <div class="contact-form">
       <h3 data-en="Send us a message" data-ru="Напишите нам">Send us a message</h3>
-      <div data-fs-success style="font-size: 14px; color: var(--forest); margin-bottom: 14px; display: none;">Thank you — we'll be in touch soon.</div>
-      <div data-fs-error style="font-size: 14px; color: #c0392b; margin-bottom: 14px; display: none;"></div>
+      <div id="contact-success" style="display:none; font-family:'Fraunces',serif; font-style:italic; font-size:18px; color:var(--forest); padding:20px 0;">Thank you — we'll be in touch soon.</div>
+      <div id="contact-error" style="display:none; color:#c0392b; font-size:14px; margin-bottom:14px;"></div>
       <form id="contact-form">
         <input type="hidden" name="_subject" value="Contact — eagangrace.com">
         <label for="cf-name" data-en="Name" data-ru="Имя">Name</label>
-        <input type="text" id="cf-name" name="name" placeholder="Your name" required data-fs-field>
-        <span data-fs-error="name"></span>
+        <input type="text" id="cf-name" name="name" placeholder="Your name" required>
         <label for="cf-email" data-en="Email" data-ru="Эл. почта">Email</label>
-        <input type="email" id="cf-email" name="email" placeholder="Email address" required data-fs-field>
-        <span data-fs-error="email"></span>
+        <input type="email" id="cf-email" name="email" placeholder="Email address" required>
         <label for="cf-message" data-en="Message" data-ru="Сообщение">Message</label>
-        <textarea id="cf-message" name="message" placeholder="How can we help?" required data-fs-field></textarea>
-        <span data-fs-error="message"></span>
-        <button type="submit" data-fs-submit-btn data-en="Send message" data-ru="Отправить">Send message</button>
+        <textarea id="cf-message" name="message" placeholder="How can we help?" required></textarea>
+        <button type="submit" id="contact-btn" data-en="Send message" data-ru="Отправить">Send message</button>
       </form>
     </div>
   </div>
@@ -2074,9 +2069,49 @@
     });
   });
 
-  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-  formspree('initForm', { formElement: '#prayer-form', formId: 'mpqbbqzq' });
-  formspree('initForm', { formElement: '#contact-form', formId: 'mpqbbqzq' });
+  const FORMSPREE_URL = 'https://formspree.io/f/mpqbbqzq';
+
+  async function submitForm(formEl, btnId, successId, errorId) {
+    const btn = document.getElementById(btnId);
+    const successEl = document.getElementById(successId);
+    const errorEl = document.getElementById(errorId);
+    const original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = '…';
+    errorEl.style.display = 'none';
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        body: new FormData(formEl),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        formEl.style.display = 'none';
+        successEl.style.display = 'block';
+      } else {
+        const data = await res.json().catch(() => ({}));
+        errorEl.textContent = data.error || 'Something went wrong. Please email us directly.';
+        errorEl.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = original;
+      }
+    } catch {
+      errorEl.textContent = 'Could not send. Please email contact@eagangrace.com directly.';
+      errorEl.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = original;
+    }
+  }
+
+  document.getElementById('prayer-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    submitForm(this, 'prayer-btn', 'prayer-success', 'prayer-error');
+  });
+
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    submitForm(this, 'contact-btn', 'contact-success', 'contact-error');
+  });
 
   // ========== SERMON TABLE — pulls from YouTube RSS feed ==========
   const CHANNEL_ID = 'UCFSu5oA0geK04MTEhFo4g3g';
@@ -2188,8 +2223,6 @@
   loadSermons();
 
 </script>
-
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>
