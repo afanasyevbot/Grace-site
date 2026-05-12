@@ -914,7 +914,7 @@
   .gallery-section {
     padding-top: 110px;
     padding-bottom: 110px;
-    background: #e2d5bc;
+    background: var(--bark);
     max-width: none;
     margin: 0;
   }
@@ -927,16 +927,24 @@
 
   .gallery-section > .eyebrow {
     justify-content: center;
+    color: var(--gold-soft);
+  }
+
+  .gallery-section > .eyebrow::before,
+  .gallery-section > .eyebrow::after {
+    background: var(--gold-soft);
   }
 
   .gallery-section > h2 {
     text-align: center;
+    color: var(--cream);
   }
 
   .gallery-section > p.lead {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    color: rgba(245, 241, 232, 0.75);
   }
 
   .gallery-grid {
