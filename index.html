@@ -1251,34 +1251,109 @@
 
   /* ====== PRAYER REQUEST ====== */
   .prayer-section {
-    padding: 60px 40px;
-    background: #ece3cf;
-    text-align: center;
+    background: var(--forest);
+    max-width: none;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 580px;
   }
 
-  .prayer-inner {
-    max-width: 620px;
-    margin: 0 auto;
+  .prayer-left {
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
   }
 
-  .prayer-section h2 {
+  .prayer-left::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 48px; bottom: 48px;
+    width: 1px;
+    background: rgba(245, 241, 232, 0.1);
+  }
+
+  .prayer-left-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    font-weight: 600;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .prayer-left-eyebrow::before {
+    content: '';
+    width: 36px; height: 1px;
+    background: var(--gold-soft);
+    flex-shrink: 0;
+  }
+
+  .prayer-left h2 {
     font-family: 'Fraunces', serif;
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
     font-weight: 300;
+    color: var(--cream);
     letter-spacing: -0.02em;
-    color: var(--bark);
-    margin-bottom: 16px;
+    line-height: 1.2;
+    margin-bottom: 32px;
   }
 
-  .prayer-section p.lead {
+  .prayer-verse {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
     font-size: 16px;
-    color: var(--muted);
-    line-height: 1.7;
-    margin-bottom: 36px;
+    color: rgba(245, 241, 232, 0.55);
+    line-height: 1.75;
+    margin: 0;
   }
 
-  .prayer-form {
-    text-align: left;
+  .prayer-verse cite {
+    display: block;
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--gold-soft);
+    margin-top: 14px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .prayer-right {
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .prayer-form-panel {
+    border: 1px solid rgba(245, 241, 232, 0.15);
+    padding: 44px 40px;
+    position: relative;
+  }
+
+  .prayer-form-panel::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 1px solid rgba(245, 241, 232, 0.06);
+    pointer-events: none;
+  }
+
+  .prayer-form { text-align: left; }
+
+  .prayer-form-hint {
+    font-size: 13px;
+    color: rgba(245, 241, 232, 0.45);
+    font-style: italic;
+    margin: 0 0 28px;
+    line-height: 1.6;
   }
 
   .prayer-form label {
@@ -1286,7 +1361,7 @@
     font-size: 11px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--forest);
+    color: var(--gold-soft);
     font-weight: 600;
     margin-bottom: 8px;
     margin-top: 20px;
@@ -1297,44 +1372,55 @@
   .prayer-form input, .prayer-form textarea {
     width: 100%;
     padding: 14px 16px;
-    border: 1px solid rgba(61, 47, 33, 0.15);
-    background: #faf3e3;
-    color: var(--ink);
-    font-family: inherit;
-    font-size: 15px;
+    border: 1px solid rgba(245, 241, 232, 0.15);
+    background: rgba(245, 241, 232, 0.05);
+    color: var(--cream);
+    font-family: inherit; font-size: 15px;
     border-radius: 2px;
     transition: border-color 0.2s;
   }
 
   .prayer-form input::placeholder, .prayer-form textarea::placeholder {
-    color: var(--tan); font-style: italic;
+    color: rgba(245, 241, 232, 0.28); font-style: italic;
   }
 
   .prayer-form input:focus, .prayer-form textarea:focus {
-    outline: none; border-color: var(--forest);
+    outline: none; border-color: var(--gold-soft);
   }
 
-  .prayer-form textarea { resize: vertical; min-height: 160px; }
+  .prayer-form textarea { resize: vertical; min-height: 130px; }
 
   .prayer-form button {
     margin-top: 24px;
     width: 100%;
-    background: var(--bark); color: var(--cream);
-    padding: 14px 28px; border: 1px solid var(--bark);
-    font-size: 14px; font-weight: 500;
+    background: var(--cream); color: var(--forest);
+    padding: 14px 28px; border: 1px solid var(--cream);
+    font-size: 14px; font-weight: 600;
     cursor: pointer; font-family: inherit;
     border-radius: 2px; transition: all 0.15s;
-    letter-spacing: 0.03em;
-    box-shadow: 4px 4px 0 rgba(61, 47, 33, 0.2);
+    letter-spacing: 0.04em;
+    box-shadow: 4px 4px 0 rgba(245, 241, 232, 0.15);
   }
 
-  .prayer-form button:hover { background: var(--forest); border-color: var(--forest); transform: translate(2px, 2px); box-shadow: 2px 2px 0 rgba(61, 47, 33, 0.15); }
+  .prayer-form button:hover {
+    background: var(--gold-soft); border-color: var(--gold-soft); color: var(--bark);
+    transform: translate(2px, 2px); box-shadow: 2px 2px 0 rgba(245, 241, 232, 0.1);
+  }
 
   .prayer-note {
     margin-top: 16px;
-    font-size: 13px;
-    color: var(--muted);
+    font-size: 12px;
+    color: rgba(245, 241, 232, 0.35);
     font-style: italic;
+    text-align: center;
+  }
+
+  @media (max-width: 860px) {
+    .prayer-section { grid-template-columns: 1fr; }
+    .prayer-left { padding: 60px 32px 40px; }
+    .prayer-left::after { display: none; }
+    .prayer-right { padding: 0 32px 60px; }
+    .prayer-form-panel { padding: 32px 24px; }
   }
 
   @media (max-width: 960px) {
@@ -1949,22 +2035,26 @@
 
 <!-- ============ PRAYER REQUEST ============ -->
 <section class="prayer-section" id="prayer">
-  <div class="prayer-inner">
-    <img src="grace-church-logo.svg" alt="" aria-hidden="true" style="height: 60px; width: auto; margin: 0 auto 24px; display: block; opacity: 0.6;">
-    <div class="eyebrow centered" data-en="Prayer" data-ru="Молитва">Prayer</div>
+  <div class="prayer-left">
+    <div class="prayer-left-eyebrow" data-en="Prayer" data-ru="Молитва">Prayer</div>
     <h2 data-en="Share a prayer request." data-ru="Поделитесь молитвенной нуждой.">Share a prayer request.</h2>
-    <p class="lead" data-en="Our pastor and elders pray over every request submitted here. You may share your name or remain anonymous." data-ru="Наш пастор и пресвитеры молятся над каждой нуждой. Вы можете указать имя или остаться анонимным.">Our pastor and elders pray over every request submitted here. You may share your name or remain anonymous.</p>
-    <div id="prayer-success" style="display:none; font-family:'Fraunces',serif; font-style:italic; font-size:18px; color:var(--forest); margin-bottom:16px;">Your request has been received — our pastor and elders will be praying.</div>
-    <div id="prayer-error" style="display:none; color:#c0392b; font-size:14px; margin-bottom:16px;"></div>
-    <form id="prayer-form" class="prayer-form">
-      <input type="hidden" name="_subject" value="Prayer Request — Grace Evangelical Church">
-      <label for="pr-name" data-en="Your name (optional)" data-ru="Ваше имя (необязательно)">Your name (optional)</label>
-      <input type="text" id="pr-name" name="name" placeholder="Leave blank to remain anonymous">
-      <label for="pr-request" data-en="Prayer request" data-ru="Молитвенная нужда">Prayer request</label>
-      <textarea id="pr-request" name="request" required placeholder="Share what's on your heart…"></textarea>
-      <button type="submit" id="prayer-btn" data-en="Submit request" data-ru="Отправить">Submit request</button>
-    </form>
-    <p class="prayer-note" data-en="All requests are held in confidence." data-ru="Все нужды хранятся в тайне.">All requests are held in confidence.</p>
+    <p class="prayer-verse" data-en='"Do not be anxious about anything, but in everything by prayer and supplication with thanksgiving let your requests be made known to God." <cite>— Philippians 4:6</cite>' data-ru='"Не заботьтесь ни о чём, но всегда в молитве и прошении с благодарением открывайте свои желания пред Богом." <cite>— Филиппийцам 4:6</cite>'>"Do not be anxious about anything, but in everything by prayer and supplication with thanksgiving let your requests be made known to God." <cite>— Philippians 4:6</cite></p>
+  </div>
+  <div class="prayer-right">
+    <div class="prayer-form-panel">
+      <div id="prayer-success" style="display:none; font-family:'Fraunces',serif; font-style:italic; font-size:18px; color:var(--gold-soft); text-align:center; padding:20px 0;">Your request has been received — our pastor and elders will be praying.</div>
+      <div id="prayer-error" style="display:none; color:#e07070; font-size:14px; margin-bottom:16px;"></div>
+      <form id="prayer-form" class="prayer-form">
+        <input type="hidden" name="_subject" value="Prayer Request — Grace Evangelical Church">
+        <p class="prayer-form-hint" data-en="Our pastor and elders pray over every request. You may remain anonymous." data-ru="Наш пастор и пресвитеры молятся над каждой нуждой. Вы можете остаться анонимным.">Our pastor and elders pray over every request. You may remain anonymous.</p>
+        <label for="pr-name" data-en="Your name (optional)" data-ru="Ваше имя (необязательно)">Your name (optional)</label>
+        <input type="text" id="pr-name" name="name" placeholder="Leave blank to remain anonymous">
+        <label for="pr-request" data-en="Prayer request" data-ru="Молитвенная нужда">Prayer request</label>
+        <textarea id="pr-request" name="request" required placeholder="Share what's on your heart…"></textarea>
+        <button type="submit" id="prayer-btn" data-en="Submit request" data-ru="Отправить">Submit request</button>
+      </form>
+      <p class="prayer-note" data-en="All requests are held in confidence." data-ru="Все нужды хранятся в тайне.">All requests are held in confidence.</p>
+    </div>
   </div>
 </section>
 
