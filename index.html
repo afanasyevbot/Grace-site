@@ -17,6 +17,75 @@
 <meta name="twitter:title" content="Grace Evangelical Church · Eagan, MN">
 <meta name="twitter:description" content="Where strangers become family. A Russian and English speaking church in Eagan, Minnesota. Sunday service at 10:30 AM.">
 <meta name="twitter:image" content="https://eagangrace.com/og-image.png">
+<!-- Structured data for local SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Church",
+  "name": "Grace Evangelical Church",
+  "alternateName": ["Grace Slavic Church", "Евангельская церковь Благодать"],
+  "description": "A Russian and English speaking evangelical church in Eagan, Minnesota. Where strangers become family.",
+  "url": "https://eagangrace.com",
+  "logo": "https://eagangrace.com/grace-church-logo.svg",
+  "image": "https://eagangrace.com/og-image.png",
+  "slogan": "Where strangers become family",
+  "foundingDate": "1999",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1985 Diffley Rd",
+    "addressLocality": "Eagan",
+    "addressRegion": "MN",
+    "postalCode": "55122",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 44.7878,
+    "longitude": -93.1869
+  },
+  "email": "contact@eagangrace.com",
+  "areaServed": "Twin Cities, Minnesota",
+  "knowsLanguage": ["en", "ru"],
+  "sameAs": [
+    "https://www.youtube.com/@gracechurch4000",
+    "https://www.instagram.com/grace.evangelist.church",
+    "https://www.facebook.com/p/Grace-Slavic-Church-100064707848112/"
+  ],
+  "event": [
+    {
+      "@type": "Event",
+      "name": "Sunday Service",
+      "eventSchedule": {
+        "@type": "Schedule",
+        "byDay": "https://schema.org/Sunday",
+        "startTime": "10:30",
+        "scheduleTimezone": "America/Chicago"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Grace Evangelical Church",
+        "address": "1985 Diffley Rd, Eagan, MN 55122"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "Wednesday Prayer",
+      "eventSchedule": {
+        "@type": "Schedule",
+        "byDay": "https://schema.org/Wednesday",
+        "startTime": "18:30",
+        "scheduleTimezone": "America/Chicago"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Grace Evangelical Church",
+        "address": "1985 Diffley Rd, Eagan, MN 55122"
+      }
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" as="style">
@@ -1688,10 +1757,665 @@
 
     nav ul li.lang-toggle-wrap { padding: 14px 0; }
     nav ul li.give-wrap { padding-top: 14px; }
+
+    nav ul {
+      max-height: 0;
+      overflow: hidden;
+      display: flex !important;
+      transition: max-height 0.35s ease;
+    }
+    nav ul.open { max-height: 600px; }
+  }
+
+  /* ====== ACCESSIBILITY: SKIP LINK ====== */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 8px;
+    z-index: 1000;
+    background: var(--bark);
+    color: var(--cream);
+    padding: 10px 18px;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 2px;
+    letter-spacing: 0.04em;
+  }
+  .skip-link:focus { left: 16px; }
+
+  *:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  .lang-toggle button:focus-visible,
+  .btn-primary:focus-visible,
+  .btn-secondary:focus-visible,
+  .give-btn:focus-visible { outline-offset: 4px; }
+
+  /* ====== SCROLL PROGRESS ====== */
+  .scroll-progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--forest), var(--gold));
+    z-index: 200;
+    transition: width 0.1s ease-out;
+    pointer-events: none;
+  }
+
+  /* ====== HEADER SHRINK ON SCROLL ====== */
+  header { transition: padding 0.3s ease, background 0.3s ease; }
+  header.scrolled {
+    padding: 8px 40px;
+    background: rgba(236, 227, 207, 0.98);
+    box-shadow: 0 2px 20px rgba(61, 47, 33, 0.06);
+  }
+  header.scrolled .brand-logo { height: 64px; transition: height 0.3s ease; }
+  .brand-logo { transition: height 0.3s ease; }
+
+  /* ====== ACTIVE NAV LINK ====== */
+  nav a {
+    transition: color 0.2s;
+  }
+  nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px; left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.25s ease;
+  }
+  nav a:hover::after { width: 100%; }
+  nav a.active {
+    color: var(--forest);
+  }
+  nav a.active::after { width: 100%; background: var(--forest); }
+  nav a.give-btn::after { display: none; }
+
+  /* ====== SCROLL REVEAL ====== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+  }
+  .reveal.in-view {
+    opacity: 1;
+    transform: none;
+  }
+  .reveal-delay-1 { transition-delay: 0.08s; }
+  .reveal-delay-2 { transition-delay: 0.16s; }
+  .reveal-delay-3 { transition-delay: 0.24s; }
+  .reveal-delay-4 { transition-delay: 0.32s; }
+  .reveal-delay-5 { transition-delay: 0.40s; }
+  .reveal-delay-6 { transition-delay: 0.48s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* ====== DECORATIVE ORNAMENT ====== */
+  .ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 60px 20px;
+    background: #ece3cf;
+  }
+  .ornament-line {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold) 50%, transparent);
+    opacity: 0.7;
+  }
+  .ornament-mark {
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--gold);
+    transform: rotate(45deg);
+    opacity: 0.7;
+  }
+  .ornament-mark::after {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 3px;
+    background: var(--gold);
+    margin: 1.5px auto;
+  }
+  .ornament.on-bark { background: var(--bark); }
+  .ornament.on-tan { background: #e2d5bc; }
+
+  /* ====== BACK TO TOP ====== */
+  .back-to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--bark);
+    color: var(--cream);
+    border: 1px solid var(--bark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 90;
+    box-shadow: 0 4px 14px rgba(61, 47, 33, 0.25);
+    font-size: 18px;
+  }
+  .back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  .back-to-top:hover {
+    background: var(--forest);
+    transform: translateY(-3px);
+  }
+
+  /* ====== CARD MICROINTERACTIONS ====== */
+  .belief-item {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative;
+  }
+  .beliefs-dark .belief-item:hover {
+    border-top-color: var(--gold);
+    transform: translateY(-3px);
+  }
+  .beliefs-dark .belief-item:hover .belief-num {
+    color: var(--gold-soft);
+    letter-spacing: 0.1em;
+    transition: letter-spacing 0.3s ease;
+  }
+  .belief-num { transition: letter-spacing 0.3s ease, color 0.3s ease; }
+
+  .leader-card {
+    transition: transform 0.3s ease;
+  }
+  .leader-card:hover { transform: translateY(-4px); }
+  .leader-photo {
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    box-shadow: 0 4px 18px rgba(61, 47, 33, 0.08);
+  }
+  .leader-card:hover .leader-photo {
+    transform: scale(1.04);
+    box-shadow: 0 10px 28px rgba(61, 47, 33, 0.18);
+    border-color: var(--gold);
+  }
+  .leader-card:hover .leader-name {
+    color: var(--forest);
+    transition: color 0.3s ease;
+  }
+  .leader-name { transition: color 0.3s ease; }
+
+  /* ====== GALLERY LIGHTBOX ====== */
+  .gallery-tile {
+    transition: transform 0.3s ease;
+  }
+  .gallery-tile:hover {
+    z-index: 2;
+  }
+  .gallery-photo img {
+    transition: transform 0.5s ease, filter 0.4s ease;
+  }
+  .gallery-tile:hover .gallery-photo img {
+    transform: scale(1.06);
+    filter: brightness(1.05);
+  }
+
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 14, 8, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 40px;
+  }
+  .lightbox.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .lightbox-inner {
+    position: relative;
+    max-width: min(1200px, 95vw);
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lightbox img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    transform: scale(0.96);
+    transition: transform 0.4s ease;
+  }
+  .lightbox.open img { transform: scale(1); }
+  .lightbox-caption {
+    color: var(--cream);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    margin-top: 18px;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    opacity: 0.9;
+  }
+  .lightbox-close,
+  .lightbox-nav {
+    position: absolute;
+    background: rgba(245, 241, 232, 0.1);
+    color: var(--cream);
+    border: 1px solid rgba(245, 241, 232, 0.25);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-family: inherit;
+  }
+  .lightbox-close:hover, .lightbox-nav:hover {
+    background: rgba(245, 241, 232, 0.2);
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+  .lightbox-close { top: -56px; right: 0; }
+  .lightbox-nav.prev { left: -64px; top: 50%; transform: translateY(-50%); }
+  .lightbox-nav.next { right: -64px; top: 50%; transform: translateY(-50%); }
+
+  @media (max-width: 800px) {
+    .lightbox { padding: 20px; }
+    .lightbox-nav.prev { left: 8px; }
+    .lightbox-nav.next { right: 8px; }
+    .lightbox-close { top: 8px; right: 8px; }
+  }
+
+  /* ====== MINISTRY / SERVE CARD POLISH ====== */
+  .ministry-card h3,
+  .serve-card h3 {
+    transition: color 0.3s ease;
+  }
+  .ministry-card:hover h3 { color: var(--forest); }
+  .serve-card:hover h3 { color: var(--forest); }
+  .ministry-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 0;
+    background: var(--gold);
+    transition: height 0.4s ease;
+  }
+  .ministry-card:hover::before { height: 100%; }
+
+  /* ====== SOCIAL ICONS ====== */
+  .footer-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .footer-social a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(245, 241, 232, 0.25);
+    color: var(--cream);
+    opacity: 0.8;
+    transition: all 0.25s ease;
+  }
+  .footer-social a:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--bark);
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+  .footer-social svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+
+  /* ====== SCROLL INDICATOR ON HERO ====== */
+  .hero-scroll-cue {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--bark);
+    opacity: 0;
+    animation: fadeIn 1s 2s ease-out forwards, gentleBounce 2.4s 3s ease-in-out infinite;
+    z-index: 2;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+  }
+  .hero-scroll-cue::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 28px;
+    background: var(--bark);
+    margin: 8px auto 0;
+    opacity: 0.5;
+  }
+  @keyframes fadeIn { to { opacity: 0.7; } }
+  @keyframes gentleBounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-scroll-cue { animation: none; opacity: 0.7; }
+  }
+  @media (max-width: 700px) {
+    .hero-scroll-cue { display: none; }
+  }
+
+  /* ====== SERMON ROW POLISH ====== */
+  .sermon-table tbody tr {
+    transition: background 0.2s, transform 0.2s;
+  }
+  .sermon-table tbody tr:hover .sermon-watch a {
+    color: var(--forest);
+  }
+  .sermon-watch a {
+    transition: all 0.2s;
+    position: relative;
+  }
+  .sermon-watch a::after {
+    content: ' ';
+  }
+
+  /* ====== KEN BURNS HERO VIDEO ====== */
+  .hero-video {
+    animation: kenBurns 28s ease-in-out infinite alternate;
+    transform-origin: center center;
+  }
+  @keyframes kenBurns {
+    0%   { transform: scale(1.0)  translate(0, 0); }
+    100% { transform: scale(1.08) translate(-1%, -1.5%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-video { animation: none; }
+  }
+
+  /* ====== ANIMATED HAMBURGER ====== */
+  .mobile-toggle {
+    width: 36px;
+    height: 36px;
+    position: relative;
+  }
+  .mobile-toggle .bar {
+    position: absolute;
+    left: 6px;
+    width: 24px;
+    height: 2px;
+    background: var(--bark);
+    transition: transform 0.3s ease, opacity 0.2s ease, top 0.3s ease;
+    border-radius: 1px;
+  }
+  .mobile-toggle .bar:nth-child(1) { top: 11px; }
+  .mobile-toggle .bar:nth-child(2) { top: 17px; }
+  .mobile-toggle .bar:nth-child(3) { top: 23px; }
+  .mobile-toggle.open .bar:nth-child(1) { top: 17px; transform: rotate(45deg); }
+  .mobile-toggle.open .bar:nth-child(2) { opacity: 0; }
+  .mobile-toggle.open .bar:nth-child(3) { top: 17px; transform: rotate(-45deg); }
+
+  /* ====== FEATURED SERMON CARD ====== */
+  .featured-sermon {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) 1.1fr;
+    gap: 0;
+    max-width: 860px;
+    margin: 0 auto 40px;
+    background: #f5ecd8;
+    border: 1px solid rgba(61, 47, 33, 0.2);
+    box-shadow: 5px 5px 0 rgba(61, 47, 33, 0.1);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .featured-sermon:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 rgba(61, 47, 33, 0.13);
+  }
+  .featured-sermon-thumb {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: var(--bark);
+    overflow: hidden;
+  }
+  .featured-sermon-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .featured-sermon:hover .featured-sermon-thumb img { transform: scale(1.04); }
+  .featured-sermon-play {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: rgba(245, 241, 232, 0.92);
+    color: var(--bark);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    transition: transform 0.25s ease, background 0.25s ease;
+  }
+  .featured-sermon:hover .featured-sermon-play {
+    transform: translate(-50%, -50%) scale(1.08);
+    background: var(--gold);
+    color: var(--bark);
+  }
+  .featured-sermon-body {
+    padding: 32px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .featured-sermon-tag {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .featured-sermon-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(20px, 2.2vw, 26px);
+    font-weight: 400;
+    color: var(--bark);
+    line-height: 1.3;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .featured-sermon-date {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--forest);
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+  .featured-sermon-cta {
+    align-self: flex-start;
+    color: var(--bark);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid var(--forest);
+    padding-bottom: 3px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .featured-sermon-cta:hover {
+    color: var(--forest);
+    border-color: var(--gold);
+  }
+  @media (max-width: 700px) {
+    .featured-sermon { grid-template-columns: 1fr; }
+    .featured-sermon-body { padding: 24px 24px 28px; }
+  }
+
+  /* ====== WHAT TO EXPECT ====== */
+  .expect-section {
+    background: #ece3cf;
+    padding: 110px 40px;
+    max-width: none;
+    margin: 0;
+  }
+  .expect-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .expect-inner > .eyebrow { justify-content: center; }
+  .expect-inner > h2 { text-align: center; }
+  .expect-inner > p.lead { text-align: center; max-width: 640px; margin: 0 auto 60px; }
+  .expect-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+  }
+  .expect-item {
+    text-align: center;
+    padding: 28px 18px 8px;
+  }
+  .expect-icon {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--bark);
+    color: var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  .expect-icon svg { width: 24px; height: 24px; fill: currentColor; }
+  .expect-item:hover .expect-icon {
+    background: var(--gold);
+    transform: translateY(-3px) rotate(-3deg);
+  }
+  .expect-item h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--bark);
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+  .expect-item p {
+    font-size: 14px;
+    color: var(--bark-soft);
+    line-height: 1.65;
+  }
+  @media (max-width: 900px) {
+    .expect-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .expect-grid { grid-template-columns: 1fr; gap: 12px; }
+    .expect-section { padding: 70px 20px; }
+  }
+
+  /* ====== MAP ====== */
+  .contact-map-wrap {
+    max-width: 860px;
+    margin: 0 auto 48px;
+    border: 1px solid rgba(61, 47, 33, 0.18);
+    overflow: hidden;
+    box-shadow: 5px 5px 0 rgba(61, 47, 33, 0.08);
+    position: relative;
+  }
+  .contact-map-wrap iframe {
+    display: block;
+    width: 100%;
+    height: 360px;
+    border: 0;
+    filter: grayscale(0.25) contrast(0.95) sepia(0.08);
+    transition: filter 0.4s ease;
+  }
+  .contact-map-wrap:hover iframe { filter: none; }
+  @media (max-width: 600px) {
+    .contact-map-wrap iframe { height: 280px; }
+  }
+
+  /* ====== HONEYPOT (hide from humans) ====== */
+  .hp-field {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px; height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* ====== ORNAMENT (used between major sections) ====== */
+  .ornament-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 44px 20px;
+    max-width: none;
+    margin: 0;
+  }
+  .ornament-divider span.line {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold) 50%, transparent);
+    opacity: 0.7;
+  }
+  .ornament-divider span.mark {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    transform: rotate(45deg);
+    opacity: 0.65;
+  }
+  .ornament-divider.on-bark { background: var(--bark); }
+  .ornament-divider.on-bark span.line {
+    background: linear-gradient(90deg, transparent, var(--gold-soft) 50%, transparent);
+  }
+  .ornament-divider.on-bark span.mark { background: var(--gold-soft); }
+  .ornament-divider.on-tan { background: #e2d5bc; }
+
+  /* ====== SECTION SPACING HARMONIZATION ON MOBILE ====== */
+  @media (max-width: 600px) {
+    .ornament { padding: 32px 20px; }
+    .back-to-top { width: 42px; height: 42px; bottom: 18px; right: 18px; }
   }
 </style>
 </head>
 <body>
+
+<a href="#main-content" class="skip-link" data-en="Skip to content" data-ru="Перейти к содержимому">Skip to content</a>
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
 <div class="rebuild-banner" data-en='Our building is under construction after the December 2025 fire — we are still meeting every Sunday in the active wing. <a href="#rebuild">Learn more →</a>' data-ru='Наше здание восстанавливается после пожара в декабре 2025 года — мы по-прежнему собираемся каждое воскресенье в действующем крыле. <a href="#rebuild">Подробнее →</a>'>
   Our building is under construction after the December 2025 fire — we are still meeting every Sunday in the active wing. <a href="#rebuild">Learn more →</a>
@@ -1708,6 +2432,7 @@
   <nav>
     <ul id="navMenu">
       <li><a href="#about" data-en="About" data-ru="О нас">About</a></li>
+      <li><a href="#visit" data-en="Visit" data-ru="Визит">Visit</a></li>
       <li><a href="#beliefs" data-en="Beliefs" data-ru="Вероучение">Beliefs</a></li>
       <li><a href="#sermons" data-en="Sermons" data-ru="Проповеди">Sermons</a></li>
       <li><a href="#leadership" data-en="Leadership" data-ru="Руководство">Leadership</a></li>
@@ -1722,13 +2447,15 @@
       </li>
     </ul>
   </nav>
-  <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+  <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+  </button>
 </header>
 
 <!-- ============ HERO ============ -->
-<main>
+<main id="main-content">
 <section class="hero" id="home">
-  <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="photos/church-exterior.jpg" aria-hidden="true">
     <source src="hero-video.mp4" type="video/mp4">
   </video>
   <div class="hero-video-overlay" aria-hidden="true"></div>
@@ -1750,6 +2477,7 @@
       <blockquote data-en='"Come to me, all you who are weary and burdened, and I will give you rest."' data-ru='"Придите ко Мне все труждающиеся и обременённые, и Я успокою вас."'>"Come to me, all you who are weary and burdened, and I will give you rest."</blockquote>
     </div>
   </div>
+  <a href="#about" class="hero-scroll-cue" aria-label="Scroll to content" data-en="Explore" data-ru="Дальше">Explore</a>
 </section>
 
 <!-- ============ SERVICE STRIP ============ -->
@@ -1759,17 +2487,17 @@
       <div class="strip-welcome-label" data-en="For all who visit" data-ru="Для всех гостей">For all who visit</div>
     </div>
     <div class="strip-items">
-      <div class="strip-item">
+      <div class="strip-item reveal">
         <div class="strip-label" data-en="Sunday Service" data-ru="Воскресное служение">Sunday Service</div>
         <div class="strip-value" data-en="10:30 AM" data-ru="10:30">10:30 AM</div>
         <div class="strip-detail" data-en="Live translation available for all languages" data-ru="Живой перевод доступен на все языки">Live translation available for all languages</div>
       </div>
-      <div class="strip-item">
+      <div class="strip-item reveal reveal-delay-1">
         <div class="strip-label" data-en="Wednesday Prayer" data-ru="Молитвенное служение">Wednesday Prayer</div>
         <div class="strip-value" data-en="6:30 PM" data-ru="18:30">6:30 PM</div>
         <div class="strip-detail" data-en="Midweek prayer service" data-ru="Молитвенное служение среди недели">Midweek prayer service</div>
       </div>
-      <div class="strip-item">
+      <div class="strip-item reveal reveal-delay-2">
         <div class="strip-label" data-en="Small Groups" data-ru="Домашние группы">Small Groups</div>
         <div class="strip-value" data-en="Weeknights" data-ru="По будням">Weeknights</div>
         <div class="strip-detail" data-en="In homes across the Twin Cities" data-ru="По домам в Миннеаполисе и Сент-Поле">In homes across the Twin Cities</div>
@@ -1788,6 +2516,41 @@
     <p class="lead" data-en="Whether you're exploring faith for the first time, returning after years away, or searching for a church home, you are welcome here. We are a close family, and you'll find a people eager to walk with you toward Christ." data-ru="Исследуете ли вы веру впервые, возвращаетесь после долгого отсутствия или ищете церковный дом — вы здесь желанны. Мы — близкая семья, и вы найдёте здесь людей, готовых идти с вами ко Христу.">Whether you're exploring faith for the first time, returning after years away, or searching for a church home, you are welcome here. We are a close family, and you'll find a people eager to walk with you toward Christ.</p>
   </div>
 </section>
+
+<!-- ============ WHAT TO EXPECT ============ -->
+<section class="expect-section" id="visit">
+  <div class="expect-inner">
+    <div class="eyebrow centered" data-en="Plan a visit" data-ru="Спланируйте визит">Plan a visit</div>
+    <h2 style="font-family:'Fraunces',serif; font-size:clamp(1.6rem, 3vw, 2.2rem); font-weight:300; line-height:1.25; letter-spacing:-0.02em; color:var(--bark); margin-bottom:24px;" data-en="What to expect on your first Sunday." data-ru="Чего ожидать в первое воскресенье.">What to expect on your first Sunday.</h2>
+    <p class="lead" style="font-size:17px; color:var(--bark-soft); line-height:1.75;" data-en="No dress code, no pressure, no surprises. Just come as you are — we'll save you a seat." data-ru="Никакого дресс-кода, никакого давления, никаких сюрпризов. Приходите как есть — мы займём вам место.">No dress code, no pressure, no surprises. Just come as you are — we'll save you a seat.</p>
+    <div class="expect-grid">
+      <div class="expect-item">
+        <div class="expect-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></div>
+        <h3 data-en="Parking" data-ru="Парковка">Parking</h3>
+        <p data-en="Free lot on site. Greeters at the front door will point you the right way." data-ru="Бесплатная парковка на месте. Встречающие у входа подскажут, куда пройти.">Free lot on site. Greeters at the front door will point you the right way.</p>
+      </div>
+      <div class="expect-item">
+        <div class="expect-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 10c4.4 0 8 2.2 8 5v1H4v-1c0-2.8 3.6-5 8-5z"/></svg></div>
+        <h3 data-en="Come as you are" data-ru="Приходите как есть">Come as you are</h3>
+        <p data-en="From jeans to a suit — you'll be welcome. We care about people, not outfits." data-ru="От джинсов до костюма — вы будете желанным гостем. Нас интересуют люди, а не одежда.">From jeans to a suit — you'll be welcome. We care about people, not outfits.</p>
+      </div>
+      <div class="expect-item">
+        <div class="expect-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.5 5.1 5.6.8-4 4 .9 5.6L12 16l-5 2.5.9-5.6-4-4 5.6-.8L12 3z"/></svg></div>
+        <h3 data-en="Kids welcome" data-ru="Детям рады">Kids welcome</h3>
+        <p data-en="Children stay with families for worship. Sunday school for all ages follows the service." data-ru="Дети остаются с семьями на богослужении. Воскресная школа для всех возрастов — после служения.">Children stay with families for worship. Sunday school for all ages follows the service.</p>
+      </div>
+      <div class="expect-item">
+        <div class="expect-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-5 4V6a2 2 0 0 1 2-2zm2 5v2h10V9H7zm0 4v2h7v-2H7z"/></svg></div>
+        <h3 data-en="Two languages" data-ru="Два языка">Two languages</h3>
+        <p data-en="Service is in Russian with live English translation available — and vice versa for English sermons." data-ru="Служение на русском с живым переводом на английский — и наоборот для проповедей на английском.">Service is in Russian with live English translation available — and vice versa for English sermons.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament-divider" aria-hidden="true">
+  <span class="line"></span><span class="mark"></span><span class="line"></span>
+</div>
 
 <!-- ============ BELIEFS ============ -->
 <section class="section beliefs-dark" id="beliefs">
@@ -1917,6 +2680,21 @@
     </div>
     <a href="https://www.youtube.com/@gracechurch4000" target="_blank" rel="noopener" data-en="Full channel on YouTube →" data-ru="Канал на YouTube →">Full channel on YouTube →</a>
   </div>
+
+  <a id="featured-sermon" class="featured-sermon" href="https://www.youtube.com/@gracechurch4000" target="_blank" rel="noopener" style="text-decoration:none; display:none;">
+    <div class="featured-sermon-thumb">
+      <img id="featured-sermon-img" src="" alt="" loading="lazy">
+      <div class="featured-sermon-play" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7L8 5z"/></svg>
+      </div>
+    </div>
+    <div class="featured-sermon-body">
+      <div class="featured-sermon-tag" data-en="Latest sermon" data-ru="Последняя проповедь">Latest sermon</div>
+      <div class="featured-sermon-title" id="featured-sermon-title">—</div>
+      <div class="featured-sermon-date" id="featured-sermon-date">—</div>
+      <span class="featured-sermon-cta" data-en="Watch on YouTube →" data-ru="Смотреть на YouTube →">Watch on YouTube →</span>
+    </div>
+  </a>
 
   <div class="sermon-ornament" data-en="The record" data-ru="Архив">The record</div>
 
@@ -2056,6 +2834,7 @@
       <div id="prayer-error" style="display:none; color:#e07070; font-size:14px; margin-bottom:16px;"></div>
       <form id="prayer-form" class="prayer-form">
         <input type="hidden" name="_subject" value="Prayer Request — Grace Evangelical Church">
+        <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
         <p class="prayer-form-hint" data-en="Our pastor and elders pray over every request. You may remain anonymous." data-ru="Наш пастор и пресвитеры молятся над каждой нуждой. Вы можете остаться анонимным.">Our pastor and elders pray over every request. You may remain anonymous.</p>
         <label for="pr-name" data-en="Your name (optional)" data-ru="Ваше имя (необязательно)">Your name (optional)</label>
         <input type="text" id="pr-name" name="name" placeholder="Leave blank to remain anonymous">
@@ -2073,6 +2852,15 @@
   <div class="contact-header">
     <div class="eyebrow centered" data-en="Contact" data-ru="Контакты">Contact</div>
     <h2 data-en="We'd love to hear from you." data-ru="Будем рады услышать вас.">We'd love to hear from you.</h2>
+  </div>
+
+  <div class="contact-map-wrap">
+    <iframe
+      src="https://www.google.com/maps?q=1985+Diffley+Rd+Eagan+MN+55122&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Map to Grace Evangelical Church, 1985 Diffley Rd, Eagan, MN"
+      allowfullscreen></iframe>
   </div>
 
   <div class="contact-info-strip">
@@ -2097,6 +2885,7 @@
     <div id="contact-error" style="display:none; color:#e07070; font-size:14px; margin-bottom:14px;"></div>
     <form id="contact-form">
       <input type="hidden" name="_subject" value="Contact — eagangrace.com">
+      <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
       <label for="cf-name" data-en="Name" data-ru="Имя">Name</label>
       <input type="text" id="cf-name" name="name" placeholder="Your name" required>
       <label for="cf-email" data-en="Email" data-ru="Эл. почта">Email</label>
@@ -2114,7 +2903,20 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <img src="grace-church-logo.svg" alt="Grace Evangelical Church" style="height: 75px; width: auto; display: block; filter: brightness(0) invert(1); opacity: 0.9;">
-      <p style="font-family:'Fraunces',Georgia,serif; font-style:italic; font-weight:300; font-size:1.15rem; color:rgba(255,255,255,0.85); margin-bottom:6px; letter-spacing:0.01em;" data-en="where strangers become family" data-ru="где чужие становятся семьёй">where strangers become family</p>
+      <div>
+        <p style="font-family:'Fraunces',Georgia,serif; font-style:italic; font-weight:300; font-size:1.15rem; color:rgba(255,255,255,0.85); margin-bottom:6px; letter-spacing:0.01em;" data-en="where strangers become family" data-ru="где чужие становятся семьёй">where strangers become family</p>
+        <div class="footer-social" aria-label="Social media">
+          <a href="https://www.youtube.com/@gracechurch4000" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-5.8 31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/grace.evangelist.church" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.9.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.9.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.9-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.9-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 5.8.1 5 .3 4.2.6c-.8.3-1.5.7-2.2 1.4C1.3 2.7.9 3.4.6 4.2.3 5 .1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.2 2.1.5 2.9.3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.6.5 2.9.5C8.3 24 8.7 24 12 24s3.7 0 4.9-.1c1.3-.1 2.1-.2 2.9-.5.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.6.5-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.2-2.1-.5-2.9-.3-.8-.7-1.5-1.4-2.2C21.3 1.3 20.6.9 19.8.6 19 .3 18.2.1 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.4a1.4 1.4 0 1 0 0-2.9 1.4 1.4 0 0 0 0 2.9z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/p/Grace-Slavic-Church-100064707848112/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12c0-6.6-5.4-12-12-12S0 5.4 0 12c0 6 4.4 11 10.1 11.9V15.5H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-1.9.9-1.9 1.9V12h3.3l-.5 3.5h-2.8v8.4C19.6 23 24 18 24 12z"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="footer-cols">
       <div class="footer-col">
@@ -2148,6 +2950,18 @@
     <div data-en="Exist to glorify Christ" data-ru="Жить во славу Христа">Exist to glorify Christ</div>
   </div>
 </footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+    <button class="lightbox-nav prev" id="lightbox-prev" aria-label="Previous photo">‹</button>
+    <button class="lightbox-nav next" id="lightbox-next" aria-label="Next photo">›</button>
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+</div>
 
 <script>
   const placeholders = {
@@ -2197,6 +3011,7 @@
     const menu = document.getElementById('navMenu');
     const btn = document.querySelector('.mobile-toggle');
     menu.classList.toggle('open');
+    btn.classList.toggle('open');
     const isOpen = menu.classList.contains('open');
     btn.setAttribute('aria-expanded', isOpen);
   }
@@ -2205,7 +3020,9 @@
   document.querySelectorAll('#navMenu a').forEach(a => {
     a.addEventListener('click', () => {
       document.getElementById('navMenu').classList.remove('open');
-      document.querySelector('.mobile-toggle').setAttribute('aria-expanded', 'false');
+      const tog = document.querySelector('.mobile-toggle');
+      tog.classList.remove('open');
+      tog.setAttribute('aria-expanded', 'false');
     });
   });
 
@@ -2268,9 +3085,33 @@
     return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   }
 
+  function extractYouTubeId(url) {
+    if (!url) return null;
+    const m = url.match(/(?:v=|youtu\.be\/|\/embed\/|\/shorts\/)([\w-]{11})/);
+    return m ? m[1] : null;
+  }
+
+  function renderFeaturedSermon(sermon) {
+    if (!sermon) return;
+    const card = document.getElementById('featured-sermon');
+    const titleEl = document.getElementById('featured-sermon-title');
+    const dateEl = document.getElementById('featured-sermon-date');
+    const imgEl = document.getElementById('featured-sermon-img');
+    const lang = document.documentElement.lang || 'en';
+    const vid = extractYouTubeId(sermon.link);
+    if (!vid) return;
+    imgEl.src = 'https://i.ytimg.com/vi/' + vid + '/hqdefault.jpg';
+    imgEl.alt = sermon.title;
+    titleEl.textContent = sermon.title;
+    dateEl.textContent = formatDate(sermon.date, lang);
+    card.href = sermon.link;
+    card.style.display = 'grid';
+  }
+
   function renderSermons(sermons) {
     const tbody = document.getElementById('sermon-tbody');
     const lang = document.documentElement.lang || 'en';
+    if (sermons.length) renderFeaturedSermon(sermons[0]);
     if (!sermons.length) {
       tbody.innerHTML = '<tr><td colspan="3" class="sermon-loading">' +
         (lang === 'ru' ? 'Проповеди появятся здесь в ближайшее время.' : 'Sermons will appear here soon.') +
@@ -2361,6 +3202,149 @@
   };
 
   loadSermons();
+
+  // ========== SCROLL PROGRESS BAR ==========
+  const scrollProgress = document.getElementById('scroll-progress');
+  const header = document.querySelector('header');
+  const backToTop = document.getElementById('back-to-top');
+
+  function onScroll() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    scrollProgress.style.width = pct + '%';
+
+    if (scrollTop > 60) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+
+    if (scrollTop > 600) backToTop.classList.add('visible');
+    else backToTop.classList.remove('visible');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ========== SCROLL REVEAL ==========
+  // Apply .reveal to grid children and section content so they fade in on scroll.
+  const revealSelectors = [
+    '.beliefs-grid > .belief-item',
+    '.leaders-grid > .leader-card',
+    '.involved-grid > .ministry-card',
+    '.serve-grid > .serve-card',
+    '.gallery-grid > .gallery-tile',
+    '.welcome-inner > *',
+    '.rebuild-inner > *',
+    '.contact-info-strip > *',
+    '.section-header > *',
+    '.ministry-hero > *',
+    '.beliefs-inner > .eyebrow, .beliefs-inner > h2, .beliefs-inner > p.lead',
+    '.involved-section > .eyebrow, .involved-section > h2, .involved-section > p, .involved-section > p.lead',
+    '.serve-section > .eyebrow, .serve-section > h2, .serve-section > p.lead, .serve-verse',
+    '.gallery-section > .eyebrow, .gallery-section > h2, .gallery-section > p.lead',
+    '.prayer-left > *',
+    '.prayer-form-panel'
+  ];
+
+  revealSelectors.forEach(sel => {
+    document.querySelectorAll(sel).forEach((el, i) => {
+      el.classList.add('reveal');
+      const delay = Math.min(i, 6);
+      if (delay > 0) el.classList.add('reveal-delay-' + delay);
+    });
+  });
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in-view'));
+  }
+
+  // ========== ACTIVE NAV LINK ON SCROLL ==========
+  const navLinks = Array.from(document.querySelectorAll('#navMenu a[href^="#"]'));
+  const sectionIds = navLinks.map(a => a.getAttribute('href').slice(1)).filter(Boolean);
+  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+  if ('IntersectionObserver' in window && sections.length) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = entry.target.id;
+        const link = navLinks.find(a => a.getAttribute('href') === '#' + id);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          navLinks.forEach(a => a.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    sections.forEach(s => sectionObserver.observe(s));
+  }
+
+  // ========== GALLERY LIGHTBOX ==========
+  const tiles = Array.from(document.querySelectorAll('.gallery-tile'));
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+  const lbCaption = document.getElementById('lightbox-caption');
+  const lbClose = document.getElementById('lightbox-close');
+  const lbPrev = document.getElementById('lightbox-prev');
+  const lbNext = document.getElementById('lightbox-next');
+  let currentIndex = 0;
+
+  function openLightbox(idx) {
+    currentIndex = idx;
+    const tile = tiles[idx];
+    const img = tile.querySelector('img');
+    const cap = tile.querySelector('figcaption');
+    if (!img) return;
+    lbImg.src = img.src;
+    lbImg.alt = img.alt || '';
+    lbCaption.textContent = cap ? cap.textContent : '';
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function navLightbox(dir) {
+    currentIndex = (currentIndex + dir + tiles.length) % tiles.length;
+    openLightbox(currentIndex);
+  }
+
+  tiles.forEach((tile, idx) => {
+    tile.setAttribute('role', 'button');
+    tile.setAttribute('tabindex', '0');
+    tile.addEventListener('click', () => openLightbox(idx));
+    tile.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightbox(idx);
+      }
+    });
+  });
+
+  lbClose.addEventListener('click', closeLightbox);
+  lbPrev.addEventListener('click', (e) => { e.stopPropagation(); navLightbox(-1); });
+  lbNext.addEventListener('click', (e) => { e.stopPropagation(); navLightbox(1); });
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target.classList.contains('lightbox-inner')) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') navLightbox(-1);
+    if (e.key === 'ArrowRight') navLightbox(1);
+  });
 
 </script>
 
