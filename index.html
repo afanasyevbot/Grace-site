@@ -2302,9 +2302,12 @@
   .expect-inner > p.lead { text-align: center; max-width: 640px; margin: 0 auto 60px; }
   .expect-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
     margin-top: 50px;
+  }
+  @media (max-width: 1100px) {
+    .expect-grid { grid-template-columns: repeat(3, 1fr); }
   }
   .expect-item {
     text-align: center;
@@ -2521,28 +2524,33 @@
 <section class="expect-section" id="visit">
   <div class="expect-inner">
     <div class="eyebrow centered" data-en="Plan a visit" data-ru="Спланируйте визит">Plan a visit</div>
-    <h2 style="font-family:'Fraunces',serif; font-size:clamp(1.6rem, 3vw, 2.2rem); font-weight:300; line-height:1.25; letter-spacing:-0.02em; color:var(--bark); margin-bottom:24px;" data-en="What to expect on your first Sunday." data-ru="Чего ожидать в первое воскресенье.">What to expect on your first Sunday.</h2>
-    <p class="lead" style="font-size:17px; color:var(--bark-soft); line-height:1.75;" data-en="No dress code, no pressure, no surprises. Just come as you are — we'll save you a seat." data-ru="Никакого дресс-кода, никакого давления, никаких сюрпризов. Приходите как есть — мы займём вам место.">No dress code, no pressure, no surprises. Just come as you are — we'll save you a seat.</p>
+    <h2 style="font-family:'Fraunces',serif; font-size:clamp(1.6rem, 3vw, 2.2rem); font-weight:300; line-height:1.25; letter-spacing:-0.02em; color:var(--bark); margin-bottom:24px;" data-en="What a Sunday morning looks like." data-ru="Как проходит воскресное утро.">What a Sunday morning looks like.</h2>
+    <p class="lead" style="font-size:17px; color:var(--bark-soft); line-height:1.75;" data-en="A simple morning — Scripture, worship, and a family waiting to meet you. Here's the shape of it." data-ru="Простое утро — Писание, поклонение и семья, готовая встретить вас. Вот как это устроено.">A simple morning — Scripture, worship, and a family waiting to meet you. Here's the shape of it.</p>
     <div class="expect-grid">
       <div class="expect-item">
-        <div class="expect-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></div>
-        <h3 data-en="Parking" data-ru="Парковка">Parking</h3>
-        <p data-en="Free lot on site. Greeters at the front door will point you the right way." data-ru="Бесплатная парковка на месте. Встречающие у входа подскажут, куда пройти.">Free lot on site. Greeters at the front door will point you the right way.</p>
+        <div class="expect-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+        <h3 data-en="Come as you are" data-ru="Приходите такими, как есть">Come as you are</h3>
+        <p data-en="New to faith, returning after years away, or somewhere in between — there's a seat saved for you, no questions you can't ask." data-ru="Открываете веру впервые, возвращаетесь после долгого отсутствия или где-то посередине — для вас оставлено место, и нет вопросов, которые нельзя задать.">New to faith, returning after years away, or somewhere in between — there's a seat saved for you, no questions you can't ask.</p>
       </div>
       <div class="expect-item">
-        <div class="expect-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 10c4.4 0 8 2.2 8 5v1H4v-1c0-2.8 3.6-5 8-5z"/></svg></div>
-        <h3 data-en="Come as you are" data-ru="Приходите как есть">Come as you are</h3>
-        <p data-en="From jeans to a suit — you'll be welcome. We care about people, not outfits." data-ru="От джинсов до костюма — вы будете желанным гостем. Нас интересуют люди, а не одежда.">From jeans to a suit — you'll be welcome. We care about people, not outfits.</p>
+        <div class="expect-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v15H6.5a2.5 2.5 0 0 0-2.5 2.5v-15zM6.5 4a.5.5 0 0 0-.5.5v11.05a4.5 4.5 0 0 1 .5-.05H18V4H6.5zM4 19.5A2.5 2.5 0 0 0 6.5 22H20v-2H6.5a.5.5 0 0 1 0-1H20v-2H6.5A2.5 2.5 0 0 0 4 19.5z"/></svg></div>
+        <h3 data-en="Sunday school · 9:30 AM" data-ru="Воскресная школа · 9:30">Sunday school · 9:30 AM</h3>
+        <p data-en="Before service, kids and adults split into classes for Bible study. Newcomers are welcome to sit in or skip straight to worship at 10:30." data-ru="Перед служением дети и взрослые расходятся по классам для изучения Библии. Гости могут присоединиться или прийти сразу к началу служения в 10:30.">Before service, kids and adults split into classes for Bible study. Newcomers are welcome to sit in or skip straight to worship at 10:30.</p>
       </div>
       <div class="expect-item">
-        <div class="expect-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.5 5.1 5.6.8-4 4 .9 5.6L12 16l-5 2.5.9-5.6-4-4 5.6-.8L12 3z"/></svg></div>
-        <h3 data-en="Kids welcome" data-ru="Детям рады">Kids welcome</h3>
-        <p data-en="Children stay with families for worship. Sunday school for all ages follows the service." data-ru="Дети остаются с семьями на богослужении. Воскресная школа для всех возрастов — после служения.">Children stay with families for worship. Sunday school for all ages follows the service.</p>
+        <div class="expect-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v5h5v2h-5v11h-2V10H6V8h5V3z"/></svg></div>
+        <h3 data-en="The service · 10:30 AM" data-ru="Служение · 10:30">The service · 10:30 AM</h3>
+        <p data-en="Singing, prayer, and a sermon from Scripture. About ninety minutes — children stay with their families." data-ru="Пение, молитва и проповедь из Писания. Около девяноста минут — дети остаются с семьями.">Singing, prayer, and a sermon from Scripture. About ninety minutes — children stay with their families.</p>
+      </div>
+      <div class="expect-item">
+        <div class="expect-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16v2H4v-2zM20 3H6v10a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-1h1a3 3 0 0 0 0-6h-1V3zm0 5h1a1 1 0 0 1 0 2h-1V8zM9 1h2v2H9V1zm4 0h2v2h-2V1z"/></svg></div>
+        <h3 data-en="Coffee & treats after" data-ru="Кофе и угощения после">Coffee & treats after</h3>
+        <p data-en="Stay awhile in the fellowship hall — homemade treats, hot coffee, and the unhurried conversations where strangers become family." data-ru="Не спешите уходить — домашние угощения, горячий кофе и неторопливые беседы в зале общения, где чужие становятся семьёй.">Stay awhile in the fellowship hall — homemade treats, hot coffee, and the unhurried conversations where strangers become family.</p>
       </div>
       <div class="expect-item">
         <div class="expect-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-5 4V6a2 2 0 0 1 2-2zm2 5v2h10V9H7zm0 4v2h7v-2H7z"/></svg></div>
-        <h3 data-en="Two languages" data-ru="Два языка">Two languages</h3>
-        <p data-en="Service is in Russian with live English translation available — and vice versa for English sermons." data-ru="Служение на русском с живым переводом на английский — и наоборот для проповедей на английском.">Service is in Russian with live English translation available — and vice versa for English sermons.</p>
+        <h3 data-en="Russian & English" data-ru="Русский и английский">Russian & English</h3>
+        <p data-en="Service is in Russian with live English translation — and English when the sermon runs the other way. Ask a greeter for a headset." data-ru="Служение проходит на русском с живым переводом на английский — и наоборот, если проповедь на английском. Попросите наушники у встречающего.">Service is in Russian with live English translation — and English when the sermon runs the other way. Ask a greeter for a headset.</p>
       </div>
     </div>
   </div>
