@@ -549,6 +549,13 @@
     font-weight: 700;
   }
 
+  .about-descriptor {
+    font-size: 15px;
+    color: var(--bark-soft);
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+
   /* ====== ABOUT / WELCOME ====== */
   .welcome {
     padding: 110px 40px;
@@ -2100,43 +2107,6 @@
     fill: currentColor;
   }
 
-  /* ====== SCROLL INDICATOR ON HERO ====== */
-  .hero-scroll-cue {
-    position: absolute;
-    bottom: 28px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--bark);
-    opacity: 0;
-    animation: fadeIn 1s 2s ease-out forwards, gentleBounce 2.4s 3s ease-in-out infinite;
-    z-index: 2;
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-  }
-  .hero-scroll-cue::after {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 28px;
-    background: var(--bark);
-    margin: 8px auto 0;
-    opacity: 0.5;
-  }
-  @keyframes fadeIn { to { opacity: 0.7; } }
-  @keyframes gentleBounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(6px); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .hero-scroll-cue { animation: none; opacity: 0.7; }
-  }
-  @media (max-width: 700px) {
-    .hero-scroll-cue { display: none; }
-  }
-
   /* ====== SERMON ROW POLISH ====== */
   .sermon-table tbody tr {
     transition: background 0.2s, transform 0.2s;
@@ -2152,18 +2122,6 @@
     content: ' ';
   }
 
-  /* ====== KEN BURNS HERO VIDEO ====== */
-  .hero-video {
-    animation: kenBurns 28s ease-in-out infinite alternate;
-    transform-origin: center center;
-  }
-  @keyframes kenBurns {
-    0%   { transform: scale(1.0)  translate(0, 0); }
-    100% { transform: scale(1.08) translate(-1%, -1.5%); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .hero-video { animation: none; }
-  }
 
   /* ====== ANIMATED HAMBURGER ====== */
   .mobile-toggle {
@@ -2458,7 +2416,7 @@
 <!-- ============ HERO ============ -->
 <main id="main-content">
 <section class="hero" id="home">
-  <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="photos/church-exterior.jpg" aria-hidden="true">
+  <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
     <source src="hero-video.mp4" type="video/mp4">
   </video>
   <div class="hero-video-overlay" aria-hidden="true"></div>
@@ -2470,7 +2428,6 @@
       <span class="hero-line-2" data-en="around" data-ru="—">around</span>
       <span class="hero-line-3" data-en="Christ." data-ru="Христос.">Christ.</span>
     </h1>
-    <p class="hero-subtitle" data-en="A Russian and English speaking church in Eagan, Minnesota. Focused on Christ and fulfilling His purpose for us." data-ru="Русско- и англоязычная церковь в Игане, Миннесота. Сосредоточены на Христе и исполнении Его замысла для нас.">A Russian and English speaking church in Eagan, Minnesota. Focused on Christ and fulfilling His purpose for us.</p>
     <div class="cta-row">
       <a href="#beliefs" class="btn-primary" data-en="What we believe →" data-ru="Во что мы верим →">What we believe →</a>
       <a href="#sermons" class="btn-secondary" data-en="Watch a sermon" data-ru="Смотреть проповедь">Watch a sermon</a>
@@ -2480,7 +2437,6 @@
       <blockquote data-en='"Come to me, all you who are weary and burdened, and I will give you rest."' data-ru='"Придите ко Мне все труждающиеся и обременённые, и Я успокою вас."'>"Come to me, all you who are weary and burdened, and I will give you rest."</blockquote>
     </div>
   </div>
-  <a href="#about" class="hero-scroll-cue" aria-label="Scroll to content" data-en="Explore" data-ru="Дальше">Explore</a>
 </section>
 
 <!-- ============ SERVICE STRIP ============ -->
@@ -2514,6 +2470,7 @@
   <div class="welcome-inner">
     <div class="eyebrow centered" data-en="Welcome" data-ru="Добро пожаловать">Welcome</div>
     <div class="est-badge" data-en="Est. 1999 · 26 years in Eagan" data-ru="Осн. 1999 · 26 лет в Игане">Est. 1999 · 26 years in Eagan</div>
+    <p class="about-descriptor" data-en="A Russian and English speaking church in Eagan, Minnesota. Focused on Christ and fulfilling His purpose for us." data-ru="Русско- и англоязычная церковь в Игане, Миннесота. Сосредоточены на Христе и исполнении Его замысла для нас.">A Russian and English speaking church in Eagan, Minnesota. Focused on Christ and fulfilling His purpose for us.</p>
     <h2 data-en="We exist to glorify Christ — in worship, and in the everyday ordinary." data-ru="Мы существуем, чтобы прославлять Христа — в поклонении и в повседневной жизни.">We exist to glorify Christ — in worship, and in the everyday ordinary.</h2>
     <p class="lead" data-en="Grace Evangelical Church is a Russian and English-speaking congregation serving the Twin Cities since 1999. We are part of the Midwest Association of Slavic Churches." data-ru="Евангельская церковь Благодать — русско- и англоязычная община, служащая в Миннеаполисе и Сент-Поле с 1999 года. Мы входим в Среднезападную ассоциацию славянских церквей.">Grace Evangelical Church is a Russian and English-speaking congregation serving the Twin Cities since 1999. We are part of the Midwest Association of Slavic Churches.</p>
     <p class="lead" data-en="Whether you're exploring faith for the first time, returning after years away, or searching for a church home, you are welcome here. We are a close family, and you'll find a people eager to walk with you toward Christ." data-ru="Исследуете ли вы веру впервые, возвращаетесь после долгого отсутствия или ищете церковный дом — вы здесь желанны. Мы — близкая семья, и вы найдёте здесь людей, готовых идти с вами ко Христу.">Whether you're exploring faith for the first time, returning after years away, or searching for a church home, you are welcome here. We are a close family, and you'll find a people eager to walk with you toward Christ.</p>
@@ -2610,7 +2567,7 @@
     <p class="lead" style="max-width: 680px;" data-en="Our pastor and elders are here for you. Whether you have questions about faith, need prayer, or want to connect — reach out." data-ru="Наш пастор и пресвитеры здесь для вас. Есть ли у вас вопросы о вере, нужна молитва или просто хотите пообщаться — обращайтесь.">Our pastor and elders are here for you. Whether you have questions about faith, need prayer, or want to connect — reach out.</p>
     <div class="leaders-grid">
       <div class="leader-card">
-        <div class="leader-photo"><img src="photos/paul-afanasiev.jpg" alt="Paul Afanasiev" style="object-position: center 20%;"></div>
+        <div class="leader-photo"><img src="photos/paul-afanasiev.jpg" alt="Paul Afanasiev"></div>
         <div class="leader-name">Paul Afanasiev</div>
         <div class="leader-role" data-en="Pastor" data-ru="Пастор">Pastor</div>
       </div>
