@@ -1403,7 +1403,8 @@
     opacity: 0.8;
   }
   .give-widget-body {
-    padding: 24px;
+    padding: 0;
+    overflow: hidden;
   }
   .give-widget-foot {
     background: var(--tan-bg);
@@ -2880,7 +2881,15 @@
         <div class="give-widget-sub" data-en="All donations go directly to the church" data-ru="Все пожертвования идут напрямую в церковь">All donations go directly to the church</div>
       </div>
       <div class="give-widget-body">
-        <givebutter-widget id="pzeb7m"></givebutter-widget>
+        <iframe
+          src="https://givebutter.com/grace-slavic-church-rchpdv"
+          width="100%"
+          height="680"
+          frameborder="0"
+          scrolling="yes"
+          title="Donate to Grace Evangelical Church"
+          style="display:block;border:none;"
+        ></iframe>
       </div>
       <div class="give-widget-foot">
         <svg width="10" height="12" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -3421,11 +3430,6 @@
 
 </script>
 
-<script>
-  window.Givebutter = window.Givebutter || function() { (Givebutter.q = Givebutter.q || []).push(arguments); };
-  Givebutter('setOptions', { accountId: '6bfmOU56oAtlUXzR' });
-</script>
-<script async src="https://js.givebutter.com/elements/latest.js"></script>
 
 </body>
 </html>
