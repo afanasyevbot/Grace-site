@@ -106,21 +106,22 @@ All static copy uses `data-en` / `data-ru` attributes, processed by the existing
 
 ### Footer Styles
 - Background: `var(--tan-bg)`
-- Font: 10px, `var(--muted)`, opacity 0.65
-- Lock SVG icon inline before text
+- Font: 9px, `var(--muted)`, opacity 0.5, letter-spacing 0.03em
+- Lock SVG icon inline before text (10px wide)
+- Intentionally very subtle — present for compliance, not prominence
 
 ### GiveButter Embed
 
+**Campaign URL:** `https://givebutter.com/grace-slavic-church-rchpdv`
 **Campaign slug:** `grace-slavic-church-rchpdv`
 
-**⚠️ Action required:** Pull the exact embed snippet from the GiveButter dashboard (Campaigns → this campaign → Embed). Paste it into `.give-widget-body`. The snippet will look something like:
-
+**Standard GiveButter inline embed:**
 ```html
 <script src="https://givebutter.com/js/widget.js"></script>
 <givebutter-widget id="grace-slavic-church-rchpdv"></givebutter-widget>
 ```
 
-Do not guess — GiveButter's embed format has changed over time and the exact attribute names must come from the dashboard.
+If the GiveButter dashboard provides a different snippet, use that. The custom element (`<givebutter-widget>`) is GiveButter's current format as of 2025.
 
 **One fund:** General donation only — no fund selector needed.
 
@@ -128,12 +129,10 @@ Do not guess — GiveButter's embed format has changed over time and the exact a
 
 ## GiveButter Footer Branding
 
-**⚠️ Action required before implementation:** Check whether your GiveButter plan allows removal of "Powered by GiveButter" from the footer.
+**Decision:** Keep "Powered by GiveButter" — styled very small and dimmed so it's present but unobtrusive.
 
-- If **yes** (paid plan): footer reads `Secure & encrypted` only
-- If **no** (free plan): footer reads `Secure & encrypted · Powered by GiveButter` (as specced)
-
-This determines the footer copy. Resolve before coding begins.
+Footer copy: `Secure & encrypted · Powered by GiveButter`
+Style: 9px, `var(--muted)`, opacity 0.5 — compliance only, not a design element.
 
 ---
 
