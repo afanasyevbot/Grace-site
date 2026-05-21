@@ -21,85 +21,136 @@ Two things:
 
 ## Nav Button
 
-- Position: top-right of the nav, after the existing nav links
-- Label: `Give →`
-- Style: uses the existing `.give-btn` CSS class (already defined, `background: var(--bark)`, `color: var(--cream)`) — no new CSS needed
-- Behavior: clicking scrolls to `#give` on the page (same-page anchor link)
-- Bilingual: EN `Give →` / RU `Пожертвовать →`
+- Insert as `<li class="give-wrap">` in `#navMenu`, positioned between the Contact `<li>` and the `lang-toggle-wrap` `<li>`
+- The HTML element is missing — the CSS class `.give-btn` (lines 207–216) and the `.give-wrap` mobile override (line 1766) already exist and require no new CSS
+- Element: `<a href="#give" class="give-btn">Give →</a>` inside the `<li>`
+- Behavior: same-page anchor scroll to `#give` (site already has `scroll-padding-top: 90px` on `html` to clear the sticky header)
+- Bilingual: `data-en="Give →"` / `data-ru="Пожертвовать →"`
 
 ---
 
 ## Give Section
 
+### Placement
+Inserted **after** `#rebuild` and **before** `#prayer` in the HTML. The Rebuild section provides emotional context (fire, ongoing construction) immediately before the giving opportunity.
+
+### CSS Class Naming
+Follows the existing site pattern:
+
+```
+.give              — section element
+.give-inner        — centered content wrapper
+.give-left         — left column (copy)
+.give-widget       — right column (widget wrapper)
+.give-widget-head  — dark header bar (our HTML, wraps GiveButter embed)
+.give-widget-body  — embed container
+.give-widget-foot  — small footer with lock icon + branding
+```
+
+### Background
+Section background: `#ece3cf` (the same value as the page body background — note: `--page-bg` is not a defined CSS variable in this codebase; use the hex directly)
+
 ### Layout
-- Two-column grid on desktop (left: copy, right: widget), single column on mobile
-- Background: `var(--page-bg)` — matches the rest of the page
-- Padding: consistent with other sections (80px vertical)
-- Section anchor: `id="give"`
-
-### Left Column — Copy
-- Eyebrow (uppercase, forest green, flanked by lines): `Give`
-- Heading: `Support the ministry.`
-- Body: `Thank you for supporting Grace Church. Your gift sustains our efforts to serve others and care for everything that makes this church home.`
-- Scripture blockquote (gold left border, italic, earth tone):
-  > "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver."
-  > — 2 Corinthians 9:7
-
-### Right Column — GiveButter Widget
-The actual GiveButter embed goes here. The widget is styled to match the site:
-
-**Widget header (bark brown background):**
-- Title: `Grace Evangelical Church` — Fraunces serif, weight 400, cream color
-- Subtitle: `All donations go directly to the church` — small, gold-soft, slightly dimmed
-
-**Widget body:**
-- Preset amounts: $25 / $50 / $100 (default selected) / $250
-- Custom amount input field
-- Frequency toggle: One-time (default) / Monthly
-- Give Now button — full width, bark brown, cream text
-- Payment method icons (SVG): Card, Bank, Apple Pay, Google Pay
-
-**Widget footer:**
-- Lock SVG icon + `Secure & encrypted · Powered by GiveButter`
-- Small (10px), dimmed (opacity 0.65), tan background — present but unobtrusive
-
-### Bilingual support
-All static copy (eyebrow, heading, body, scripture reference) uses the existing `data-en` / `data-ru` pattern. The GiveButter widget itself is not translated (it's a third-party embed).
+- Desktop: two-column CSS grid, `1fr 1fr`, 64px gap, items centered vertically
+- Padding: `80px 40px` (consistent with `.rebuild` and `.welcome` sections)
+- Mobile (below 768px): single column, copy above widget, widget full width
 
 ---
 
-## GiveButter Integration
+## Left Column — Copy
 
-GiveButter provides an embeddable widget via a `<script>` tag + a `<div>` placeholder. The embed replaces our mocked-up widget UI at runtime.
+```
+Eyebrow:   GIVE   (same pattern as other sections — uppercase, forest green, flanked by 40px lines)
+Heading:   Support the ministry.
+Body:      Thank you for supporting Grace Church. Your gift sustains our efforts to serve others
+           and care for everything that makes this church home.
+Quote:     "Each of you should give what you have decided in your heart to give, not reluctantly
+           or under compulsion, for God loves a cheerful giver."
+           — 2 Corinthians 9:7
+```
 
-- **Campaign:** `grace-slavic-church-rchpdv`
-- **Embed type:** Inline widget (not a redirect, not a popup)
-- **One fund:** General donation — no fund selector tabs
-- **Script source:** GiveButter's CDN embed script
+Scripture quote styling: reuse the `.rebuild-verse` approach — italic, gold left border (2px solid `var(--gold)`), padding-left 16px, `var(--earth)` text color.
 
-The mockup widget (amount buttons, frequency toggle, etc.) is purely for design preview — at implementation, GiveButter's actual embed renders inside the widget container. The header (`Grace Evangelical Church` + subtitle) and footer (lock icon + branding text) are our own HTML wrapped around the embed.
-
-**Open question:** Whether GiveButter's free plan allows removal of their branding in the footer. If yes, the footer can be simplified to just `Secure & encrypted`. If no, keep as-is.
-
----
-
-## Placement on the Page
-
-The Give section is inserted **after the Rebuild section** and **before the Prayer Request section**. This ordering is intentional — the Rebuild context (fire, ongoing construction) provides emotional motivation right before the giving opportunity.
+All static copy uses `data-en` / `data-ru` attributes, processed by the existing `setLang()` function. The GiveButter widget itself is not translated.
 
 ---
 
-## Mobile
+## Right Column — GiveButter Widget
 
-- Two-column grid collapses to single column
+### DOM Structure
+
+```html
+<div class="give-widget">
+  <!-- Our header — sits above the embed -->
+  <div class="give-widget-head">
+    <div class="give-widget-title">Grace Evangelical Church</div>  <!-- Fraunces serif -->
+    <div class="give-widget-sub">All donations go directly to the church</div>
+  </div>
+
+  <!-- GiveButter embed renders here -->
+  <div class="give-widget-body">
+    [GiveButter embed placeholder — see below]
+  </div>
+
+  <!-- Our footer — sits below the embed -->
+  <div class="give-widget-foot">
+    [lock SVG] Secure &amp; encrypted · Powered by GiveButter
+  </div>
+</div>
+```
+
+### Header Styles
+- Background: `var(--bark)` (#3d2f21)
+- Title: Fraunces serif, 18px, weight 400, `var(--cream)`, letter-spacing -0.01em
+- Subtitle: Inter, 11px, `var(--gold-soft)`, opacity 0.8
+
+### Footer Styles
+- Background: `var(--tan-bg)`
+- Font: 10px, `var(--muted)`, opacity 0.65
+- Lock SVG icon inline before text
+
+### GiveButter Embed
+
+**Campaign slug:** `grace-slavic-church-rchpdv`
+
+**⚠️ Action required:** Pull the exact embed snippet from the GiveButter dashboard (Campaigns → this campaign → Embed). Paste it into `.give-widget-body`. The snippet will look something like:
+
+```html
+<script src="https://givebutter.com/js/widget.js"></script>
+<givebutter-widget id="grace-slavic-church-rchpdv"></givebutter-widget>
+```
+
+Do not guess — GiveButter's embed format has changed over time and the exact attribute names must come from the dashboard.
+
+**One fund:** General donation only — no fund selector needed.
+
+---
+
+## GiveButter Footer Branding
+
+**⚠️ Action required before implementation:** Check whether your GiveButter plan allows removal of "Powered by GiveButter" from the footer.
+
+- If **yes** (paid plan): footer reads `Secure & encrypted` only
+- If **no** (free plan): footer reads `Secure & encrypted · Powered by GiveButter` (as specced)
+
+This determines the footer copy. Resolve before coding begins.
+
+---
+
+## Mobile Behavior
+
+At ≤768px:
+- Grid collapses to single column
+- Copy (`.give-left`) appears first (above widget) — matches the pattern of `.prayer-section` on mobile
 - Widget takes full width
-- Nav "Give →" button remains visible (already handled by existing mobile nav CSS)
+- Nav "Give" button: already handled by the existing `.give-wrap` mobile CSS
 
 ---
 
 ## What's Not in Scope
 
-- A modal/popup give experience (decided against in favor of the inline section)
-- Fund selector tabs (one general fund only)
-- Custom payment processing (fully delegated to GiveButter)
-- Recurring donation management UI (handled by GiveButter)
+- A modal/popup give experience
+- Fund selector tabs
+- Custom payment processing
+- Recurring donation management UI
+- Translation of the GiveButter widget UI
