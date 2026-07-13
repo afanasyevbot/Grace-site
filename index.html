@@ -215,6 +215,22 @@
   nav a.give-btn { color: var(--bark); font-size: 14px; }
   nav a.give-btn:hover { background: var(--gold-soft); color: var(--bark); }
 
+  .admin-link {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: color 0.2s, opacity 0.2s;
+    white-space: nowrap;
+  }
+
+  nav a.admin-link { color: var(--muted); font-size: 12px; }
+  nav a.admin-link:hover { color: var(--bark); opacity: 1; }
+  nav a.admin-link::after { display: none; }
+
   .mobile-toggle {
     display: none; background: transparent; border: none;
     cursor: pointer; color: var(--bark); font-size: 22px;
@@ -1812,6 +1828,7 @@
 
     nav ul li.lang-toggle-wrap { padding: 14px 0; }
     nav ul li.give-wrap { padding-top: 14px; }
+    nav ul li.admin-wrap { padding: 14px 0 4px; }
 
     nav ul {
       max-height: 0;
@@ -1819,7 +1836,7 @@
       display: flex !important;
       transition: max-height 0.35s ease;
     }
-    nav ul.open { max-height: 600px; }
+    nav ul.open { max-height: 680px; }
   }
 
   /* ====== ACCESSIBILITY: SKIP LINK ====== */
@@ -2455,6 +2472,9 @@
           <button class="active" onclick="setLang('en', this)" aria-label="Switch to English">EN</button>
           <button onclick="setLang('ru', this)" aria-label="Переключить на русский">РУ</button>
         </div>
+      </li>
+      <li class="admin-wrap">
+        <a href="https://serve.eagangrace.com" class="admin-link" data-en="Admin" data-ru="Админ" aria-label="Volunteer admin portal login">Admin</a>
       </li>
     </ul>
   </nav>
