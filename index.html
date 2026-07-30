@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Grace Evangelical Church · Eagan, MN</title>
 <meta name="description" content="Grace Slavic Church — where strangers become family. A Russian and English speaking church in Eagan, Minnesota. Sunday service 10:30 AM at 1985 Diffley Rd.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -43,7 +43,7 @@
     "latitude": 44.7878,
     "longitude": -93.1869
   },
-  "email": "contact@eagangrace.com",
+  "email": "admin@eagangrace.com",
   "areaServed": "Twin Cities, Minnesota",
   "knowsLanguage": ["en", "ru"],
   "sameAs": [
@@ -130,15 +130,21 @@
     overflow-x: hidden;
   }
 
+  body.nav-open {
+    overflow: hidden;
+  }
+
   .serif { font-family: 'Fraunces', Georgia, serif; letter-spacing: -0.015em; }
 
   /* ====== HEADER ====== */
   header {
     padding: 16px 40px;
+    padding-left: max(40px, env(safe-area-inset-left));
+    padding-right: max(40px, env(safe-area-inset-right));
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: 24px;
     border-bottom: 1px solid rgba(61, 47, 33, 0.1);
     position: sticky;
     top: 0;
@@ -146,9 +152,21 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     z-index: 100;
+    width: 100%;
+    max-width: 100%;
   }
 
-  .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    min-width: 0;
+  }
+
+  .brand > div {
+    min-width: 0;
+  }
 
   .brand-mark {
     width: 44px; height: 44px;
@@ -164,18 +182,26 @@
   .brand-logo {
     height: 100px;
     width: auto;
+    max-width: 100%;
     flex-shrink: 0;
     display: block;
+    object-fit: contain;
   }
 
   .brand-name {
     font-family: 'Fraunces', serif; font-size: 18px; font-weight: 500;
     color: var(--bark); letter-spacing: -0.01em; line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .brand-sub {
     font-size: 11px; color: var(--muted);
     letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   nav ul {
@@ -248,9 +274,12 @@
     background: var(--bark);
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     padding: 12px 40px;
+    padding-left: max(40px, env(safe-area-inset-left));
+    padding-right: max(40px, env(safe-area-inset-right));
     text-align: center;
     font-size: 13px;
     color: var(--cream);
+    line-height: 1.5;
   }
 
   .rebuild-banner a {
@@ -1668,6 +1697,8 @@
     color: var(--bark);
     text-decoration: none;
     transition: color 0.2s;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .contact-strip-value a:hover { color: var(--forest); }
@@ -1733,6 +1764,12 @@
   @media (max-width: 700px) {
     .contact-info-strip { flex-direction: column; gap: 28px; padding: 32px 24px; }
     .contact-strip-div { width: 60px; height: 1px; }
+    .contact-section { padding: 72px 20px; }
+    .contact-header { margin-bottom: 40px; }
+    .contact-form input, .contact-form textarea,
+    .prayer-form input, .prayer-form textarea {
+      font-size: 16px; /* prevents iOS zoom on focus */
+    }
   }
 
   /* ====== FOOTER ====== */
@@ -1805,23 +1842,78 @@
     .give { padding: 60px 24px; }
     .give-inner { grid-template-columns: 1fr; gap: 40px; }
     .service-strip { padding: 40px 24px; }
-    header { padding: 16px 20px; }
-    .rebuild-banner { padding: 12px 20px; font-size: 12px; }
+    header {
+      padding: 10px 16px;
+      padding-left: max(16px, env(safe-area-inset-left));
+      padding-right: max(16px, env(safe-area-inset-right));
+      gap: 12px;
+      justify-content: space-between;
+    }
+    header.scrolled {
+      padding: 8px 16px;
+      padding-left: max(16px, env(safe-area-inset-left));
+      padding-right: max(16px, env(safe-area-inset-right));
+    }
+    .brand { gap: 10px; flex: 1 1 auto; min-width: 0; }
+    .brand-logo { height: 48px; }
+    header.scrolled .brand-logo { height: 40px; }
+    .brand-name { font-size: 15px; }
+    .brand-sub { font-size: 10px; letter-spacing: 0.06em; }
+    .rebuild-banner {
+      padding: 10px 16px;
+      padding-left: max(16px, env(safe-area-inset-left));
+      padding-right: max(16px, env(safe-area-inset-right));
+      font-size: 12px;
+      line-height: 1.45;
+      text-wrap: pretty;
+    }
     footer { padding: 60px 24px 24px; }
+    .footer-brand img { height: 56px !important; }
+    .footer-inner { gap: 28px; }
+    .hero-headline span.hero-line-1 { font-size: clamp(2.6rem, 14vw, 3.5rem); }
+    .hero-headline span.hero-line-2 { font-size: clamp(2.1rem, 11vw, 2.8rem); }
+    .hero-headline span.hero-line-3 { font-size: clamp(3rem, 16vw, 4rem); }
 
-    .mobile-toggle { display: block; }
-
-    nav ul {
-      display: none;
-      position: absolute; top: 100%; left: 0; right: 0;
-      background: #ece3cf;
-      flex-direction: column; gap: 0;
-      padding: 20px 24px;
-      border-bottom: 1px solid rgba(61, 47, 33, 0.1);
-      box-shadow: 0 10px 20px rgba(61, 47, 33, 0.05);
+    .mobile-toggle {
+      display: block;
+      flex-shrink: 0;
+      margin-left: auto;
     }
 
-    nav ul.open { display: flex; }
+    nav { flex-shrink: 0; }
+
+    nav ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #ece3cf;
+      flex-direction: column;
+      gap: 0;
+      padding: 0 24px;
+      border-bottom: 0;
+      box-shadow: none;
+      z-index: 101;
+      max-height: 0;
+      overflow: hidden;
+      display: flex;
+      visibility: hidden;
+      pointer-events: none;
+      transition: max-height 0.35s ease, padding 0.25s ease, visibility 0s linear 0.35s;
+    }
+
+    nav ul.open {
+      display: flex;
+      visibility: visible;
+      pointer-events: auto;
+      max-height: min(680px, calc(100dvh - 72px));
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 12px 24px 20px;
+      border-bottom: 1px solid rgba(61, 47, 33, 0.1);
+      box-shadow: 0 10px 20px rgba(61, 47, 33, 0.05);
+      transition: max-height 0.35s ease, padding 0.25s ease, visibility 0s;
+    }
 
     nav ul li {
       width: 100%; padding: 10px 0;
@@ -1840,14 +1932,34 @@
       text-align: center;
       min-width: 96px;
     }
+  }
 
-    nav ul {
-      max-height: 0;
-      overflow: hidden;
-      display: flex !important;
-      transition: max-height 0.35s ease;
+  @media (max-width: 480px) {
+    header {
+      padding: 8px 14px;
+      padding-left: max(14px, env(safe-area-inset-left));
+      padding-right: max(14px, env(safe-area-inset-right));
+      gap: 8px;
     }
-    nav ul.open { max-height: 680px; }
+    header.scrolled {
+      padding: 6px 14px;
+      padding-left: max(14px, env(safe-area-inset-left));
+      padding-right: max(14px, env(safe-area-inset-right));
+    }
+    .brand-logo { height: 48px; }
+    header.scrolled .brand-logo { height: 40px; }
+    /* Logo already carries the wordmark — hide duplicate text so it can't truncate */
+    .brand > div { display: none; }
+    html { scroll-padding-top: 72px; }
+    .mobile-toggle {
+      width: 44px;
+      height: 44px;
+    }
+    .mobile-toggle .bar:nth-child(1) { top: 15px; }
+    .mobile-toggle .bar:nth-child(2) { top: 21px; }
+    .mobile-toggle .bar:nth-child(3) { top: 27px; }
+    .mobile-toggle.open .bar:nth-child(1),
+    .mobile-toggle.open .bar:nth-child(3) { top: 21px; }
   }
 
   /* ====== ACCESSIBILITY: SKIP LINK ====== */
@@ -1895,8 +2007,17 @@
     background: rgba(236, 227, 207, 0.98);
     box-shadow: 0 2px 20px rgba(61, 47, 33, 0.06);
   }
-  header.scrolled .brand-logo { height: 64px; transition: height 0.3s ease; }
+  header.scrolled .brand-logo { height: 64px; }
   .brand-logo { transition: height 0.3s ease; }
+
+  @media (max-width: 960px) {
+    header.scrolled { padding: 8px 16px; }
+    header.scrolled .brand-logo { height: 40px; }
+  }
+  @media (max-width: 480px) {
+    header.scrolled { padding: 6px 14px; }
+    header.scrolled .brand-logo { height: 36px; }
+  }
 
   /* ====== ACTIVE NAV LINK ====== */
   nav a {
@@ -2935,7 +3056,7 @@
     <div class="contact-strip-div"></div>
     <div class="contact-strip-item">
       <div class="contact-strip-label" data-en="Email" data-ru="Эл. почта">Email</div>
-      <p class="contact-strip-value"><a href="mailto:contact@eagangrace.com">contact@eagangrace.com</a><br><a href="mailto:operations@eagangrace.com">operations@eagangrace.com</a></p>
+      <p class="contact-strip-value"><a href="mailto:admin@eagangrace.com">admin@eagangrace.com</a></p>
     </div>
     <div class="contact-strip-div"></div>
     <div class="contact-strip-item">
@@ -3078,16 +3199,27 @@
     btn.classList.toggle('open');
     const isOpen = menu.classList.contains('open');
     btn.setAttribute('aria-expanded', isOpen);
+    document.body.classList.toggle('nav-open', isOpen);
+  }
+
+  function closeMenu() {
+    const menu = document.getElementById('navMenu');
+    const tog = document.querySelector('.mobile-toggle');
+    if (!menu || !tog) return;
+    menu.classList.remove('open');
+    tog.classList.remove('open');
+    tog.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('nav-open');
   }
 
   // Close mobile menu on nav click
   document.querySelectorAll('#navMenu a').forEach(a => {
-    a.addEventListener('click', () => {
-      document.getElementById('navMenu').classList.remove('open');
-      const tog = document.querySelector('.mobile-toggle');
-      tog.classList.remove('open');
-      tog.setAttribute('aria-expanded', 'false');
-    });
+    a.addEventListener('click', closeMenu);
+  });
+
+  // Close menu on resize back to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 960) closeMenu();
   });
 
   const FORMSPREE_URL = 'https://formspree.io/f/mpqbbqzq';
@@ -3117,7 +3249,7 @@
         btn.textContent = original;
       }
     } catch {
-      errorEl.textContent = 'Could not send. Please email contact@eagangrace.com directly.';
+      errorEl.textContent = 'Could not send. Please email admin@eagangrace.com directly.';
       errorEl.style.display = 'block';
       btn.disabled = false;
       btn.textContent = original;
