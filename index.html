@@ -1630,7 +1630,7 @@
   .contact-header {
     text-align: center;
     max-width: 900px;
-    margin: 0 auto 64px;
+    margin: 0 auto 56px;
   }
 
   .contact-header .eyebrow {
@@ -1645,82 +1645,68 @@
     letter-spacing: -0.02em;
   }
 
-  .contact-info-strip {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 860px;
-    margin: 0 auto 64px;
+  .contact-body {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 40px 48px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: stretch;
+  }
+
+  .contact-map-wrap {
+    min-height: 360px;
+    height: 100%;
     border: 1px solid rgba(61, 47, 33, 0.18);
-    padding: 40px 0;
+    overflow: hidden;
+    box-shadow: 5px 5px 0 rgba(61, 47, 33, 0.08);
     position: relative;
   }
 
-  .contact-info-strip::after {
-    content: '';
+  .contact-map-wrap iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    border: 0;
+    filter: grayscale(0.25) contrast(0.95) sepia(0.08);
+    transition: filter 0.4s ease;
     position: absolute;
-    inset: 8px;
-    border: 1px solid rgba(61, 47, 33, 0.08);
-    pointer-events: none;
+    inset: 0;
   }
 
-  .contact-strip-item {
-    flex: 1;
-    text-align: center;
-    padding: 0 40px;
-  }
-
-  .contact-strip-div {
-    width: 1px;
-    height: 64px;
-    background: rgba(61, 47, 33, 0.12);
-    flex-shrink: 0;
-  }
-
-  .contact-strip-label {
-    font-family: 'Inter', sans-serif;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--forest);
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-
-  .contact-strip-value {
-    font-size: 15px;
-    color: var(--bark);
-    line-height: 1.75;
-    margin: 0;
-  }
-
-  .contact-strip-value a {
-    color: var(--bark);
-    text-decoration: none;
-    transition: color 0.2s;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-
-  .contact-strip-value a:hover { color: var(--forest); }
+  .contact-map-wrap:hover iframe { filter: none; }
 
   .contact-form-wrap {
-    max-width: 580px;
-    margin: 0 auto;
+    max-width: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .contact-form label {
-    display: block;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--forest);
-    font-weight: 600;
-    margin-bottom: 8px;
-    margin-top: 24px;
+  .contact-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
   }
 
-  .contact-form label:first-of-type { margin-top: 0; }
+  .contact-form-row > div { min-width: 0; }
+
+  .contact-form { position: relative; }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
 
   .contact-form input, .contact-form textarea {
     width: 100%;
@@ -1742,7 +1728,11 @@
     outline: none; border-color: var(--forest);
   }
 
-  .contact-form textarea { resize: vertical; min-height: 140px; }
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 180px;
+    margin-bottom: 0;
+  }
 
   .contact-form button {
     background: var(--bark); color: var(--cream);
@@ -1750,7 +1740,7 @@
     padding: 16px 36px;
     font-size: 14px; font-weight: 600;
     cursor: pointer; font-family: inherit;
-    margin-top: 28px; width: 100%;
+    margin-top: 16px; width: 100%;
     transition: all 0.15s;
     border-radius: 2px;
     letter-spacing: 0.04em;
@@ -1762,15 +1752,48 @@
     transform: translate(2px, 2px); box-shadow: 2px 2px 0 rgba(61, 47, 33, 0.15);
   }
 
+  .contact-map-meta {
+    grid-column: 1 / -1;
+    margin: 0;
+    text-align: center;
+    font-size: 13px;
+    color: var(--bark);
+    line-height: 1.8;
+    opacity: 0.78;
+  }
+
+  .contact-map-meta a {
+    color: var(--bark);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(61, 47, 33, 0.22);
+    transition: color 0.2s;
+  }
+
+  .contact-map-meta a:hover { color: var(--forest); }
+
+  .contact-meta-dot {
+    margin: 0 10px;
+    opacity: 0.4;
+  }
+
+  @media (max-width: 860px) {
+    .contact-body { grid-template-columns: 1fr; gap: 28px; }
+    .contact-map-wrap { min-height: 260px; height: 260px; }
+    .contact-map-wrap iframe { min-height: 260px; position: static; height: 260px; }
+    .contact-form-row { grid-template-columns: 1fr; }
+  }
+
   @media (max-width: 700px) {
-    .contact-info-strip { flex-direction: column; gap: 28px; padding: 32px 24px; }
-    .contact-strip-div { width: 60px; height: 1px; }
     .contact-section { padding: 72px 20px; }
     .contact-header { margin-bottom: 40px; }
     .contact-form input, .contact-form textarea,
     .prayer-form input, .prayer-form textarea {
       font-size: 16px; /* prevents iOS zoom on focus */
     }
+    .contact-map-meta { font-size: 12px; }
+    .contact-meta-dot { display: none; }
+    .contact-map-meta > span:not(.contact-meta-dot),
+    .contact-map-meta a { display: block; }
   }
 
   /* ====== FOOTER ====== */
@@ -1836,7 +1859,6 @@
     .involved-grid { grid-template-columns: 1fr; }
     .ministry-hero { padding: 36px 28px; margin: 40px 0 28px; }
     .ministry-hero h3 { font-size: 26px; }
-    .contact { grid-template-columns: 1fr; gap: 50px; }
     .footer-cols { gap: 32px; }
     .section { padding: 80px 24px; }
     .welcome, .rebuild { padding: 80px 24px; }
@@ -2517,28 +2539,6 @@
     .expect-section { padding: 70px 20px; }
   }
 
-  /* ====== MAP ====== */
-  .contact-map-wrap {
-    max-width: 860px;
-    margin: 0 auto 48px;
-    border: 1px solid rgba(61, 47, 33, 0.18);
-    overflow: hidden;
-    box-shadow: 5px 5px 0 rgba(61, 47, 33, 0.08);
-    position: relative;
-  }
-  .contact-map-wrap iframe {
-    display: block;
-    width: 100%;
-    height: 360px;
-    border: 0;
-    filter: grayscale(0.25) contrast(0.95) sepia(0.08);
-    transition: filter 0.4s ease;
-  }
-  .contact-map-wrap:hover iframe { filter: none; }
-  @media (max-width: 600px) {
-    .contact-map-wrap iframe { height: 280px; }
-  }
-
   /* ====== HONEYPOT (hide from humans) ====== */
   .hp-field {
     position: absolute !important;
@@ -3053,46 +3053,45 @@
     <h2 data-en="We'd love to hear from you." data-ru="Будем рады услышать вас.">We'd love to hear from you.</h2>
   </div>
 
-  <div class="contact-map-wrap">
-    <iframe
-      src="https://www.google.com/maps?q=1985+Diffley+Rd+Eagan+MN+55122&output=embed"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      title="Map to Grace Evangelical Church, 1985 Diffley Rd, Eagan, MN"
-      allowfullscreen></iframe>
-  </div>
+  <div class="contact-body">
+    <div class="contact-map-wrap">
+      <iframe
+        src="https://www.google.com/maps?q=1985+Diffley+Rd+Eagan+MN+55122&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Map to Grace Evangelical Church, 1985 Diffley Rd, Eagan, MN"
+        allowfullscreen></iframe>
+    </div>
 
-  <div class="contact-info-strip">
-    <div class="contact-strip-item">
-      <div class="contact-strip-label" data-en="Visit" data-ru="Адрес">Visit</div>
-      <p class="contact-strip-value">1985 Diffley Rd<br>Eagan, MN 55122</p>
+    <div class="contact-form contact-form-wrap">
+      <div id="contact-success" style="display:none; font-family:'Fraunces',serif; font-style:italic; font-size:20px; color:var(--gold-soft); padding:40px 0; text-align:center;">Thank you — we'll be in touch soon.</div>
+      <div id="contact-error" style="display:none; color:#e07070; font-size:14px; margin-bottom:14px;"></div>
+      <form id="contact-form">
+        <input type="hidden" name="_subject" value="Contact — eagangrace.com">
+        <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="contact-form-row">
+          <div>
+            <label for="cf-name" class="sr-only" data-en="Name" data-ru="Имя">Name</label>
+            <input type="text" id="cf-name" name="name" placeholder="Your name" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="cf-email" class="sr-only" data-en="Email" data-ru="Эл. почта">Email</label>
+            <input type="email" id="cf-email" name="email" placeholder="Email address" autocomplete="email" required>
+          </div>
+        </div>
+        <label for="cf-message" class="sr-only" data-en="Message" data-ru="Сообщение">Message</label>
+        <textarea id="cf-message" name="message" placeholder="How can we help?" required></textarea>
+        <button type="submit" id="contact-btn" data-en="Send message" data-ru="Отправить">Send message</button>
+      </form>
     </div>
-    <div class="contact-strip-div"></div>
-    <div class="contact-strip-item">
-      <div class="contact-strip-label" data-en="Email" data-ru="Эл. почта">Email</div>
-      <p class="contact-strip-value"><a href="mailto:admin@eagangrace.com">admin@eagangrace.com</a></p>
-    </div>
-    <div class="contact-strip-div"></div>
-    <div class="contact-strip-item">
-      <div class="contact-strip-label" data-en="Service times" data-ru="Время служений">Service times</div>
-      <p class="contact-strip-value" data-en="Sunday · 10:30 AM<br>Wednesday · 6:30 PM<br>Weeknights — small groups" data-ru="Воскресенье · 10:30<br>Среда · 18:30<br>По будням — домашние группы">Sunday · 10:30 AM<br>Wednesday · 6:30 PM<br>Weeknights — small groups</p>
-    </div>
-  </div>
 
-  <div class="contact-form contact-form-wrap">
-    <div id="contact-success" style="display:none; font-family:'Fraunces',serif; font-style:italic; font-size:20px; color:var(--gold-soft); padding:40px 0; text-align:center;">Thank you — we'll be in touch soon.</div>
-    <div id="contact-error" style="display:none; color:#e07070; font-size:14px; margin-bottom:14px;"></div>
-    <form id="contact-form">
-      <input type="hidden" name="_subject" value="Contact — eagangrace.com">
-      <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <label for="cf-name" data-en="Name" data-ru="Имя">Name</label>
-      <input type="text" id="cf-name" name="name" placeholder="Your name" required>
-      <label for="cf-email" data-en="Email" data-ru="Эл. почта">Email</label>
-      <input type="email" id="cf-email" name="email" placeholder="Email address" required>
-      <label for="cf-message" data-en="Message" data-ru="Сообщение">Message</label>
-      <textarea id="cf-message" name="message" placeholder="How can we help?" required></textarea>
-      <button type="submit" id="contact-btn" data-en="Send message" data-ru="Отправить">Send message</button>
-    </form>
+    <p class="contact-map-meta">
+      <span>1985 Diffley Rd, Eagan, MN 55122</span>
+      <span class="contact-meta-dot" aria-hidden="true">·</span>
+      <a href="mailto:admin@eagangrace.com">admin@eagangrace.com</a>
+      <span class="contact-meta-dot" aria-hidden="true">·</span>
+      <span data-en="Sunday 10:30 AM · Wednesday 6:30 PM" data-ru="Воскресенье 10:30 · Среда 18:30">Sunday 10:30 AM · Wednesday 6:30 PM</span>
+    </p>
   </div>
 </section>
 </main>
@@ -3453,7 +3452,7 @@
     '.welcome-inner > *',
     '.rebuild-inner > *',
     '.give-inner > *',
-    '.contact-info-strip > *',
+    '.contact-body > *',
     '.section-header > *',
     '.ministry-hero > *',
     '.beliefs-inner > .eyebrow, .beliefs-inner > h2, .beliefs-inner > p.lead',
