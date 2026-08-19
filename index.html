@@ -217,18 +217,18 @@
   nav a:hover { color: var(--gold); }
 
   .lang-toggle {
-    display: flex; border: 1px solid rgba(61, 47, 33, 0.15);
+    display: flex; border: 1.5px solid var(--gold);
     border-radius: 20px; overflow: hidden; margin-left: 8px;
   }
 
   .lang-toggle button {
     background: transparent; border: none;
-    padding: 6px 12px; font-size: 12px; cursor: pointer;
-    color: var(--muted); font-family: inherit;
+    padding: 7px 14px; font-size: 13px; font-weight: 600; cursor: pointer;
+    color: var(--bark-soft); font-family: inherit;
     letter-spacing: 0.05em; transition: all 0.2s;
   }
 
-  .lang-toggle button.active { background: var(--bark); color: var(--cream); }
+  .lang-toggle button.active { background: var(--gold); color: var(--bark); }
 
   .give-btn {
     background: var(--gold); color: var(--bark);
@@ -1062,6 +1062,120 @@
 
   .ministry-card p {
     font-size: 14px; color: var(--bark-soft); line-height: 1.65;
+  }
+
+
+  /* ====== EVENTS ====== */
+  .events-grid {
+    display: grid;
+    gap: 24px;
+    max-width: 760px;
+    margin: 8px auto 0;
+  }
+
+  .event-card {
+    background: #f5ecd8;
+    padding: 28px;
+    border: 1px solid rgba(61, 47, 33, 0.2);
+    position: relative;
+    box-shadow: 5px 5px 0 rgba(61, 47, 33, 0.1);
+    transition: all 0.18s ease;
+  }
+
+  .event-card::after {
+    content: '';
+    position: absolute;
+    inset: 7px;
+    border: 1px solid rgba(61, 47, 33, 0.1);
+    pointer-events: none;
+  }
+
+  .event-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 rgba(61, 47, 33, 0.12);
+  }
+
+  .event-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 18px;
+  }
+
+  .event-date {
+    flex: 0 0 76px;
+    text-align: center;
+    background: var(--bark);
+    color: var(--ivory);
+    padding: 14px 8px;
+  }
+
+  .event-date .event-month {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold-soft);
+  }
+
+  .event-date .event-day {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .event-top h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--bark);
+  }
+
+  .event-meta {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+  }
+
+  .event-meta svg {
+    width: 15px;
+    height: 15px;
+    fill: var(--forest);
+    vertical-align: -2px;
+  }
+
+  .event-body p {
+    font-size: 14px;
+    color: var(--bark-soft);
+    line-height: 1.65;
+    margin-bottom: 14px;
+    white-space: pre-line;
+  }
+
+  .event-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+  }
+
+  .event-cta {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--bark);
+    text-decoration: none;
+    border-bottom: 1px solid var(--forest);
+    padding-bottom: 2px;
+  }
+
+  .event-cta:hover { color: var(--forest); }
+
+  @media (max-width: 700px) {
+    .event-date { flex: 0 0 64px; padding: 10px 6px; }
+    .event-date .event-day { font-size: 24px; }
   }
 
 
@@ -2606,6 +2720,7 @@
     <ul id="navMenu">
       <li><a href="#about" data-en="About" data-ru="О нас">About</a></li>
       <li><a href="#visit" data-en="Visit" data-ru="Визит">Visit</a></li>
+      <li><a href="#events" data-en="Events" data-ru="События">Events</a></li>
       <li><a href="#beliefs" data-en="Beliefs" data-ru="Вероучение">Beliefs</a></li>
       <li><a href="#sermons" data-en="Sermons" data-ru="Проповеди">Sermons</a></li>
       <li><a href="#leadership" data-en="Leadership" data-ru="Руководство">Leadership</a></li>
@@ -2724,6 +2839,36 @@
         <div class="expect-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-5 4V6a2 2 0 0 1 2-2zm2 5v2h10V9H7zm0 4v2h7v-2H7z"/></svg></div>
         <h3 data-en="Russian & English" data-ru="Русский и английский">Russian & English</h3>
         <p data-en="Live translation between Russian and English. Ask a greeter for a headset." data-ru="Живой перевод между русским и английским. Попросите наушники у встречающего.">Live translation between Russian and English. Ask a greeter for a headset.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVENTS ============ -->
+<section class="section events-section" id="events">
+  <div class="eyebrow" data-en="Upcoming events" data-ru="Ближайшие события">Upcoming events</div>
+  <h2 data-en="Join us for what's next." data-ru="Присоединяйтесь к нам.">Join us for what's next.</h2>
+  <p class="lead" style="max-width: 680px;" data-en="Special services, gatherings, and celebrations we're hosting." data-ru="Особые богослужения, встречи и праздники, которые мы проводим.">Special services, gatherings, and celebrations we're hosting.</p>
+
+  <div class="events-grid">
+    <div class="event-card">
+      <div class="event-top">
+        <div class="event-date">
+          <span class="event-month" data-en="Sep" data-ru="Сен">Sep</span>
+          <span class="event-day">27</span>
+        </div>
+        <h3 data-en="Harvest Festival" data-ru="Праздник урожая">Harvest Festival</h3>
+      </div>
+      <div class="event-body">
+        <div class="event-meta">
+          <span data-en="Sunday, September 27, 2026 · 10:30 AM CDT" data-ru="Воскресенье, 27 сентября 2026 · 10:30 (CDT)">Sunday, September 27, 2026 · 10:30 AM CDT</span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35c-4.68-4.24-8-7.72-8-11.6A8 8 0 0 1 12 2a8 8 0 0 1 8 7.75c0 3.88-3.32 7.36-8 11.6zm0-9.35a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg> <span data-en="1985 Diffley Rd, Eagan, MN" data-ru="1985 Diffley Rd, Eagan, MN">1985 Diffley Rd, Eagan, MN</span></span>
+        </div>
+        <p data-en="A time to thank God for all His blessings! Join us for a service in a tent by our church. Afterward — fellowship, tea, and refreshments." data-ru="Время благодарить Бога за все Его благословения! Присоединяйтесь к нам на богослужении в палатке около нашей церкви. После — общение, чай и угощения.">A time to thank God for all His blessings! Join us for a service in a tent by our church. Afterward — fellowship, tea, and refreshments.</p>
+        <div class="event-actions">
+          <a class="event-cta" href="https://www.facebook.com/share/1AVyAUCos2/" target="_blank" rel="noopener" data-en="View on Facebook →" data-ru="Смотреть на Facebook →">View on Facebook →</a>
+          <a class="event-cta" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Harvest+Festival+%C2%B7+Grace+Slavic+Church&dates=20260927T153000Z/20260927T173000Z&details=A+time+to+thank+God+for+all+His+blessings.+Service+in+a+tent+by+the+church%2C+followed+by+fellowship%2C+tea%2C+and+refreshments.&location=1985+Diffley+Rd%2C+Eagan%2C+MN+55122&ctz=America%2FChicago" target="_blank" rel="noopener" data-en="Add to calendar →" data-ru="Добавить в календарь →">Add to calendar →</a>
+        </div>
       </div>
     </div>
   </div>
