@@ -3181,6 +3181,7 @@
       <div id="prayer-error" style="display:none; color:#e07070; font-size:14px; margin-bottom:16px;"></div>
       <form id="prayer-form" class="prayer-form">
         <input type="hidden" name="_subject" value="Prayer Request — Grace Evangelical Church">
+        <input type="hidden" name="form_type" value="prayer">
         <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
         <p class="prayer-form-hint" data-en="Our pastor and elders pray over every request. You may remain anonymous." data-ru="Наш пастор и пресвитеры молятся над каждой нуждой. Вы можете остаться анонимным.">Our pastor and elders pray over every request. You may remain anonymous.</p>
         <label for="pr-name" data-en="Your name (optional)" data-ru="Ваше имя (необязательно)">Your name (optional)</label>
@@ -3216,6 +3217,7 @@
       <div id="contact-error" style="display:none; color:#e07070; font-size:14px; margin-bottom:14px;"></div>
       <form id="contact-form">
         <input type="hidden" name="_subject" value="Contact — eagangrace.com">
+        <input type="hidden" name="form_type" value="contact">
         <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="contact-form-row">
           <div>
@@ -3388,6 +3390,7 @@
     if (e.key === 'Escape') closeMenu();
   });
 
+  const CHURCH_EMAIL = 'admin@eagangrace.com';
   const FORMSPREE_URL = 'https://formspree.io/f/mpqbbqzq';
 
   async function submitForm(formEl, btnId, successId, errorId) {
@@ -3399,9 +3402,13 @@
     btn.textContent = '…';
     errorEl.style.display = 'none';
     try {
+      const payload = new FormData(formEl);
+      payload.set('_cc', CHURCH_EMAIL);
+      const submitterEmail = payload.get('email');
+      if (submitterEmail) payload.set('_replyto', submitterEmail);
       const res = await fetch(FORMSPREE_URL, {
         method: 'POST',
-        body: new FormData(formEl),
+        body: payload,
         headers: { 'Accept': 'application/json' }
       });
       if (res.ok) {
@@ -3415,7 +3422,7 @@
         btn.textContent = original;
       }
     } catch {
-      errorEl.textContent = 'Could not send. Please email admin@eagangrace.com directly.';
+      errorEl.textContent = 'Could not send. Please email ' + CHURCH_EMAIL + ' directly.';
       errorEl.style.display = 'block';
       btn.disabled = false;
       btn.textContent = original;
