@@ -1,0 +1,3926 @@
+[
+  {
+    "mode": "final-fonts",
+    "language": "en",
+    "width": 320,
+    "documentWidth": 320,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 14,
+      "y": 108,
+      "w": 93,
+      "h": 48,
+      "right": 107
+    },
+    "hero": {
+      "x": 0,
+      "y": 165,
+      "w": 320,
+      "h": 672,
+      "right": 320
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 24,
+        "y": 213,
+        "w": 272,
+        "h": 37,
+        "right": 296
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 24,
+        "y": 266,
+        "w": 272,
+        "h": 27,
+        "right": 296
+      },
+      {
+        "tag": "hero-headline",
+        "x": 24,
+        "y": 321,
+        "w": 272,
+        "h": 129,
+        "right": 296
+      },
+      {
+        "tag": "cta-row",
+        "x": 24,
+        "y": 482,
+        "w": 272,
+        "h": 121,
+        "right": 296
+      },
+      {
+        "tag": "hero-verse",
+        "x": 24,
+        "y": 635,
+        "w": 272,
+        "h": 146,
+        "right": 296
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fonts",
+    "language": "en",
+    "width": 375,
+    "documentWidth": 375,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 14,
+      "y": 108,
+      "w": 93,
+      "h": 48,
+      "right": 107
+    },
+    "hero": {
+      "x": 0,
+      "y": 165,
+      "w": 375,
+      "h": 663,
+      "right": 375
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 48,
+        "y": 213,
+        "w": 280,
+        "h": 37,
+        "right": 328
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 43,
+        "y": 266,
+        "w": 290,
+        "h": 27,
+        "right": 333
+      },
+      {
+        "tag": "hero-headline",
+        "x": 24,
+        "y": 321,
+        "w": 327,
+        "h": 150,
+        "right": 351
+      },
+      {
+        "tag": "cta-row",
+        "x": 24,
+        "y": 503,
+        "w": 327,
+        "h": 121,
+        "right": 351
+      },
+      {
+        "tag": "hero-verse",
+        "x": 24,
+        "y": 656,
+        "w": 327,
+        "h": 116,
+        "right": 351
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fonts",
+    "language": "en",
+    "width": 390,
+    "documentWidth": 390,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 14,
+      "y": 108,
+      "w": 93,
+      "h": 48,
+      "right": 107
+    },
+    "hero": {
+      "x": 0,
+      "y": 165,
+      "w": 390,
+      "h": 669,
+      "right": 390
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 55,
+        "y": 213,
+        "w": 280,
+        "h": 37,
+        "right": 335
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 50,
+        "y": 266,
+        "w": 290,
+        "h": 27,
+        "right": 340
+      },
+      {
+        "tag": "hero-headline",
+        "x": 24,
+        "y": 321,
+        "w": 342,
+        "h": 155,
+        "right": 366
+      },
+      {
+        "tag": "cta-row",
+        "x": 24,
+        "y": 509,
+        "w": 342,
+        "h": 121,
+        "right": 366
+      },
+      {
+        "tag": "hero-verse",
+        "x": 24,
+        "y": 661,
+        "w": 342,
+        "h": 116,
+        "right": 366
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fonts",
+    "language": "en",
+    "width": 430,
+    "documentWidth": 430,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 14,
+      "y": 90,
+      "w": 93,
+      "h": 48,
+      "right": 107
+    },
+    "hero": {
+      "x": 0,
+      "y": 147,
+      "w": 430,
+      "h": 684,
+      "right": 430
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 75,
+        "y": 195,
+        "w": 280,
+        "h": 37,
+        "right": 355
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 70,
+        "y": 249,
+        "w": 290,
+        "h": 27,
+        "right": 360
+      },
+      {
+        "tag": "hero-headline",
+        "x": 25,
+        "y": 304,
+        "w": 380,
+        "h": 171,
+        "right": 405
+      },
+      {
+        "tag": "cta-row",
+        "x": 25,
+        "y": 506,
+        "w": 380,
+        "h": 121,
+        "right": 405
+      },
+      {
+        "tag": "hero-verse",
+        "x": 25,
+        "y": 659,
+        "w": 380,
+        "h": 116,
+        "right": 405
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fonts",
+    "language": "en",
+    "width": 768,
+    "documentWidth": 768,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 16,
+      "y": 92,
+      "w": 93,
+      "h": 48,
+      "right": 109
+    },
+    "hero": {
+      "x": 0,
+      "y": 151,
+      "w": 768,
+      "h": 600,
+      "right": 768
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 104,
+        "y": 211,
+        "w": 560,
+        "h": 18,
+        "right": 664
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 104,
+        "y": 243,
+        "w": 560,
+        "h": 30,
+        "right": 664
+      },
+      {
+        "tag": "hero-headline",
+        "x": 104,
+        "y": 292,
+        "w": 560,
+        "h": 157,
+        "right": 664
+      },
+      {
+        "tag": "cta-row",
+        "x": 104,
+        "y": 469,
+        "w": 560,
+        "h": 52,
+        "right": 664
+      },
+      {
+        "tag": "hero-verse",
+        "x": 104,
+        "y": 553,
+        "w": 560,
+        "h": 118,
+        "right": 664
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fonts",
+    "language": "en",
+    "width": 960,
+    "documentWidth": 960,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 16,
+      "y": 75,
+      "w": 93,
+      "h": 48,
+      "right": 109
+    },
+    "hero": {
+      "x": 0,
+      "y": 134,
+      "w": 960,
+      "h": 607,
+      "right": 960
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 200,
+        "y": 194,
+        "w": 560,
+        "h": 18,
+        "right": 760
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 200,
+        "y": 226,
+        "w": 560,
+        "h": 37,
+        "right": 760
+      },
+      {
+        "tag": "hero-headline",
+        "x": 200,
+        "y": 282,
+        "w": 560,
+        "h": 157,
+        "right": 760
+      },
+      {
+        "tag": "cta-row",
+        "x": 200,
+        "y": 459,
+        "w": 560,
+        "h": 52,
+        "right": 760
+      },
+      {
+        "tag": "hero-verse",
+        "x": 200,
+        "y": 543,
+        "w": 560,
+        "h": 118,
+        "right": 760
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fonts",
+    "language": "en",
+    "width": 1165,
+    "documentWidth": 1165,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 16,
+      "y": 48,
+      "w": 93,
+      "h": 48,
+      "right": 109
+    },
+    "hero": {
+      "x": 0,
+      "y": 107,
+      "w": 1165,
+      "h": 861,
+      "right": 1165
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 303,
+        "y": 187,
+        "w": 560,
+        "h": 19,
+        "right": 863
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 303,
+        "y": 223,
+        "w": 560,
+        "h": 42,
+        "right": 863
+      },
+      {
+        "tag": "hero-headline",
+        "x": 303,
+        "y": 285,
+        "w": 560,
+        "h": 332,
+        "right": 863
+      },
+      {
+        "tag": "cta-row",
+        "x": 303,
+        "y": 645,
+        "w": 560,
+        "h": 52,
+        "right": 863
+      },
+      {
+        "tag": "hero-verse",
+        "x": 303,
+        "y": 741,
+        "w": 560,
+        "h": 127,
+        "right": 863
+      }
+    ],
+    "smallTargets": [
+      {
+        "text": "Learn more \u2192",
+        "cls": "",
+        "x": 885,
+        "y": 11,
+        "w": 81,
+        "h": 17,
+        "right": 965
+      },
+      {
+        "text": "Full channel on YouTube \u2192",
+        "cls": "reveal reveal-delay-1 in-view",
+        "x": 946,
+        "y": 6569,
+        "w": 179,
+        "h": 26,
+        "right": 1125
+      },
+      {
+        "text": "YouTube channel",
+        "cls": "",
+        "x": 611,
+        "y": 6789,
+        "w": 122,
+        "h": 19,
+        "right": 733
+      },
+      {
+        "text": "View the full archive on YouTube \u2192",
+        "cls": "",
+        "x": 588,
+        "y": 6868,
+        "w": 236,
+        "h": 20,
+        "right": 824
+      },
+      {
+        "text": "Get in touch \u2192",
+        "cls": "group-join-cta",
+        "x": 220,
+        "y": 7864,
+        "w": 157,
+        "h": 40,
+        "right": 377
+      },
+      {
+        "text": "Give at givebutter.com \u2192",
+        "cls": "",
+        "x": 741,
+        "y": 10289,
+        "w": 191,
+        "h": 20,
+        "right": 932
+      },
+      {
+        "text": "admin@eagangrace.com",
+        "cls": "",
+        "x": 487,
+        "y": 12002,
+        "w": 154,
+        "h": 17,
+        "right": 641
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 225,
+        "y": 12244,
+        "w": 38,
+        "h": 38,
+        "right": 263
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 275,
+        "y": 12244,
+        "w": 38,
+        "h": 38,
+        "right": 313
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 325,
+        "y": 12244,
+        "w": 38,
+        "h": 38,
+        "right": 363
+      },
+      {
+        "text": "Service times",
+        "cls": "",
+        "x": 796,
+        "y": 12196,
+        "w": 77,
+        "h": 15,
+        "right": 873
+      },
+      {
+        "text": "Directions",
+        "cls": "",
+        "x": 796,
+        "y": 12228,
+        "w": 57,
+        "h": 15,
+        "right": 853
+      },
+      {
+        "text": "What to expect",
+        "cls": "",
+        "x": 796,
+        "y": 12260,
+        "w": 86,
+        "h": 15,
+        "right": 882
+      },
+      {
+        "text": "Contact",
+        "cls": "",
+        "x": 930,
+        "y": 12196,
+        "w": 45,
+        "h": 15,
+        "right": 974
+      },
+      {
+        "text": "YouTube",
+        "cls": "",
+        "x": 930,
+        "y": 12228,
+        "w": 49,
+        "h": 15,
+        "right": 979
+      },
+      {
+        "text": "Instagram",
+        "cls": "",
+        "x": 930,
+        "y": 12260,
+        "w": 57,
+        "h": 15,
+        "right": 986
+      },
+      {
+        "text": "Facebook",
+        "cls": "",
+        "x": 930,
+        "y": 12291,
+        "w": 56,
+        "h": 15,
+        "right": 986
+      },
+      {
+        "text": "Our beliefs",
+        "cls": "",
+        "x": 1042,
+        "y": 12196,
+        "w": 62,
+        "h": 15,
+        "right": 1104
+      },
+      {
+        "text": "Leadership",
+        "cls": "",
+        "x": 1042,
+        "y": 12228,
+        "w": 63,
+        "h": 15,
+        "right": 1105
+      }
+    ]
+  },
+  {
+    "mode": "final-fonts",
+    "language": "en",
+    "width": 1440,
+    "documentWidth": 1440,
+    "overflow": [],
+    "navigation": "none",
+    "logo": {
+      "x": 40,
+      "y": 61,
+      "w": 194,
+      "h": 100,
+      "right": 234
+    },
+    "hero": {
+      "x": 0,
+      "y": 178,
+      "w": 1440,
+      "h": 907,
+      "right": 1440
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 440,
+        "y": 258,
+        "w": 560,
+        "h": 19,
+        "right": 1000
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 440,
+        "y": 293,
+        "w": 560,
+        "h": 42,
+        "right": 1000
+      },
+      {
+        "tag": "hero-headline",
+        "x": 440,
+        "y": 355,
+        "w": 560,
+        "h": 372,
+        "right": 1000
+      },
+      {
+        "tag": "cta-row",
+        "x": 440,
+        "y": 755,
+        "w": 560,
+        "h": 52,
+        "right": 1000
+      },
+      {
+        "tag": "hero-verse",
+        "x": 440,
+        "y": 852,
+        "w": 560,
+        "h": 133,
+        "right": 1000
+      }
+    ],
+    "smallTargets": [
+      {
+        "text": "Learn more \u2192",
+        "cls": "",
+        "x": 1047,
+        "y": 13,
+        "w": 87,
+        "h": 18,
+        "right": 1134
+      },
+      {
+        "text": "About",
+        "cls": "",
+        "x": 465,
+        "y": 102,
+        "w": 39,
+        "h": 17,
+        "right": 504
+      },
+      {
+        "text": "Visit",
+        "cls": "",
+        "x": 520,
+        "y": 102,
+        "w": 28,
+        "h": 17,
+        "right": 549
+      },
+      {
+        "text": "Events",
+        "cls": "",
+        "x": 565,
+        "y": 102,
+        "w": 44,
+        "h": 17,
+        "right": 609
+      },
+      {
+        "text": "Beliefs",
+        "cls": "",
+        "x": 625,
+        "y": 102,
+        "w": 45,
+        "h": 17,
+        "right": 669
+      },
+      {
+        "text": "Sermons",
+        "cls": "",
+        "x": 685,
+        "y": 102,
+        "w": 59,
+        "h": 17,
+        "right": 744
+      },
+      {
+        "text": "Leadership",
+        "cls": "",
+        "x": 760,
+        "y": 102,
+        "w": 74,
+        "h": 17,
+        "right": 834
+      },
+      {
+        "text": "Get Involved",
+        "cls": "",
+        "x": 850,
+        "y": 102,
+        "w": 83,
+        "h": 17,
+        "right": 933
+      },
+      {
+        "text": "Ministries",
+        "cls": "",
+        "x": 949,
+        "y": 102,
+        "w": 64,
+        "h": 17,
+        "right": 1013
+      },
+      {
+        "text": "Contact",
+        "cls": "active",
+        "x": 1029,
+        "y": 102,
+        "w": 52,
+        "h": 17,
+        "right": 1081
+      },
+      {
+        "text": "Give \u2192",
+        "cls": "give-btn",
+        "x": 1097,
+        "y": 92,
+        "w": 92,
+        "h": 37,
+        "right": 1189
+      },
+      {
+        "text": "EN",
+        "cls": "active",
+        "x": 1214,
+        "y": 96,
+        "w": 47,
+        "h": 30,
+        "right": 1261
+      },
+      {
+        "text": "\u0420\u0423",
+        "cls": "",
+        "x": 1261,
+        "y": 96,
+        "w": 46,
+        "h": 30,
+        "right": 1307
+      },
+      {
+        "text": "Admin",
+        "cls": "admin-link",
+        "x": 1324,
+        "y": 95,
+        "w": 76,
+        "h": 33,
+        "right": 1400
+      },
+      {
+        "text": "Full channel on YouTube \u2192",
+        "cls": "reveal reveal-delay-1 in-view",
+        "x": 1141,
+        "y": 6639,
+        "w": 179,
+        "h": 26,
+        "right": 1320
+      },
+      {
+        "text": "YouTube channel",
+        "cls": "",
+        "x": 749,
+        "y": 6859,
+        "w": 122,
+        "h": 19,
+        "right": 871
+      },
+      {
+        "text": "View the full archive on YouTube \u2192",
+        "cls": "",
+        "x": 725,
+        "y": 6938,
+        "w": 236,
+        "h": 20,
+        "right": 961
+      },
+      {
+        "text": "Get in touch \u2192",
+        "cls": "group-join-cta",
+        "x": 357,
+        "y": 7935,
+        "w": 157,
+        "h": 40,
+        "right": 514
+      },
+      {
+        "text": "Give at givebutter.com \u2192",
+        "cls": "",
+        "x": 879,
+        "y": 10361,
+        "w": 191,
+        "h": 20,
+        "right": 1069
+      },
+      {
+        "text": "admin@eagangrace.com",
+        "cls": "",
+        "x": 625,
+        "y": 12055,
+        "w": 154,
+        "h": 17,
+        "right": 778
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 285,
+        "y": 12298,
+        "w": 38,
+        "h": 38,
+        "right": 323
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 335,
+        "y": 12298,
+        "w": 38,
+        "h": 38,
+        "right": 373
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 385,
+        "y": 12298,
+        "w": 38,
+        "h": 38,
+        "right": 423
+      },
+      {
+        "text": "Service times",
+        "cls": "",
+        "x": 1011,
+        "y": 12250,
+        "w": 77,
+        "h": 15,
+        "right": 1088
+      },
+      {
+        "text": "Directions",
+        "cls": "",
+        "x": 1011,
+        "y": 12281,
+        "w": 57,
+        "h": 15,
+        "right": 1068
+      },
+      {
+        "text": "What to expect",
+        "cls": "",
+        "x": 1011,
+        "y": 12313,
+        "w": 86,
+        "h": 15,
+        "right": 1097
+      },
+      {
+        "text": "Contact",
+        "cls": "",
+        "x": 1145,
+        "y": 12250,
+        "w": 45,
+        "h": 15,
+        "right": 1189
+      },
+      {
+        "text": "YouTube",
+        "cls": "",
+        "x": 1145,
+        "y": 12281,
+        "w": 49,
+        "h": 15,
+        "right": 1194
+      },
+      {
+        "text": "Instagram",
+        "cls": "",
+        "x": 1145,
+        "y": 12313,
+        "w": 57,
+        "h": 15,
+        "right": 1201
+      },
+      {
+        "text": "Facebook",
+        "cls": "",
+        "x": 1145,
+        "y": 12345,
+        "w": 56,
+        "h": 15,
+        "right": 1201
+      },
+      {
+        "text": "Our beliefs",
+        "cls": "",
+        "x": 1257,
+        "y": 12250,
+        "w": 62,
+        "h": 15,
+        "right": 1319
+      },
+      {
+        "text": "Leadership",
+        "cls": "",
+        "x": 1257,
+        "y": 12281,
+        "w": 63,
+        "h": 15,
+        "right": 1320
+      }
+    ]
+  },
+  {
+    "mode": "final-fonts",
+    "language": "ru",
+    "width": 320,
+    "documentWidth": 320,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 14,
+      "y": 125,
+      "w": 93,
+      "h": 48,
+      "right": 107
+    },
+    "hero": {
+      "x": 0,
+      "y": 182,
+      "w": 320,
+      "h": 672,
+      "right": 320
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 24,
+        "y": 230,
+        "w": 272,
+        "h": 37,
+        "right": 296
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 24,
+        "y": 284,
+        "w": 272,
+        "h": 27,
+        "right": 296
+      },
+      {
+        "tag": "hero-headline",
+        "x": 24,
+        "y": 339,
+        "w": 272,
+        "h": 129,
+        "right": 296
+      },
+      {
+        "tag": "cta-row",
+        "x": 24,
+        "y": 499,
+        "w": 272,
+        "h": 121,
+        "right": 296
+      },
+      {
+        "tag": "hero-verse",
+        "x": 24,
+        "y": 652,
+        "w": 272,
+        "h": 146,
+        "right": 296
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fonts",
+    "language": "ru",
+    "width": 375,
+    "documentWidth": 375,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 14,
+      "y": 125,
+      "w": 93,
+      "h": 48,
+      "right": 107
+    },
+    "hero": {
+      "x": 0,
+      "y": 182,
+      "w": 375,
+      "h": 663,
+      "right": 375
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 48,
+        "y": 230,
+        "w": 280,
+        "h": 37,
+        "right": 328
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 43,
+        "y": 284,
+        "w": 290,
+        "h": 27,
+        "right": 333
+      },
+      {
+        "tag": "hero-headline",
+        "x": 24,
+        "y": 339,
+        "w": 327,
+        "h": 150,
+        "right": 351
+      },
+      {
+        "tag": "cta-row",
+        "x": 24,
+        "y": 520,
+        "w": 327,
+        "h": 121,
+        "right": 351
+      },
+      {
+        "tag": "hero-verse",
+        "x": 24,
+        "y": 673,
+        "w": 327,
+        "h": 116,
+        "right": 351
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fonts",
+    "language": "ru",
+    "width": 390,
+    "documentWidth": 390,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 14,
+      "y": 108,
+      "w": 93,
+      "h": 48,
+      "right": 107
+    },
+    "hero": {
+      "x": 0,
+      "y": 165,
+      "w": 390,
+      "h": 669,
+      "right": 390
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 55,
+        "y": 213,
+        "w": 280,
+        "h": 37,
+        "right": 335
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 50,
+        "y": 266,
+        "w": 290,
+        "h": 27,
+        "right": 340
+      },
+      {
+        "tag": "hero-headline",
+        "x": 24,
+        "y": 321,
+        "w": 342,
+        "h": 155,
+        "right": 366
+      },
+      {
+        "tag": "cta-row",
+        "x": 24,
+        "y": 509,
+        "w": 342,
+        "h": 121,
+        "right": 366
+      },
+      {
+        "tag": "hero-verse",
+        "x": 24,
+        "y": 661,
+        "w": 342,
+        "h": 116,
+        "right": 366
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fonts",
+    "language": "ru",
+    "width": 430,
+    "documentWidth": 430,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 14,
+      "y": 108,
+      "w": 93,
+      "h": 48,
+      "right": 107
+    },
+    "hero": {
+      "x": 0,
+      "y": 165,
+      "w": 430,
+      "h": 684,
+      "right": 430
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 75,
+        "y": 213,
+        "w": 280,
+        "h": 37,
+        "right": 355
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 70,
+        "y": 266,
+        "w": 290,
+        "h": 27,
+        "right": 360
+      },
+      {
+        "tag": "hero-headline",
+        "x": 25,
+        "y": 321,
+        "w": 380,
+        "h": 171,
+        "right": 405
+      },
+      {
+        "tag": "cta-row",
+        "x": 25,
+        "y": 524,
+        "w": 380,
+        "h": 121,
+        "right": 405
+      },
+      {
+        "tag": "hero-verse",
+        "x": 25,
+        "y": 676,
+        "w": 380,
+        "h": 116,
+        "right": 405
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fonts",
+    "language": "ru",
+    "width": 768,
+    "documentWidth": 768,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 16,
+      "y": 92,
+      "w": 93,
+      "h": 48,
+      "right": 109
+    },
+    "hero": {
+      "x": 0,
+      "y": 151,
+      "w": 768,
+      "h": 600,
+      "right": 768
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 104,
+        "y": 211,
+        "w": 560,
+        "h": 18,
+        "right": 664
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 104,
+        "y": 243,
+        "w": 560,
+        "h": 30,
+        "right": 664
+      },
+      {
+        "tag": "hero-headline",
+        "x": 104,
+        "y": 292,
+        "w": 560,
+        "h": 157,
+        "right": 664
+      },
+      {
+        "tag": "cta-row",
+        "x": 104,
+        "y": 469,
+        "w": 560,
+        "h": 52,
+        "right": 664
+      },
+      {
+        "tag": "hero-verse",
+        "x": 104,
+        "y": 553,
+        "w": 560,
+        "h": 118,
+        "right": 664
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fonts",
+    "language": "ru",
+    "width": 960,
+    "documentWidth": 960,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 16,
+      "y": 92,
+      "w": 93,
+      "h": 48,
+      "right": 109
+    },
+    "hero": {
+      "x": 0,
+      "y": 151,
+      "w": 960,
+      "h": 607,
+      "right": 960
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 200,
+        "y": 211,
+        "w": 560,
+        "h": 18,
+        "right": 760
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 200,
+        "y": 243,
+        "w": 560,
+        "h": 37,
+        "right": 760
+      },
+      {
+        "tag": "hero-headline",
+        "x": 200,
+        "y": 300,
+        "w": 560,
+        "h": 157,
+        "right": 760
+      },
+      {
+        "tag": "cta-row",
+        "x": 200,
+        "y": 476,
+        "w": 560,
+        "h": 52,
+        "right": 760
+      },
+      {
+        "tag": "hero-verse",
+        "x": 200,
+        "y": 561,
+        "w": 560,
+        "h": 118,
+        "right": 760
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fonts",
+    "language": "ru",
+    "width": 1165,
+    "documentWidth": 1165,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 16,
+      "y": 48,
+      "w": 93,
+      "h": 48,
+      "right": 109
+    },
+    "hero": {
+      "x": 0,
+      "y": 107,
+      "w": 1165,
+      "h": 861,
+      "right": 1165
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 303,
+        "y": 187,
+        "w": 560,
+        "h": 19,
+        "right": 863
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 303,
+        "y": 223,
+        "w": 560,
+        "h": 42,
+        "right": 863
+      },
+      {
+        "tag": "hero-headline",
+        "x": 303,
+        "y": 285,
+        "w": 560,
+        "h": 332,
+        "right": 863
+      },
+      {
+        "tag": "cta-row",
+        "x": 303,
+        "y": 645,
+        "w": 560,
+        "h": 52,
+        "right": 863
+      },
+      {
+        "tag": "hero-verse",
+        "x": 303,
+        "y": 741,
+        "w": 560,
+        "h": 127,
+        "right": 863
+      }
+    ],
+    "smallTargets": [
+      {
+        "text": "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u0435\u0435 \u2192",
+        "cls": "",
+        "x": 981,
+        "y": 11,
+        "w": 82,
+        "h": 17,
+        "right": 1063
+      },
+      {
+        "text": "\u041a\u0430\u043d\u0430\u043b \u043d\u0430 YouTube \u2192",
+        "cls": "reveal reveal-delay-1 in-view",
+        "x": 984,
+        "y": 6733,
+        "w": 141,
+        "h": 26,
+        "right": 1125
+      },
+      {
+        "text": "YouTube channel",
+        "cls": "",
+        "x": 611,
+        "y": 6953,
+        "w": 122,
+        "h": 19,
+        "right": 733
+      },
+      {
+        "text": "\u0421\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0432\u0435\u0441\u044c \u0430\u0440\u0445\u0438\u0432 \u043d\u0430 YouTube \u2192",
+        "cls": "",
+        "x": 581,
+        "y": 7032,
+        "w": 248,
+        "h": 20,
+        "right": 829
+      },
+      {
+        "text": "\u0421\u0432\u044f\u0437\u0430\u0442\u044c\u0441\u044f \u0441 \u043d\u0430\u043c\u0438 \u2192",
+        "cls": "group-join-cta",
+        "x": 220,
+        "y": 8086,
+        "w": 194,
+        "h": 40,
+        "right": 413
+      },
+      {
+        "text": "Give at givebutter.com \u2192",
+        "cls": "",
+        "x": 741,
+        "y": 10614,
+        "w": 191,
+        "h": 20,
+        "right": 932
+      },
+      {
+        "text": "admin@eagangrace.com",
+        "cls": "",
+        "x": 506,
+        "y": 12327,
+        "w": 154,
+        "h": 17,
+        "right": 659
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 225,
+        "y": 12569,
+        "w": 38,
+        "h": 38,
+        "right": 263
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 275,
+        "y": 12569,
+        "w": 38,
+        "h": 38,
+        "right": 313
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 325,
+        "y": 12569,
+        "w": 38,
+        "h": 38,
+        "right": 363
+      },
+      {
+        "text": "\u0412\u0440\u0435\u043c\u044f \u0441\u043b\u0443\u0436\u0435\u043d\u0438\u0439",
+        "cls": "",
+        "x": 769,
+        "y": 12521,
+        "w": 100,
+        "h": 15,
+        "right": 868
+      },
+      {
+        "text": "\u041a\u0430\u043a \u0434\u043e\u0431\u0440\u0430\u0442\u044c\u0441\u044f",
+        "cls": "",
+        "x": 769,
+        "y": 12553,
+        "w": 86,
+        "h": 15,
+        "right": 855
+      },
+      {
+        "text": "\u0427\u0435\u0433\u043e \u043e\u0436\u0438\u0434\u0430\u0442\u044c",
+        "cls": "",
+        "x": 769,
+        "y": 12584,
+        "w": 81,
+        "h": 15,
+        "right": 850
+      },
+      {
+        "text": "\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u044b",
+        "cls": "",
+        "x": 916,
+        "y": 12521,
+        "w": 55,
+        "h": 15,
+        "right": 972
+      },
+      {
+        "text": "YouTube",
+        "cls": "",
+        "x": 916,
+        "y": 12553,
+        "w": 49,
+        "h": 15,
+        "right": 966
+      },
+      {
+        "text": "Instagram",
+        "cls": "",
+        "x": 916,
+        "y": 12584,
+        "w": 57,
+        "h": 15,
+        "right": 973
+      },
+      {
+        "text": "Facebook",
+        "cls": "",
+        "x": 916,
+        "y": 12616,
+        "w": 56,
+        "h": 15,
+        "right": 972
+      },
+      {
+        "text": "\u0412\u0435\u0440\u043e\u0443\u0447\u0435\u043d\u0438\u0435",
+        "cls": "",
+        "x": 1029,
+        "y": 12521,
+        "w": 71,
+        "h": 15,
+        "right": 1100
+      },
+      {
+        "text": "\u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e",
+        "cls": "",
+        "x": 1029,
+        "y": 12553,
+        "w": 76,
+        "h": 15,
+        "right": 1105
+      }
+    ]
+  },
+  {
+    "mode": "final-fonts",
+    "language": "ru",
+    "width": 1440,
+    "documentWidth": 1440,
+    "overflow": [],
+    "navigation": "none",
+    "logo": {
+      "x": 40,
+      "y": 61,
+      "w": 194,
+      "h": 100,
+      "right": 234
+    },
+    "hero": {
+      "x": 0,
+      "y": 178,
+      "w": 1440,
+      "h": 907,
+      "right": 1440
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 423,
+        "y": 258,
+        "w": 594,
+        "h": 19,
+        "right": 1017
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 423,
+        "y": 293,
+        "w": 594,
+        "h": 42,
+        "right": 1017
+      },
+      {
+        "tag": "hero-headline",
+        "x": 423,
+        "y": 355,
+        "w": 594,
+        "h": 372,
+        "right": 1017
+      },
+      {
+        "tag": "cta-row",
+        "x": 423,
+        "y": 755,
+        "w": 594,
+        "h": 52,
+        "right": 1017
+      },
+      {
+        "tag": "hero-verse",
+        "x": 440,
+        "y": 852,
+        "w": 560,
+        "h": 133,
+        "right": 1000
+      }
+    ],
+    "smallTargets": [
+      {
+        "text": "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u0435\u0435 \u2192",
+        "cls": "",
+        "x": 1152,
+        "y": 13,
+        "w": 89,
+        "h": 18,
+        "right": 1241
+      },
+      {
+        "text": "\u041e \u043d\u0430\u0441",
+        "cls": "",
+        "x": 315,
+        "y": 102,
+        "w": 39,
+        "h": 17,
+        "right": 354
+      },
+      {
+        "text": "\u0412\u0438\u0437\u0438\u0442",
+        "cls": "",
+        "x": 370,
+        "y": 102,
+        "w": 39,
+        "h": 17,
+        "right": 409
+      },
+      {
+        "text": "\u0421\u043e\u0431\u044b\u0442\u0438\u044f",
+        "cls": "",
+        "x": 425,
+        "y": 102,
+        "w": 60,
+        "h": 17,
+        "right": 485
+      },
+      {
+        "text": "\u0412\u0435\u0440\u043e\u0443\u0447\u0435\u043d\u0438\u0435",
+        "cls": "",
+        "x": 501,
+        "y": 102,
+        "w": 83,
+        "h": 17,
+        "right": 584
+      },
+      {
+        "text": "\u041f\u0440\u043e\u043f\u043e\u0432\u0435\u0434\u0438",
+        "cls": "",
+        "x": 600,
+        "y": 102,
+        "w": 77,
+        "h": 17,
+        "right": 677
+      },
+      {
+        "text": "\u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e",
+        "cls": "",
+        "x": 693,
+        "y": 102,
+        "w": 88,
+        "h": 17,
+        "right": 781
+      },
+      {
+        "text": "\u0423\u0447\u0430\u0441\u0442\u0438\u0435",
+        "cls": "",
+        "x": 797,
+        "y": 102,
+        "w": 55,
+        "h": 17,
+        "right": 852
+      },
+      {
+        "text": "\u041c\u0438\u0441\u0441\u0438\u0438",
+        "cls": "",
+        "x": 868,
+        "y": 102,
+        "w": 53,
+        "h": 17,
+        "right": 922
+      },
+      {
+        "text": "\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u044b",
+        "cls": "active",
+        "x": 938,
+        "y": 102,
+        "w": 64,
+        "h": 17,
+        "right": 1002
+      },
+      {
+        "text": "\u041f\u043e\u0436\u0435\u0440\u0442\u0432\u043e\u0432\u0430\u0442\u044c \u2192",
+        "cls": "give-btn",
+        "x": 1018,
+        "y": 92,
+        "w": 164,
+        "h": 37,
+        "right": 1182
+      },
+      {
+        "text": "EN",
+        "cls": "",
+        "x": 1207,
+        "y": 96,
+        "w": 47,
+        "h": 30,
+        "right": 1254
+      },
+      {
+        "text": "\u0420\u0423",
+        "cls": "active",
+        "x": 1254,
+        "y": 96,
+        "w": 46,
+        "h": 30,
+        "right": 1300
+      },
+      {
+        "text": "\u0410\u0434\u043c\u0438\u043d",
+        "cls": "admin-link",
+        "x": 1317,
+        "y": 95,
+        "w": 83,
+        "h": 33,
+        "right": 1400
+      },
+      {
+        "text": "\u041a\u0430\u043d\u0430\u043b \u043d\u0430 YouTube \u2192",
+        "cls": "reveal reveal-delay-1 in-view",
+        "x": 1179,
+        "y": 6801,
+        "w": 141,
+        "h": 26,
+        "right": 1320
+      },
+      {
+        "text": "YouTube channel",
+        "cls": "",
+        "x": 749,
+        "y": 7021,
+        "w": 122,
+        "h": 19,
+        "right": 871
+      },
+      {
+        "text": "\u0421\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0432\u0435\u0441\u044c \u0430\u0440\u0445\u0438\u0432 \u043d\u0430 YouTube \u2192",
+        "cls": "",
+        "x": 718,
+        "y": 7100,
+        "w": 248,
+        "h": 20,
+        "right": 967
+      },
+      {
+        "text": "\u0421\u0432\u044f\u0437\u0430\u0442\u044c\u0441\u044f \u0441 \u043d\u0430\u043c\u0438 \u2192",
+        "cls": "group-join-cta",
+        "x": 357,
+        "y": 8154,
+        "w": 194,
+        "h": 40,
+        "right": 551
+      },
+      {
+        "text": "Give at givebutter.com \u2192",
+        "cls": "",
+        "x": 879,
+        "y": 10687,
+        "w": 191,
+        "h": 20,
+        "right": 1069
+      },
+      {
+        "text": "admin@eagangrace.com",
+        "cls": "",
+        "x": 643,
+        "y": 12402,
+        "w": 154,
+        "h": 17,
+        "right": 797
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 285,
+        "y": 12644,
+        "w": 38,
+        "h": 38,
+        "right": 323
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 335,
+        "y": 12644,
+        "w": 38,
+        "h": 38,
+        "right": 373
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 385,
+        "y": 12644,
+        "w": 38,
+        "h": 38,
+        "right": 423
+      },
+      {
+        "text": "\u0412\u0440\u0435\u043c\u044f \u0441\u043b\u0443\u0436\u0435\u043d\u0438\u0439",
+        "cls": "",
+        "x": 984,
+        "y": 12596,
+        "w": 100,
+        "h": 15,
+        "right": 1083
+      },
+      {
+        "text": "\u041a\u0430\u043a \u0434\u043e\u0431\u0440\u0430\u0442\u044c\u0441\u044f",
+        "cls": "",
+        "x": 984,
+        "y": 12628,
+        "w": 86,
+        "h": 15,
+        "right": 1070
+      },
+      {
+        "text": "\u0427\u0435\u0433\u043e \u043e\u0436\u0438\u0434\u0430\u0442\u044c",
+        "cls": "",
+        "x": 984,
+        "y": 12660,
+        "w": 81,
+        "h": 15,
+        "right": 1065
+      },
+      {
+        "text": "\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u044b",
+        "cls": "",
+        "x": 1131,
+        "y": 12596,
+        "w": 55,
+        "h": 15,
+        "right": 1187
+      },
+      {
+        "text": "YouTube",
+        "cls": "",
+        "x": 1131,
+        "y": 12628,
+        "w": 49,
+        "h": 15,
+        "right": 1181
+      },
+      {
+        "text": "Instagram",
+        "cls": "",
+        "x": 1131,
+        "y": 12660,
+        "w": 57,
+        "h": 15,
+        "right": 1188
+      },
+      {
+        "text": "Facebook",
+        "cls": "",
+        "x": 1131,
+        "y": 12691,
+        "w": 56,
+        "h": 15,
+        "right": 1187
+      },
+      {
+        "text": "\u0412\u0435\u0440\u043e\u0443\u0447\u0435\u043d\u0438\u0435",
+        "cls": "",
+        "x": 1244,
+        "y": 12596,
+        "w": 71,
+        "h": 15,
+        "right": 1315
+      },
+      {
+        "text": "\u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e",
+        "cls": "",
+        "x": 1244,
+        "y": 12628,
+        "w": 76,
+        "h": 15,
+        "right": 1320
+      }
+    ]
+  },
+  {
+    "mode": "final-fallback",
+    "language": "en",
+    "width": 320,
+    "documentWidth": 320,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 14,
+      "y": 108,
+      "w": 93,
+      "h": 48,
+      "right": 107
+    },
+    "hero": {
+      "x": 0,
+      "y": 165,
+      "w": 320,
+      "h": 672,
+      "right": 320
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 24,
+        "y": 213,
+        "w": 272,
+        "h": 37,
+        "right": 296
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 24,
+        "y": 266,
+        "w": 272,
+        "h": 27,
+        "right": 296
+      },
+      {
+        "tag": "hero-headline",
+        "x": 24,
+        "y": 321,
+        "w": 272,
+        "h": 129,
+        "right": 296
+      },
+      {
+        "tag": "cta-row",
+        "x": 24,
+        "y": 482,
+        "w": 272,
+        "h": 121,
+        "right": 296
+      },
+      {
+        "tag": "hero-verse",
+        "x": 24,
+        "y": 635,
+        "w": 272,
+        "h": 146,
+        "right": 296
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fallback",
+    "language": "en",
+    "width": 375,
+    "documentWidth": 375,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 14,
+      "y": 108,
+      "w": 93,
+      "h": 48,
+      "right": 107
+    },
+    "hero": {
+      "x": 0,
+      "y": 165,
+      "w": 375,
+      "h": 663,
+      "right": 375
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 48,
+        "y": 213,
+        "w": 280,
+        "h": 37,
+        "right": 328
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 43,
+        "y": 266,
+        "w": 290,
+        "h": 27,
+        "right": 333
+      },
+      {
+        "tag": "hero-headline",
+        "x": 24,
+        "y": 321,
+        "w": 327,
+        "h": 150,
+        "right": 351
+      },
+      {
+        "tag": "cta-row",
+        "x": 24,
+        "y": 503,
+        "w": 327,
+        "h": 121,
+        "right": 351
+      },
+      {
+        "tag": "hero-verse",
+        "x": 24,
+        "y": 656,
+        "w": 327,
+        "h": 116,
+        "right": 351
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fallback",
+    "language": "en",
+    "width": 390,
+    "documentWidth": 390,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 14,
+      "y": 108,
+      "w": 93,
+      "h": 48,
+      "right": 107
+    },
+    "hero": {
+      "x": 0,
+      "y": 165,
+      "w": 390,
+      "h": 669,
+      "right": 390
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 55,
+        "y": 213,
+        "w": 280,
+        "h": 37,
+        "right": 335
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 50,
+        "y": 266,
+        "w": 290,
+        "h": 27,
+        "right": 340
+      },
+      {
+        "tag": "hero-headline",
+        "x": 24,
+        "y": 321,
+        "w": 342,
+        "h": 155,
+        "right": 366
+      },
+      {
+        "tag": "cta-row",
+        "x": 24,
+        "y": 509,
+        "w": 342,
+        "h": 121,
+        "right": 366
+      },
+      {
+        "tag": "hero-verse",
+        "x": 24,
+        "y": 661,
+        "w": 342,
+        "h": 116,
+        "right": 366
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fallback",
+    "language": "en",
+    "width": 430,
+    "documentWidth": 430,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 14,
+      "y": 90,
+      "w": 93,
+      "h": 48,
+      "right": 107
+    },
+    "hero": {
+      "x": 0,
+      "y": 147,
+      "w": 430,
+      "h": 684,
+      "right": 430
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 75,
+        "y": 195,
+        "w": 280,
+        "h": 37,
+        "right": 355
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 70,
+        "y": 249,
+        "w": 290,
+        "h": 27,
+        "right": 360
+      },
+      {
+        "tag": "hero-headline",
+        "x": 25,
+        "y": 304,
+        "w": 380,
+        "h": 171,
+        "right": 405
+      },
+      {
+        "tag": "cta-row",
+        "x": 25,
+        "y": 506,
+        "w": 380,
+        "h": 121,
+        "right": 405
+      },
+      {
+        "tag": "hero-verse",
+        "x": 25,
+        "y": 659,
+        "w": 380,
+        "h": 116,
+        "right": 405
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fallback",
+    "language": "en",
+    "width": 768,
+    "documentWidth": 768,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 16,
+      "y": 75,
+      "w": 93,
+      "h": 48,
+      "right": 109
+    },
+    "hero": {
+      "x": 0,
+      "y": 134,
+      "w": 768,
+      "h": 600,
+      "right": 768
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 104,
+        "y": 194,
+        "w": 560,
+        "h": 18,
+        "right": 664
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 104,
+        "y": 226,
+        "w": 560,
+        "h": 30,
+        "right": 664
+      },
+      {
+        "tag": "hero-headline",
+        "x": 104,
+        "y": 275,
+        "w": 560,
+        "h": 157,
+        "right": 664
+      },
+      {
+        "tag": "cta-row",
+        "x": 104,
+        "y": 452,
+        "w": 560,
+        "h": 52,
+        "right": 664
+      },
+      {
+        "tag": "hero-verse",
+        "x": 104,
+        "y": 536,
+        "w": 560,
+        "h": 118,
+        "right": 664
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fallback",
+    "language": "en",
+    "width": 960,
+    "documentWidth": 960,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 16,
+      "y": 75,
+      "w": 93,
+      "h": 48,
+      "right": 109
+    },
+    "hero": {
+      "x": 0,
+      "y": 134,
+      "w": 960,
+      "h": 607,
+      "right": 960
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 200,
+        "y": 194,
+        "w": 560,
+        "h": 18,
+        "right": 760
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 200,
+        "y": 226,
+        "w": 560,
+        "h": 37,
+        "right": 760
+      },
+      {
+        "tag": "hero-headline",
+        "x": 200,
+        "y": 282,
+        "w": 560,
+        "h": 157,
+        "right": 760
+      },
+      {
+        "tag": "cta-row",
+        "x": 200,
+        "y": 459,
+        "w": 560,
+        "h": 52,
+        "right": 760
+      },
+      {
+        "tag": "hero-verse",
+        "x": 200,
+        "y": 543,
+        "w": 560,
+        "h": 118,
+        "right": 760
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fallback",
+    "language": "en",
+    "width": 1165,
+    "documentWidth": 1165,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 16,
+      "y": 48,
+      "w": 93,
+      "h": 48,
+      "right": 109
+    },
+    "hero": {
+      "x": 0,
+      "y": 107,
+      "w": 1165,
+      "h": 861,
+      "right": 1165
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 303,
+        "y": 187,
+        "w": 560,
+        "h": 19,
+        "right": 863
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 303,
+        "y": 223,
+        "w": 560,
+        "h": 42,
+        "right": 863
+      },
+      {
+        "tag": "hero-headline",
+        "x": 303,
+        "y": 285,
+        "w": 560,
+        "h": 332,
+        "right": 863
+      },
+      {
+        "tag": "cta-row",
+        "x": 303,
+        "y": 645,
+        "w": 560,
+        "h": 52,
+        "right": 863
+      },
+      {
+        "tag": "hero-verse",
+        "x": 303,
+        "y": 741,
+        "w": 560,
+        "h": 127,
+        "right": 863
+      }
+    ],
+    "smallTargets": [
+      {
+        "text": "Learn more \u2192",
+        "cls": "",
+        "x": 865,
+        "y": 11,
+        "w": 77,
+        "h": 16,
+        "right": 941
+      },
+      {
+        "text": "Full channel on YouTube \u2192",
+        "cls": "reveal reveal-delay-1 in-view",
+        "x": 954,
+        "y": 6497,
+        "w": 172,
+        "h": 26,
+        "right": 1125
+      },
+      {
+        "text": "YouTube channel",
+        "cls": "",
+        "x": 610,
+        "y": 6719,
+        "w": 116,
+        "h": 17,
+        "right": 725
+      },
+      {
+        "text": "View the full archive on YouTube \u2192",
+        "cls": "",
+        "x": 588,
+        "y": 6798,
+        "w": 220,
+        "h": 19,
+        "right": 808
+      },
+      {
+        "text": "Get in touch \u2192",
+        "cls": "group-join-cta",
+        "x": 220,
+        "y": 7793,
+        "w": 142,
+        "h": 40,
+        "right": 362
+      },
+      {
+        "text": "Give at givebutter.com \u2192",
+        "cls": "",
+        "x": 747,
+        "y": 10216,
+        "w": 180,
+        "h": 17,
+        "right": 926
+      },
+      {
+        "text": "admin@eagangrace.com",
+        "cls": "",
+        "x": 493,
+        "y": 11925,
+        "w": 145,
+        "h": 16,
+        "right": 639
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 225,
+        "y": 12166,
+        "w": 38,
+        "h": 38,
+        "right": 263
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 275,
+        "y": 12166,
+        "w": 38,
+        "h": 38,
+        "right": 313
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 325,
+        "y": 12166,
+        "w": 38,
+        "h": 38,
+        "right": 363
+      },
+      {
+        "text": "Service times",
+        "cls": "",
+        "x": 806,
+        "y": 12119,
+        "w": 72,
+        "h": 14,
+        "right": 878
+      },
+      {
+        "text": "Directions",
+        "cls": "",
+        "x": 806,
+        "y": 12151,
+        "w": 53,
+        "h": 14,
+        "right": 859
+      },
+      {
+        "text": "What to expect",
+        "cls": "",
+        "x": 806,
+        "y": 12182,
+        "w": 80,
+        "h": 14,
+        "right": 886
+      },
+      {
+        "text": "Contact",
+        "cls": "",
+        "x": 934,
+        "y": 12119,
+        "w": 41,
+        "h": 14,
+        "right": 976
+      },
+      {
+        "text": "YouTube",
+        "cls": "",
+        "x": 934,
+        "y": 12151,
+        "w": 47,
+        "h": 14,
+        "right": 981
+      },
+      {
+        "text": "Instagram",
+        "cls": "",
+        "x": 934,
+        "y": 12182,
+        "w": 53,
+        "h": 14,
+        "right": 988
+      },
+      {
+        "text": "Facebook",
+        "cls": "",
+        "x": 934,
+        "y": 12214,
+        "w": 53,
+        "h": 14,
+        "right": 987
+      },
+      {
+        "text": "Our beliefs",
+        "cls": "",
+        "x": 1046,
+        "y": 12119,
+        "w": 58,
+        "h": 14,
+        "right": 1104
+      },
+      {
+        "text": "Leadership",
+        "cls": "",
+        "x": 1046,
+        "y": 12151,
+        "w": 59,
+        "h": 14,
+        "right": 1105
+      }
+    ]
+  },
+  {
+    "mode": "final-fallback",
+    "language": "en",
+    "width": 1440,
+    "documentWidth": 1440,
+    "overflow": [],
+    "navigation": "none",
+    "logo": {
+      "x": 40,
+      "y": 61,
+      "w": 194,
+      "h": 100,
+      "right": 234
+    },
+    "hero": {
+      "x": 0,
+      "y": 178,
+      "w": 1440,
+      "h": 907,
+      "right": 1440
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 440,
+        "y": 258,
+        "w": 560,
+        "h": 19,
+        "right": 1000
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 440,
+        "y": 293,
+        "w": 560,
+        "h": 42,
+        "right": 1000
+      },
+      {
+        "tag": "hero-headline",
+        "x": 440,
+        "y": 355,
+        "w": 560,
+        "h": 372,
+        "right": 1000
+      },
+      {
+        "tag": "cta-row",
+        "x": 440,
+        "y": 755,
+        "w": 560,
+        "h": 52,
+        "right": 1000
+      },
+      {
+        "tag": "hero-verse",
+        "x": 440,
+        "y": 852,
+        "w": 560,
+        "h": 133,
+        "right": 1000
+      }
+    ],
+    "smallTargets": [
+      {
+        "text": "Learn more \u2192",
+        "cls": "",
+        "x": 1025,
+        "y": 14,
+        "w": 83,
+        "h": 17,
+        "right": 1109
+      },
+      {
+        "text": "About",
+        "cls": "",
+        "x": 495,
+        "y": 103,
+        "w": 37,
+        "h": 16,
+        "right": 532
+      },
+      {
+        "text": "Visit",
+        "cls": "",
+        "x": 548,
+        "y": 103,
+        "w": 26,
+        "h": 16,
+        "right": 574
+      },
+      {
+        "text": "Events",
+        "cls": "",
+        "x": 590,
+        "y": 103,
+        "w": 43,
+        "h": 16,
+        "right": 633
+      },
+      {
+        "text": "Beliefs",
+        "cls": "",
+        "x": 649,
+        "y": 103,
+        "w": 42,
+        "h": 16,
+        "right": 691
+      },
+      {
+        "text": "Sermons",
+        "cls": "",
+        "x": 707,
+        "y": 103,
+        "w": 56,
+        "h": 16,
+        "right": 763
+      },
+      {
+        "text": "Leadership",
+        "cls": "",
+        "x": 779,
+        "y": 103,
+        "w": 69,
+        "h": 16,
+        "right": 848
+      },
+      {
+        "text": "Get Involved",
+        "cls": "",
+        "x": 864,
+        "y": 103,
+        "w": 79,
+        "h": 16,
+        "right": 943
+      },
+      {
+        "text": "Ministries",
+        "cls": "",
+        "x": 959,
+        "y": 103,
+        "w": 59,
+        "h": 16,
+        "right": 1018
+      },
+      {
+        "text": "Contact",
+        "cls": "active",
+        "x": 1034,
+        "y": 103,
+        "w": 48,
+        "h": 16,
+        "right": 1082
+      },
+      {
+        "text": "Give \u2192",
+        "cls": "give-btn",
+        "x": 1098,
+        "y": 93,
+        "w": 92,
+        "h": 36,
+        "right": 1191
+      },
+      {
+        "text": "EN",
+        "cls": "active",
+        "x": 1216,
+        "y": 96,
+        "w": 47,
+        "h": 29,
+        "right": 1263
+      },
+      {
+        "text": "\u0420\u0423",
+        "cls": "",
+        "x": 1263,
+        "y": 96,
+        "w": 46,
+        "h": 29,
+        "right": 1309
+      },
+      {
+        "text": "Admin",
+        "cls": "admin-link",
+        "x": 1326,
+        "y": 96,
+        "w": 74,
+        "h": 32,
+        "right": 1400
+      },
+      {
+        "text": "Full channel on YouTube \u2192",
+        "cls": "reveal reveal-delay-1 in-view",
+        "x": 1149,
+        "y": 6616,
+        "w": 172,
+        "h": 26,
+        "right": 1320
+      },
+      {
+        "text": "YouTube channel",
+        "cls": "",
+        "x": 747,
+        "y": 6837,
+        "w": 116,
+        "h": 17,
+        "right": 863
+      },
+      {
+        "text": "View the full archive on YouTube \u2192",
+        "cls": "",
+        "x": 725,
+        "y": 6916,
+        "w": 220,
+        "h": 19,
+        "right": 946
+      },
+      {
+        "text": "Get in touch \u2192",
+        "cls": "group-join-cta",
+        "x": 357,
+        "y": 7912,
+        "w": 142,
+        "h": 40,
+        "right": 499
+      },
+      {
+        "text": "Give at givebutter.com \u2192",
+        "cls": "",
+        "x": 884,
+        "y": 10316,
+        "w": 180,
+        "h": 17,
+        "right": 1064
+      },
+      {
+        "text": "admin@eagangrace.com",
+        "cls": "",
+        "x": 631,
+        "y": 12006,
+        "w": 145,
+        "h": 16,
+        "right": 776
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 285,
+        "y": 12248,
+        "w": 38,
+        "h": 38,
+        "right": 323
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 335,
+        "y": 12248,
+        "w": 38,
+        "h": 38,
+        "right": 373
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 385,
+        "y": 12248,
+        "w": 38,
+        "h": 38,
+        "right": 423
+      },
+      {
+        "text": "Service times",
+        "cls": "",
+        "x": 1021,
+        "y": 12201,
+        "w": 72,
+        "h": 14,
+        "right": 1093
+      },
+      {
+        "text": "Directions",
+        "cls": "",
+        "x": 1021,
+        "y": 12232,
+        "w": 53,
+        "h": 14,
+        "right": 1074
+      },
+      {
+        "text": "What to expect",
+        "cls": "",
+        "x": 1021,
+        "y": 12264,
+        "w": 80,
+        "h": 14,
+        "right": 1101
+      },
+      {
+        "text": "Contact",
+        "cls": "",
+        "x": 1149,
+        "y": 12201,
+        "w": 41,
+        "h": 14,
+        "right": 1191
+      },
+      {
+        "text": "YouTube",
+        "cls": "",
+        "x": 1149,
+        "y": 12232,
+        "w": 47,
+        "h": 14,
+        "right": 1196
+      },
+      {
+        "text": "Instagram",
+        "cls": "",
+        "x": 1149,
+        "y": 12264,
+        "w": 53,
+        "h": 14,
+        "right": 1203
+      },
+      {
+        "text": "Facebook",
+        "cls": "",
+        "x": 1149,
+        "y": 12296,
+        "w": 53,
+        "h": 14,
+        "right": 1202
+      },
+      {
+        "text": "Our beliefs",
+        "cls": "",
+        "x": 1261,
+        "y": 12201,
+        "w": 58,
+        "h": 14,
+        "right": 1319
+      },
+      {
+        "text": "Leadership",
+        "cls": "",
+        "x": 1261,
+        "y": 12232,
+        "w": 59,
+        "h": 14,
+        "right": 1320
+      }
+    ]
+  },
+  {
+    "mode": "final-fallback",
+    "language": "ru",
+    "width": 320,
+    "documentWidth": 320,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 14,
+      "y": 125,
+      "w": 93,
+      "h": 48,
+      "right": 107
+    },
+    "hero": {
+      "x": 0,
+      "y": 182,
+      "w": 320,
+      "h": 672,
+      "right": 320
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 24,
+        "y": 230,
+        "w": 272,
+        "h": 37,
+        "right": 296
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 24,
+        "y": 284,
+        "w": 272,
+        "h": 27,
+        "right": 296
+      },
+      {
+        "tag": "hero-headline",
+        "x": 24,
+        "y": 339,
+        "w": 272,
+        "h": 129,
+        "right": 296
+      },
+      {
+        "tag": "cta-row",
+        "x": 24,
+        "y": 499,
+        "w": 272,
+        "h": 121,
+        "right": 296
+      },
+      {
+        "tag": "hero-verse",
+        "x": 24,
+        "y": 652,
+        "w": 272,
+        "h": 146,
+        "right": 296
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fallback",
+    "language": "ru",
+    "width": 375,
+    "documentWidth": 375,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 14,
+      "y": 108,
+      "w": 93,
+      "h": 48,
+      "right": 107
+    },
+    "hero": {
+      "x": 0,
+      "y": 165,
+      "w": 375,
+      "h": 663,
+      "right": 375
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 48,
+        "y": 213,
+        "w": 280,
+        "h": 37,
+        "right": 328
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 43,
+        "y": 266,
+        "w": 290,
+        "h": 27,
+        "right": 333
+      },
+      {
+        "tag": "hero-headline",
+        "x": 24,
+        "y": 321,
+        "w": 327,
+        "h": 150,
+        "right": 351
+      },
+      {
+        "tag": "cta-row",
+        "x": 24,
+        "y": 503,
+        "w": 327,
+        "h": 121,
+        "right": 351
+      },
+      {
+        "tag": "hero-verse",
+        "x": 24,
+        "y": 656,
+        "w": 327,
+        "h": 116,
+        "right": 351
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fallback",
+    "language": "ru",
+    "width": 390,
+    "documentWidth": 390,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 14,
+      "y": 108,
+      "w": 93,
+      "h": 48,
+      "right": 107
+    },
+    "hero": {
+      "x": 0,
+      "y": 165,
+      "w": 390,
+      "h": 669,
+      "right": 390
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 55,
+        "y": 213,
+        "w": 280,
+        "h": 37,
+        "right": 335
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 50,
+        "y": 266,
+        "w": 290,
+        "h": 27,
+        "right": 340
+      },
+      {
+        "tag": "hero-headline",
+        "x": 24,
+        "y": 321,
+        "w": 342,
+        "h": 155,
+        "right": 366
+      },
+      {
+        "tag": "cta-row",
+        "x": 24,
+        "y": 509,
+        "w": 342,
+        "h": 121,
+        "right": 366
+      },
+      {
+        "tag": "hero-verse",
+        "x": 24,
+        "y": 661,
+        "w": 342,
+        "h": 116,
+        "right": 366
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fallback",
+    "language": "ru",
+    "width": 430,
+    "documentWidth": 430,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 14,
+      "y": 108,
+      "w": 93,
+      "h": 48,
+      "right": 107
+    },
+    "hero": {
+      "x": 0,
+      "y": 165,
+      "w": 430,
+      "h": 684,
+      "right": 430
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 75,
+        "y": 213,
+        "w": 280,
+        "h": 37,
+        "right": 355
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 70,
+        "y": 266,
+        "w": 290,
+        "h": 27,
+        "right": 360
+      },
+      {
+        "tag": "hero-headline",
+        "x": 25,
+        "y": 321,
+        "w": 380,
+        "h": 171,
+        "right": 405
+      },
+      {
+        "tag": "cta-row",
+        "x": 25,
+        "y": 524,
+        "w": 380,
+        "h": 121,
+        "right": 405
+      },
+      {
+        "tag": "hero-verse",
+        "x": 25,
+        "y": 676,
+        "w": 380,
+        "h": 116,
+        "right": 405
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fallback",
+    "language": "ru",
+    "width": 768,
+    "documentWidth": 768,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 16,
+      "y": 92,
+      "w": 93,
+      "h": 48,
+      "right": 109
+    },
+    "hero": {
+      "x": 0,
+      "y": 151,
+      "w": 768,
+      "h": 600,
+      "right": 768
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 104,
+        "y": 211,
+        "w": 560,
+        "h": 18,
+        "right": 664
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 104,
+        "y": 243,
+        "w": 560,
+        "h": 30,
+        "right": 664
+      },
+      {
+        "tag": "hero-headline",
+        "x": 104,
+        "y": 292,
+        "w": 560,
+        "h": 157,
+        "right": 664
+      },
+      {
+        "tag": "cta-row",
+        "x": 104,
+        "y": 469,
+        "w": 560,
+        "h": 52,
+        "right": 664
+      },
+      {
+        "tag": "hero-verse",
+        "x": 104,
+        "y": 553,
+        "w": 560,
+        "h": 118,
+        "right": 664
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fallback",
+    "language": "ru",
+    "width": 960,
+    "documentWidth": 960,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 16,
+      "y": 75,
+      "w": 93,
+      "h": 48,
+      "right": 109
+    },
+    "hero": {
+      "x": 0,
+      "y": 134,
+      "w": 960,
+      "h": 607,
+      "right": 960
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 200,
+        "y": 194,
+        "w": 560,
+        "h": 18,
+        "right": 760
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 200,
+        "y": 226,
+        "w": 560,
+        "h": 37,
+        "right": 760
+      },
+      {
+        "tag": "hero-headline",
+        "x": 200,
+        "y": 282,
+        "w": 560,
+        "h": 157,
+        "right": 760
+      },
+      {
+        "tag": "cta-row",
+        "x": 200,
+        "y": 459,
+        "w": 560,
+        "h": 52,
+        "right": 760
+      },
+      {
+        "tag": "hero-verse",
+        "x": 200,
+        "y": 543,
+        "w": 560,
+        "h": 118,
+        "right": 760
+      }
+    ],
+    "smallTargets": []
+  },
+  {
+    "mode": "final-fallback",
+    "language": "ru",
+    "width": 1165,
+    "documentWidth": 1165,
+    "overflow": [],
+    "navigation": "block",
+    "logo": {
+      "x": 16,
+      "y": 48,
+      "w": 93,
+      "h": 48,
+      "right": 109
+    },
+    "hero": {
+      "x": 0,
+      "y": 107,
+      "w": 1165,
+      "h": 861,
+      "right": 1165
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 303,
+        "y": 187,
+        "w": 560,
+        "h": 19,
+        "right": 863
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 303,
+        "y": 223,
+        "w": 560,
+        "h": 42,
+        "right": 863
+      },
+      {
+        "tag": "hero-headline",
+        "x": 303,
+        "y": 285,
+        "w": 560,
+        "h": 332,
+        "right": 863
+      },
+      {
+        "tag": "cta-row",
+        "x": 303,
+        "y": 645,
+        "w": 560,
+        "h": 52,
+        "right": 863
+      },
+      {
+        "tag": "hero-verse",
+        "x": 303,
+        "y": 741,
+        "w": 560,
+        "h": 127,
+        "right": 863
+      }
+    ],
+    "smallTargets": [
+      {
+        "text": "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u0435\u0435 \u2192",
+        "cls": "",
+        "x": 954,
+        "y": 11,
+        "w": 78,
+        "h": 16,
+        "right": 1032
+      },
+      {
+        "text": "\u041a\u0430\u043d\u0430\u043b \u043d\u0430 YouTube \u2192",
+        "cls": "reveal reveal-delay-1 in-view",
+        "x": 989,
+        "y": 6678,
+        "w": 136,
+        "h": 26,
+        "right": 1125
+      },
+      {
+        "text": "YouTube channel",
+        "cls": "",
+        "x": 610,
+        "y": 6899,
+        "w": 116,
+        "h": 17,
+        "right": 725
+      },
+      {
+        "text": "\u0421\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0432\u0435\u0441\u044c \u0430\u0440\u0445\u0438\u0432 \u043d\u0430 YouTube \u2192",
+        "cls": "",
+        "x": 581,
+        "y": 6978,
+        "w": 233,
+        "h": 19,
+        "right": 814
+      },
+      {
+        "text": "\u0421\u0432\u044f\u0437\u0430\u0442\u044c\u0441\u044f \u0441 \u043d\u0430\u043c\u0438 \u2192",
+        "cls": "group-join-cta",
+        "x": 220,
+        "y": 8001,
+        "w": 196,
+        "h": 40,
+        "right": 415
+      },
+      {
+        "text": "Give at givebutter.com \u2192",
+        "cls": "",
+        "x": 747,
+        "y": 10501,
+        "w": 180,
+        "h": 17,
+        "right": 926
+      },
+      {
+        "text": "admin@eagangrace.com",
+        "cls": "",
+        "x": 511,
+        "y": 12210,
+        "w": 145,
+        "h": 16,
+        "right": 656
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 225,
+        "y": 12451,
+        "w": 38,
+        "h": 38,
+        "right": 263
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 275,
+        "y": 12451,
+        "w": 38,
+        "h": 38,
+        "right": 313
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 325,
+        "y": 12451,
+        "w": 38,
+        "h": 38,
+        "right": 363
+      },
+      {
+        "text": "\u0412\u0440\u0435\u043c\u044f \u0441\u043b\u0443\u0436\u0435\u043d\u0438\u0439",
+        "cls": "",
+        "x": 780,
+        "y": 12404,
+        "w": 93,
+        "h": 14,
+        "right": 873
+      },
+      {
+        "text": "\u041a\u0430\u043a \u0434\u043e\u0431\u0440\u0430\u0442\u044c\u0441\u044f",
+        "cls": "",
+        "x": 780,
+        "y": 12436,
+        "w": 80,
+        "h": 14,
+        "right": 860
+      },
+      {
+        "text": "\u0427\u0435\u0433\u043e \u043e\u0436\u0438\u0434\u0430\u0442\u044c",
+        "cls": "",
+        "x": 780,
+        "y": 12468,
+        "w": 75,
+        "h": 14,
+        "right": 855
+      },
+      {
+        "text": "\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u044b",
+        "cls": "",
+        "x": 921,
+        "y": 12404,
+        "w": 52,
+        "h": 14,
+        "right": 973
+      },
+      {
+        "text": "YouTube",
+        "cls": "",
+        "x": 921,
+        "y": 12436,
+        "w": 47,
+        "h": 14,
+        "right": 969
+      },
+      {
+        "text": "Instagram",
+        "cls": "",
+        "x": 921,
+        "y": 12468,
+        "w": 53,
+        "h": 14,
+        "right": 975
+      },
+      {
+        "text": "Facebook",
+        "cls": "",
+        "x": 921,
+        "y": 12499,
+        "w": 53,
+        "h": 14,
+        "right": 974
+      },
+      {
+        "text": "\u0412\u0435\u0440\u043e\u0443\u0447\u0435\u043d\u0438\u0435",
+        "cls": "",
+        "x": 1035,
+        "y": 12404,
+        "w": 67,
+        "h": 14,
+        "right": 1102
+      },
+      {
+        "text": "\u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e",
+        "cls": "",
+        "x": 1035,
+        "y": 12436,
+        "w": 70,
+        "h": 14,
+        "right": 1105
+      }
+    ]
+  },
+  {
+    "mode": "final-fallback",
+    "language": "ru",
+    "width": 1440,
+    "documentWidth": 1440,
+    "overflow": [],
+    "navigation": "none",
+    "logo": {
+      "x": 40,
+      "y": 61,
+      "w": 194,
+      "h": 100,
+      "right": 234
+    },
+    "hero": {
+      "x": 0,
+      "y": 178,
+      "w": 1440,
+      "h": 907,
+      "right": 1440
+    },
+    "heroParts": [
+      {
+        "tag": "hero-eyebrow",
+        "x": 417,
+        "y": 258,
+        "w": 606,
+        "h": 19,
+        "right": 1023
+      },
+      {
+        "tag": "hero-slogan",
+        "x": 417,
+        "y": 293,
+        "w": 606,
+        "h": 42,
+        "right": 1023
+      },
+      {
+        "tag": "hero-headline",
+        "x": 417,
+        "y": 355,
+        "w": 606,
+        "h": 372,
+        "right": 1023
+      },
+      {
+        "tag": "cta-row",
+        "x": 417,
+        "y": 755,
+        "w": 606,
+        "h": 52,
+        "right": 1023
+      },
+      {
+        "tag": "hero-verse",
+        "x": 440,
+        "y": 852,
+        "w": 560,
+        "h": 133,
+        "right": 1000
+      }
+    ],
+    "smallTargets": [
+      {
+        "text": "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u0435\u0435 \u2192",
+        "cls": "",
+        "x": 1123,
+        "y": 14,
+        "w": 84,
+        "h": 17,
+        "right": 1207
+      },
+      {
+        "text": "\u041e \u043d\u0430\u0441",
+        "cls": "",
+        "x": 352,
+        "y": 103,
+        "w": 37,
+        "h": 16,
+        "right": 390
+      },
+      {
+        "text": "\u0412\u0438\u0437\u0438\u0442",
+        "cls": "",
+        "x": 406,
+        "y": 103,
+        "w": 38,
+        "h": 16,
+        "right": 443
+      },
+      {
+        "text": "\u0421\u043e\u0431\u044b\u0442\u0438\u044f",
+        "cls": "",
+        "x": 459,
+        "y": 103,
+        "w": 58,
+        "h": 16,
+        "right": 517
+      },
+      {
+        "text": "\u0412\u0435\u0440\u043e\u0443\u0447\u0435\u043d\u0438\u0435",
+        "cls": "",
+        "x": 533,
+        "y": 103,
+        "w": 78,
+        "h": 16,
+        "right": 611
+      },
+      {
+        "text": "\u041f\u0440\u043e\u043f\u043e\u0432\u0435\u0434\u0438",
+        "cls": "",
+        "x": 627,
+        "y": 103,
+        "w": 72,
+        "h": 16,
+        "right": 699
+      },
+      {
+        "text": "\u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e",
+        "cls": "",
+        "x": 715,
+        "y": 103,
+        "w": 82,
+        "h": 16,
+        "right": 797
+      },
+      {
+        "text": "\u0423\u0447\u0430\u0441\u0442\u0438\u0435",
+        "cls": "",
+        "x": 813,
+        "y": 103,
+        "w": 53,
+        "h": 16,
+        "right": 866
+      },
+      {
+        "text": "\u041c\u0438\u0441\u0441\u0438\u0438",
+        "cls": "",
+        "x": 882,
+        "y": 103,
+        "w": 49,
+        "h": 16,
+        "right": 931
+      },
+      {
+        "text": "\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u044b",
+        "cls": "active",
+        "x": 947,
+        "y": 103,
+        "w": 60,
+        "h": 16,
+        "right": 1007
+      },
+      {
+        "text": "\u041f\u043e\u0436\u0435\u0440\u0442\u0432\u043e\u0432\u0430\u0442\u044c \u2192",
+        "cls": "give-btn",
+        "x": 1023,
+        "y": 93,
+        "w": 162,
+        "h": 36,
+        "right": 1185
+      },
+      {
+        "text": "EN",
+        "cls": "",
+        "x": 1210,
+        "y": 96,
+        "w": 47,
+        "h": 29,
+        "right": 1257
+      },
+      {
+        "text": "\u0420\u0423",
+        "cls": "active",
+        "x": 1257,
+        "y": 96,
+        "w": 46,
+        "h": 29,
+        "right": 1303
+      },
+      {
+        "text": "\u0410\u0434\u043c\u0438\u043d",
+        "cls": "admin-link",
+        "x": 1320,
+        "y": 96,
+        "w": 80,
+        "h": 32,
+        "right": 1400
+      },
+      {
+        "text": "\u041a\u0430\u043d\u0430\u043b \u043d\u0430 YouTube \u2192",
+        "cls": "reveal reveal-delay-1 in-view",
+        "x": 1184,
+        "y": 6748,
+        "w": 136,
+        "h": 26,
+        "right": 1320
+      },
+      {
+        "text": "YouTube channel",
+        "cls": "",
+        "x": 747,
+        "y": 6969,
+        "w": 116,
+        "h": 17,
+        "right": 863
+      },
+      {
+        "text": "\u0421\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0432\u0435\u0441\u044c \u0430\u0440\u0445\u0438\u0432 \u043d\u0430 YouTube \u2192",
+        "cls": "",
+        "x": 718,
+        "y": 7048,
+        "w": 233,
+        "h": 19,
+        "right": 952
+      },
+      {
+        "text": "\u0421\u0432\u044f\u0437\u0430\u0442\u044c\u0441\u044f \u0441 \u043d\u0430\u043c\u0438 \u2192",
+        "cls": "group-join-cta",
+        "x": 357,
+        "y": 8072,
+        "w": 196,
+        "h": 40,
+        "right": 553
+      },
+      {
+        "text": "Give at givebutter.com \u2192",
+        "cls": "",
+        "x": 884,
+        "y": 10553,
+        "w": 180,
+        "h": 17,
+        "right": 1064
+      },
+      {
+        "text": "admin@eagangrace.com",
+        "cls": "",
+        "x": 648,
+        "y": 12264,
+        "w": 145,
+        "h": 16,
+        "right": 794
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 285,
+        "y": 12505,
+        "w": 38,
+        "h": 38,
+        "right": 323
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 335,
+        "y": 12505,
+        "w": 38,
+        "h": 38,
+        "right": 373
+      },
+      {
+        "text": "",
+        "cls": "",
+        "x": 385,
+        "y": 12505,
+        "w": 38,
+        "h": 38,
+        "right": 423
+      },
+      {
+        "text": "\u0412\u0440\u0435\u043c\u044f \u0441\u043b\u0443\u0436\u0435\u043d\u0438\u0439",
+        "cls": "",
+        "x": 995,
+        "y": 12458,
+        "w": 93,
+        "h": 14,
+        "right": 1088
+      },
+      {
+        "text": "\u041a\u0430\u043a \u0434\u043e\u0431\u0440\u0430\u0442\u044c\u0441\u044f",
+        "cls": "",
+        "x": 995,
+        "y": 12490,
+        "w": 80,
+        "h": 14,
+        "right": 1075
+      },
+      {
+        "text": "\u0427\u0435\u0433\u043e \u043e\u0436\u0438\u0434\u0430\u0442\u044c",
+        "cls": "",
+        "x": 995,
+        "y": 12522,
+        "w": 75,
+        "h": 14,
+        "right": 1070
+      },
+      {
+        "text": "\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u044b",
+        "cls": "",
+        "x": 1136,
+        "y": 12458,
+        "w": 52,
+        "h": 14,
+        "right": 1188
+      },
+      {
+        "text": "YouTube",
+        "cls": "",
+        "x": 1136,
+        "y": 12490,
+        "w": 47,
+        "h": 14,
+        "right": 1184
+      },
+      {
+        "text": "Instagram",
+        "cls": "",
+        "x": 1136,
+        "y": 12522,
+        "w": 53,
+        "h": 14,
+        "right": 1190
+      },
+      {
+        "text": "Facebook",
+        "cls": "",
+        "x": 1136,
+        "y": 12553,
+        "w": 53,
+        "h": 14,
+        "right": 1189
+      },
+      {
+        "text": "\u0412\u0435\u0440\u043e\u0443\u0447\u0435\u043d\u0438\u0435",
+        "cls": "",
+        "x": 1250,
+        "y": 12458,
+        "w": 67,
+        "h": 14,
+        "right": 1317
+      },
+      {
+        "text": "\u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e",
+        "cls": "",
+        "x": 1250,
+        "y": 12490,
+        "w": 70,
+        "h": 14,
+        "right": 1320
+      }
+    ]
+  }
+]

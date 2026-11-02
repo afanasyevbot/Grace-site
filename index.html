@@ -1994,8 +1994,8 @@
 
   }
 
-  /* Keep mobile navigation separate from the content layout rules. */
-  @media (max-width: 960px) {
+  /* Both languages need the collapsed menu until the full navigation fits. */
+  @media (max-width: 1400px) {
     header {
       padding: 10px 16px;
       padding-left: max(16px, env(safe-area-inset-left));
@@ -2161,7 +2161,7 @@
   .brand-logo { transition: height 0.3s ease; }
 
   /* Keep safe-area padding when the later scrolled rules win the cascade */
-  @media (max-width: 960px) {
+  @media (max-width: 1400px) {
     html { scroll-padding-top: 80px; }
     header.scrolled {
       padding: 8px 16px;
@@ -2385,6 +2385,7 @@
   .lightbox-close,
   .lightbox-nav {
     position: absolute;
+    z-index: 1; /* Keep touch controls above the transformed photo. */
     background: rgba(245, 241, 232, 0.1);
     color: var(--cream);
     border: 1px solid rgba(245, 241, 232, 0.25);
@@ -2709,7 +2710,7 @@
 
   /* ====== RESPONSIVE FINISHING ======
      Keep these after decorative rules so touch sizes are not overridden. */
-  @media (max-width: 960px) {
+  @media (max-width: 1400px) {
     .mobile-toggle { width: 44px; height: 44px; }
     .mobile-toggle .bar { left: 10px; }
     .mobile-toggle .bar:nth-child(1) { top: 15px; }
@@ -2723,6 +2724,17 @@
     nav a.give-btn, nav a.admin-link { padding: 11px 22px; }
     .lang-toggle { width: fit-content; margin-left: 0; }
     .lang-toggle button { min-width: 48px; min-height: 44px; }
+  }
+
+  /* Keep the logo intact and avoid wrapping/truncating the desktop menu.
+     The logo already includes the wordmark; show the extra name when it fits. */
+  @media (min-width: 1401px) {
+    .brand { flex-shrink: 0; }
+    nav a { white-space: nowrap; }
+  }
+  @media (min-width: 1401px) and (max-width: 1800px) {
+    .brand > div { display: none; }
+    nav ul { gap: 16px; }
   }
 
   @media (max-width: 960px) {
@@ -2743,9 +2755,15 @@
     .contact-form input, .contact-form textarea { min-width: 0; font-size: 16px; }
     .footer-brand { flex-wrap: wrap; max-width: 100%; }
     .footer-brand img { max-width: 100%; object-fit: contain; }
-    .footer-col a { display: inline-block; padding: 10px 0; }
+    .footer-col a { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; padding: 10px 0; }
     .footer-social a { width: 44px; height: 44px; }
-    .event-cta, .sermon-watch a { display: inline-flex; align-items: center; min-height: 44px; }
+    .event-cta, .sermon-watch a, .group-join-cta,
+    .sermons .section-header > a, .sermon-note a,
+    .sermon-loading a, .contact-map-meta a, givebutter-widget a {
+      display: inline-flex; align-items: center; min-height: 44px;
+    }
+    .rebuild-banner a { display: inline-flex; align-items: center; min-height: 44px; vertical-align: middle; padding: 10px 0; }
+    .back-to-top { width: 44px; height: 44px; }
   }
 
   @media (max-width: 500px) {
@@ -3456,7 +3474,7 @@
 
   // Close menu on resize back to desktop
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 960) closeMenu();
+    if (window.matchMedia('(min-width: 1401px)').matches) closeMenu();
     else updateMenuHeight();
   });
 
