@@ -1330,7 +1330,6 @@
     .gallery-tile-hero { grid-column: span 2; grid-row: span 1; }
     .beliefs-dark { padding: 80px 20px; }
     .beliefs-dark .belief-item { padding: 24px 16px 0; }
-    .hero { padding: 48px 20px 60px; }
     .footer-cols { flex-direction: column; gap: 24px; align-items: center; }
     .cta-row { flex-direction: column; }
     .cta-row a { text-align: center; justify-content: center; }
@@ -1983,6 +1982,20 @@
     .give { padding: 60px 24px; }
     .give-inner { grid-template-columns: 1fr; gap: 40px; }
     .service-strip { padding: 40px 24px; }
+  }
+
+  @media (max-width: 960px) {
+    footer { padding: 60px 24px 24px; }
+    .footer-brand img { height: 56px !important; }
+    .footer-inner { gap: 28px; }
+    .hero-headline span.hero-line-1 { font-size: clamp(2.6rem, 14vw, 3.5rem); }
+    .hero-headline span.hero-line-2 { font-size: clamp(2.1rem, 11vw, 2.8rem); }
+    .hero-headline span.hero-line-3 { font-size: clamp(3rem, 16vw, 4rem); }
+
+  }
+
+  /* Keep mobile navigation separate from the content layout rules. */
+  @media (max-width: 960px) {
     header {
       padding: 10px 16px;
       padding-left: max(16px, env(safe-area-inset-left));
@@ -2009,13 +2022,6 @@
       line-height: 1.45;
       text-wrap: pretty;
     }
-    footer { padding: 60px 24px 24px; }
-    .footer-brand img { height: 56px !important; }
-    .footer-inner { gap: 28px; }
-    .hero-headline span.hero-line-1 { font-size: clamp(2.6rem, 14vw, 3.5rem); }
-    .hero-headline span.hero-line-2 { font-size: clamp(2.1rem, 11vw, 2.8rem); }
-    .hero-headline span.hero-line-3 { font-size: clamp(3rem, 16vw, 4rem); }
-
     .mobile-toggle {
       display: block;
       flex-shrink: 0;
@@ -2048,7 +2054,7 @@
       display: flex;
       visibility: visible;
       pointer-events: auto;
-      max-height: min(680px, calc(100dvh - 72px));
+      max-height: min(680px, var(--nav-available-height, calc(100vh - 160px)));
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
       padding: 12px 24px 20px;
@@ -2700,6 +2706,70 @@
     .ornament { padding: 32px 20px; }
     .back-to-top { width: 42px; height: 42px; bottom: 18px; right: 18px; }
   }
+
+  /* ====== RESPONSIVE FINISHING ======
+     Keep these after decorative rules so touch sizes are not overridden. */
+  @media (max-width: 960px) {
+    .mobile-toggle { width: 44px; height: 44px; }
+    .mobile-toggle .bar { left: 10px; }
+    .mobile-toggle .bar:nth-child(1) { top: 15px; }
+    .mobile-toggle .bar:nth-child(2) { top: 21px; }
+    .mobile-toggle .bar:nth-child(3) { top: 27px; }
+    .mobile-toggle.open .bar:nth-child(1),
+    .mobile-toggle.open .bar:nth-child(3) { top: 21px; }
+    nav ul.open { overscroll-behavior: contain; padding-bottom: max(20px, env(safe-area-inset-bottom)); }
+    nav ul li { flex-shrink: 0; padding: 0; }
+    nav a { min-height: 44px; padding: 11px 0; }
+    nav a.give-btn, nav a.admin-link { padding: 11px 22px; }
+    .lang-toggle { width: fit-content; margin-left: 0; }
+    .lang-toggle button { min-width: 48px; min-height: 44px; }
+  }
+
+  @media (max-width: 960px) {
+    .hero-content, .strip-item, .belief-item, .leader-card,
+    .event-top > div, .featured-sermon-body, .give-inner > *,
+    .prayer-section > *, .contact-body > * { min-width: 0; }
+    .hero-content, .section, .prayer-section, .contact-section,
+    .give, footer { overflow-wrap: anywhere; }
+    .btn-primary, .btn-secondary { max-width: 100%; justify-content: center; text-align: center; }
+    .btn-primary svg, .btn-secondary svg { flex-shrink: 0; }
+    .expect-section { padding: 80px 24px; }
+    .prayer-section { grid-template-columns: minmax(0, 1fr); padding: 60px 24px; }
+    .prayer-left { padding: 0 0 32px; }
+    .prayer-left::after { display: none; }
+    .prayer-right { padding: 0; }
+    .prayer-form-panel { padding: 28px 20px; }
+    .prayer-form input, .prayer-form textarea,
+    .contact-form input, .contact-form textarea { min-width: 0; font-size: 16px; }
+    .footer-brand { flex-wrap: wrap; max-width: 100%; }
+    .footer-brand img { max-width: 100%; object-fit: contain; }
+    .footer-col a { display: inline-block; padding: 10px 0; }
+    .footer-social a { width: 44px; height: 44px; }
+    .event-cta, .sermon-watch a { display: inline-flex; align-items: center; min-height: 44px; }
+  }
+
+  @media (max-width: 500px) {
+    .hero { padding: 48px 24px 56px; }
+    .hero-content { width: 100%; max-width: 380px; }
+    .hero-eyebrow { max-width: 280px; margin: 0 auto 16px; line-height: 1.7; letter-spacing: 0.16em; }
+    .hero-slogan { max-width: 290px; margin-bottom: 28px; font-size: 18px; line-height: 1.5; }
+    .hero-headline { line-height: 1.08; margin-bottom: 32px; }
+    .hero-headline span + span { margin-top: 4px; }
+    .hero-verse { padding: 24px 0 0; }
+    .hero-verse blockquote { font-size: 18px; line-height: 1.65; }
+    .hero-verse-ref { letter-spacing: 0.2em; }
+    .hero .cta-row { flex-direction: column; align-items: stretch; }
+    .event-card, .ministry-card, .serve-card { padding: 24px 20px; }
+    .event-top { gap: 12px; align-items: flex-start; }
+    .event-top h3 { font-size: 20px; }
+    .eyebrow { gap: 10px; font-size: 12px; letter-spacing: 0.15em; }
+    .eyebrow::before, .eyebrow::after,
+    .eyebrow.centered::before, .eyebrow.centered::after { width: 24px; flex-shrink: 0; }
+    .hero-headline span.hero-line-1 { font-size: clamp(2rem, 11vw, 3.5rem); }
+    .hero-headline span.hero-line-2 { font-size: clamp(1.8rem, 10vw, 2.8rem); }
+    .hero-headline span.hero-line-3 { font-size: clamp(2.4rem, 14vw, 4rem); }
+    .back-to-top { width: 44px; height: 44px; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); }
+  }
 </style>
 <script src="https://widgets.givebutter.com/latest.umd.cjs?acct=6bfmOU56oAtlUXzR&p=other" async></script>
 </head>
@@ -2743,7 +2813,7 @@
       </li>
     </ul>
   </nav>
-  <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+  <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-controls="navMenu" aria-expanded="false">
     <span class="bar"></span><span class="bar"></span><span class="bar"></span>
   </button>
 </header>
@@ -3349,7 +3419,17 @@
     }
   } catch (e) {}
 
+  function updateMenuHeight() {
+    const menu = document.getElementById('navMenu');
+    const viewportBottom = window.visualViewport
+      ? window.visualViewport.height + window.visualViewport.offsetTop
+      : window.innerHeight;
+    const headerBottom = document.querySelector('header').getBoundingClientRect().bottom;
+    menu.style.setProperty('--nav-available-height', Math.max(0, viewportBottom - headerBottom) + 'px');
+  }
+
   function toggleMenu() {
+    updateMenuHeight();
     const menu = document.getElementById('navMenu');
     const btn = document.querySelector('.mobile-toggle');
     menu.classList.toggle('open');
@@ -3377,11 +3457,20 @@
   // Close menu on resize back to desktop
   window.addEventListener('resize', () => {
     if (window.innerWidth > 960) closeMenu();
+    else updateMenuHeight();
   });
+
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', updateMenuHeight);
+  }
+  document.querySelector('header').addEventListener('transitionend', updateMenuHeight);
 
   // Close menu on Escape
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeMenu();
+    if (e.key === 'Escape' && document.getElementById('navMenu').classList.contains('open')) {
+      closeMenu();
+      document.querySelector('.mobile-toggle').focus();
+    }
   });
 
   const FORMSPREE_URL = 'https://formspree.io/f/mpqbbqzq';
