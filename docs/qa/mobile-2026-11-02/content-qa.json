@@ -1,0 +1,93 @@
+[
+  {
+    "lang": "en",
+    "desktopContent": "all section widths/heights match main at 1440"
+  },
+  {
+    "lang": "ru",
+    "desktopContent": "all section widths/heights match main at 1440"
+  },
+  {
+    "lang": "en",
+    "width": 320,
+    "populatedSermons": "pass"
+  },
+  {
+    "lang": "en",
+    "width": 375,
+    "populatedSermons": "pass"
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "populatedSermons": "pass"
+  },
+  {
+    "lang": "en",
+    "width": 430,
+    "populatedSermons": "pass"
+  },
+  {
+    "lang": "en",
+    "width": 768,
+    "populatedSermons": "pass"
+  },
+  {
+    "lang": "en",
+    "width": 960,
+    "populatedSermons": "pass"
+  },
+  {
+    "lang": "en",
+    "width": 1165,
+    "populatedSermons": "pass"
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "populatedSermons": "pass"
+  },
+  {
+    "lang": "ru",
+    "width": 320,
+    "populatedSermons": "pass"
+  },
+  {
+    "lang": "ru",
+    "width": 375,
+    "populatedSermons": "pass"
+  },
+  {
+    "lang": "ru",
+    "width": 390,
+    "populatedSermons": "pass"
+  },
+  {
+    "lang": "ru",
+    "width": 430,
+    "populatedSermons": "pass"
+  },
+  {
+    "lang": "ru",
+    "width": 768,
+    "populatedSermons": "pass"
+  },
+  {
+    "lang": "ru",
+    "width": 960,
+    "populatedSermons": "pass"
+  },
+  {
+    "lang": "ru",
+    "width": 1165,
+    "populatedSermons": "pass"
+  },
+  {
+    "lang": "ru",
+    "width": 1440,
+    "populatedSermons": "pass"
+  },
+  {
+    "normalMotionAndBackToTop": "pass"
+  }
+]

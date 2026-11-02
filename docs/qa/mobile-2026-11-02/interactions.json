@@ -1,0 +1,218 @@
+{
+  "checks": [
+    {
+      "lang": "en",
+      "width": 320,
+      "result": "pass"
+    },
+    {
+      "lang": "en",
+      "width": 375,
+      "result": "pass"
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "result": "pass"
+    },
+    {
+      "lang": "en",
+      "width": 430,
+      "result": "pass"
+    },
+    {
+      "lang": "en",
+      "width": 768,
+      "result": "pass"
+    },
+    {
+      "lang": "en",
+      "width": 960,
+      "result": "pass"
+    },
+    {
+      "lang": "en",
+      "width": 1165,
+      "result": "pass"
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "result": "pass"
+    },
+    {
+      "lang": "en",
+      "width": 320,
+      "height": 568,
+      "menu": "pass"
+    },
+    {
+      "lang": "en",
+      "width": 768,
+      "height": 390,
+      "menu": "pass"
+    },
+    {
+      "lang": "en",
+      "width": 1400,
+      "height": 844,
+      "menu": "pass"
+    },
+    {
+      "lang": "ru",
+      "width": 320,
+      "result": "pass"
+    },
+    {
+      "lang": "ru",
+      "width": 375,
+      "result": "pass"
+    },
+    {
+      "lang": "ru",
+      "width": 390,
+      "result": "pass"
+    },
+    {
+      "lang": "ru",
+      "width": 430,
+      "result": "pass"
+    },
+    {
+      "lang": "ru",
+      "width": 768,
+      "result": "pass"
+    },
+    {
+      "lang": "ru",
+      "width": 960,
+      "result": "pass"
+    },
+    {
+      "lang": "ru",
+      "width": 1165,
+      "result": "pass"
+    },
+    {
+      "lang": "ru",
+      "width": 1440,
+      "result": "pass"
+    },
+    {
+      "lang": "ru",
+      "width": 320,
+      "height": 568,
+      "menu": "pass"
+    },
+    {
+      "lang": "ru",
+      "width": 768,
+      "height": 390,
+      "menu": "pass"
+    },
+    {
+      "lang": "ru",
+      "width": 1400,
+      "height": 844,
+      "menu": "pass"
+    },
+    {
+      "lang": "en",
+      "width": 1400,
+      "breakpoint": "pass",
+      "toggle": "block",
+      "logo": 93.078125,
+      "overflow": []
+    },
+    {
+      "lang": "en",
+      "width": 1401,
+      "breakpoint": "pass",
+      "toggle": "none",
+      "logo": 193.9375,
+      "overflow": []
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "breakpoint": "pass",
+      "toggle": "none",
+      "logo": 193.9375,
+      "overflow": []
+    },
+    {
+      "lang": "en",
+      "width": 1800,
+      "breakpoint": "pass",
+      "toggle": "none",
+      "logo": 193.9375,
+      "overflow": []
+    },
+    {
+      "lang": "en",
+      "width": 1801,
+      "breakpoint": "pass",
+      "toggle": "none",
+      "logo": 193.9375,
+      "overflow": []
+    },
+    {
+      "lang": "en",
+      "width": 1920,
+      "breakpoint": "pass",
+      "toggle": "none",
+      "logo": 193.9375,
+      "overflow": []
+    },
+    {
+      "lang": "ru",
+      "width": 1400,
+      "breakpoint": "pass",
+      "toggle": "block",
+      "logo": 93.078125,
+      "overflow": []
+    },
+    {
+      "lang": "ru",
+      "width": 1401,
+      "breakpoint": "pass",
+      "toggle": "none",
+      "logo": 193.9375,
+      "overflow": []
+    },
+    {
+      "lang": "ru",
+      "width": 1440,
+      "breakpoint": "pass",
+      "toggle": "none",
+      "logo": 193.9375,
+      "overflow": []
+    },
+    {
+      "lang": "ru",
+      "width": 1800,
+      "breakpoint": "pass",
+      "toggle": "none",
+      "logo": 193.9375,
+      "overflow": []
+    },
+    {
+      "lang": "ru",
+      "width": 1801,
+      "breakpoint": "pass",
+      "toggle": "none",
+      "logo": 193.9375,
+      "overflow": []
+    },
+    {
+      "lang": "ru",
+      "width": 1920,
+      "breakpoint": "pass",
+      "toggle": "none",
+      "logo": 193.9375,
+      "overflow": []
+    }
+  ],
+  "pageErrors": [],
+  "postRequests": []
+}
