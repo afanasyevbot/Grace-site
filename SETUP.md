@@ -10,7 +10,7 @@ A single-file HTML website (`index.html`) with:
 - Working YouTube embed of the @gracechurch4000 channel
 - Working "Give" button routed to your existing MBF donation portal
 - Google Maps embed for directions
-- Contact form (opens email client)
+- Contact form and prayer request form (both submit via Formspree to `admin@eagangrace.com` — verify in Formspree dashboard)
 - Newsletter signup form (needs one integration step — see below)
 - Fully mobile-responsive
 - Fast — loads in under 1 second
@@ -21,7 +21,7 @@ Open `index.html` in any text editor (VS Code, Sublime, even Notepad) and search
 
 1. **Leadership section** — search for "Associate Pastor" and "Elder / Deacon". Replace with real names, roles, and short bios (~2 sentences each).
 2. **Leader initials** — the circles currently show "PA" for Pavel and "+" for others. Change the `<div class="leader-photo">` text to the correct initials, or swap to photos later.
-3. **Contact email** — search for `info@eagangrace.com`. Replace with the real church email address the contact form should send to.
+3. **Contact email** — all public contact links use `admin@eagangrace.com`. Contact and prayer forms submit through Formspree; confirm the Formspree form (`mpqbbqzq`) sends notifications to `admin@eagangrace.com`.
 4. **Maps embed** — the current Google Map is approximate. For the exact pin: go to Google Maps, search "1985 Diffley Rd Eagan MN", click Share → Embed a map → Copy HTML → paste the `src="..."` URL to replace the existing one.
 
 ## How to deploy it (free)
@@ -47,20 +47,24 @@ Once the new site is live on Netlify:
 5. Takes 1–24 hours to propagate
 6. Once live, cancel the WordPress hosting
 
-## Optional: connecting the newsletter form
+## Form submissions (contact + prayer)
 
-The newsletter form currently shows a success message but doesn't store emails. To make it real:
+Both forms post to Formspree endpoint `mpqbbqzq`. The site CCs `admin@eagangrace.com` on every submission, but the primary notification address is controlled in the Formspree dashboard:
+
+1. Log in at https://formspree.io
+2. Open form `mpqbbqzq`
+3. In Workflow → Email action (or Form Settings), set the target email to `admin@eagangrace.com`
+4. Submit a test message from the live site and confirm it arrives in the admin inbox
+
+## Optional: connecting a newsletter form
+
+There is no newsletter form on the current site. To add one later:
 - **Easiest**: Sign up for Mailchimp (free up to 500 contacts) or Buttondown. They give you an embed code — replace the `<form class="newsletter-form">` block with their code.
 - **Or**: use Netlify Forms (free, works automatically when hosted on Netlify). Add `netlify` and `name="newsletter"` to the `<form>` tag:
   ```html
   <form class="newsletter-form" name="newsletter" netlify onsubmit="return handleNewsletter(event)">
   ```
   All submissions then show up in your Netlify dashboard.
-
-## Same for the contact form
-Currently opens the visitor's email app. For a real form that captures and stores messages:
-- Add `netlify` and `name="contact"` to the `<form>` tag the same way, and remove the `onsubmit` handler.
-- Or use Formspree, Getform, or similar (all free tiers).
 
 ## If you want to edit later
 

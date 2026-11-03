@@ -64,11 +64,11 @@ A modern, responsive, bilingual (EN/РУ) website for Grace Evangelical Church, 
 
 1. **Deacon bios** — search for "Bio to be added." (3 occurrences in the Leadership section)
 2. **Leader headshots** — currently showing initials (PA, SK, AA, VB). Replace `.leader-photo` divs with `<img>` tags pointing to photos when available.
-3. **Church email address** — search for `info@eagangrace.com` (used in the contact form). Confirm or update.
+3. **Church email address** — all public contact links and form fallbacks use `admin@eagangrace.com`.
 4. **Google Maps embed** — the `<iframe src="...">` in the Contact section uses an approximate pin. To get exact: Google Maps → search "1985 Diffley Rd Eagan MN" → Share → Embed a map → copy HTML → replace existing iframe src.
 5. **Giving platform** — currently still points at the legacy MBF donation link. Pending leadership decision on Tithely vs. keeping MBF.
-6. **Newsletter signup** — form currently shows a success message only. To make real: add `netlify` and `name="newsletter"` attributes to the `<form>` tag (if hosting on Netlify), or swap in Mailchimp/Buttondown embed code.
-7. **Contact form** — opens visitor's email client on submit. To capture real submissions: add `netlify` and `name="contact"` to the `<form>` tag.
+6. **Newsletter signup** — no newsletter form on the current site.
+7. **Contact & prayer forms** — submit via Formspree (`mpqbbqzq`). Verify in the Formspree dashboard that the form's notification email is set to `admin@eagangrace.com`.
 
 ## Editing text
 
@@ -122,4 +122,4 @@ To change the English, update both `data-en="..."` AND the visible text between 
 
 - YouTube RSS feed is fetched through `api.allorigins.win` (free CORS proxy). If that service is down, the sermon table shows a fallback message but the rest of the site works fine.
 - No CMS — content edits require opening the HTML file and updating text directly (or using the bilingual attributes).
-- Forms are frontend-only placeholders; need Netlify Forms or similar to actually capture submissions.
+- Contact and prayer forms submit through Formspree. Confirm the Formspree dashboard sends notifications to `admin@eagangrace.com`.
